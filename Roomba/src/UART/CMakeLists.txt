@@ -15,7 +15,7 @@ target_include_directories(UART_lib PUBLIC ${PROJECT_SOURCE_DIR}/include)
 target_link_libraries(UART_lib PRIVATE Boost::boost)
 
 # All users of this library will need at least C++11
-target_compile_features(UART_lib PUBLIC cxx_std_17)
+target_compile_features(UART_lib PUBLIC cxx_std_20)
 
 # IDEs should put the headers in a nice place
 source_group(

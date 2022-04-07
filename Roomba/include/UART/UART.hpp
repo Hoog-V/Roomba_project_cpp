@@ -16,7 +16,7 @@ public:
 	UART(const UARTSettings Settings);
 	void changeBaud(const uint32_t baudrate);
 	void sendBytes(const uint8_t *bytes, const uint8_t numOfbytes);
-	void readBytes(const uint8_t *buffer, const uint8_t numOfbytes);
+	template <typename arr, std::size_t size> void readBytes(std::array<arr,size> &buffer, const uint8_t numOfbytes);
 	~UART();
 	enum baudrates : uint32_t
 	{
@@ -36,4 +36,5 @@ private:
 	boost::asio::io_service mIOService;
 };
 
+#include <UART/UART-tmp-func.inl>
 
