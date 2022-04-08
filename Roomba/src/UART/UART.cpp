@@ -41,9 +41,9 @@ void UART::changeBaud(const uint32_t baudrate)
 }
 
 
-void UART::sendBytes(const uint8_t *bytes, const uint8_t numOfbytes){
-	boost::system::error_code ec;
-	mSerialPort->write_some(boost::asio::buffer(bytes, numOfbytes),ec);
+void UART::sendByte(const uint8_t byte)
+{
+		uint8_t buff = byte;
+		boost::system::error_code ec;
+		mSerialPort->write_some(boost::asio::buffer(&buff, sizeof(buff)),ec);
 }
-
-
