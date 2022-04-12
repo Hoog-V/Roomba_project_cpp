@@ -14,7 +14,9 @@ int main(int argc, char **argv)
 	p.baudrate = UART::baud_115200;
 	UART * p1 = new UART(p);
 	Roomba::Roomba* rmb = new Roomba::Roomba(p1);
-	rmb->setDockMode();
+	//rmb->setDockMode();
+	rmb->setLed(Roomba::leds::LED_Dock, Roomba::LedState::On);
+	rmb->setControlMode(Roomba::control::Passive);
 	delete p1;
 	return (0);
 }

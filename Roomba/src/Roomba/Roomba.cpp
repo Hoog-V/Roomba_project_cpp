@@ -27,7 +27,7 @@ bool Roomba::mSetPassiveMode()
 	case control::Safe: case control::Full:
 	{
 		mUARTHandle->sendByte(command::Spot);
-		SLEEP(25);
+		SLEEP(220);
 		mUARTHandle->sendByte(command::Spot);
 		SLEEP(25);
 		break;
@@ -123,6 +123,27 @@ void Roomba::setBaudRate(baudrate BaudRate)
 	mUARTHandle->sendBytes(commands, std::size(commands));
 	SLEEP(100);
 	mUARTHandle->changeBaud( baud_mapping.at(BaudRate) );
+}
+
+void Roomba::setLed(uint8_t led, LedState state)
+{
+	bool checkControlMode = mCurrControlMode == control::Passive || mCurrControlMode == control::No_init;
+	if(checkControlMode)
+		setControlMode(control::Safe);
+	uint8_t ledBits = state == LedState::Off ? 0 : led;
+	std::array<uint8_t, 4> commands {command::Leds, ledBits , 0, 128};
+	mUARTHandle->sendBytes(commands, std::size(commands));
+}
+
+void Roomba::setPowerLed(uint8_t color, uint8_t intensity)
+{
+	;
+}
+
+
+bool Roomba::mGetCurrLedState()
+{
+return true;
 }
 
 }

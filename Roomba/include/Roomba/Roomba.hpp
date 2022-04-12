@@ -4,8 +4,6 @@
 namespace Roomba
 {
 
-#define LED_COLOR_RED 1
-#define LED_COLOR_GREEN 0
 
 enum class cleaning{
 	Spot, Clean, Max
@@ -33,7 +31,7 @@ enum class sensors : uint8_t
 
 enum leds : uint8_t
 {
-	DD, MAX, CLEAN, SPOT, STATUS
+	LED_Debris=1, LED_Spot=2, LED_Dock=4, LED_Check_Robot=8
 };
 
 enum command : uint8_t
@@ -43,6 +41,12 @@ enum command : uint8_t
 	Motor_PWM, Drive_Wheels, Stream=148, Query_List, Do_Stream,
 	Schedule_Leds = 162, Digit_Leds_Raw, Digit_Leds_Ascii,
 	Buttons, Schedule=167, Set_Date_Time, Stop=173
+};
+
+
+enum class LedState
+{
+	On, Off
 };
 
 class Roomba
@@ -57,7 +61,8 @@ public:
 	void startCleaning(cleaning cleaningMode);
 	void setDockMode();
 	void setControlMode(control ControlMode);
-	void setLed(uint8_t led, uint8_t brightness, bool color_red);
+	void setLed(uint8_t led, LedState state);
+	void setPowerLed(uint8_t color, uint8_t intensity);
 	void setBaudRate(baudrate BaudRate);
 	void getSensorData(uint16_t sensor);
 	void setSongNum(uint8_t songnum);
@@ -70,6 +75,7 @@ private:
 	bool mSetPassiveMode();
 	bool mSetSafeMode();
 	bool mSetFullMode();
+	bool mGetCurrLedState();
 	UART *mUARTHandle;
 	control mCurrControlMode;
 	const std::array<uint32_t, 12> baud_mapping {300, 600, 1200, 2400, 4800,
