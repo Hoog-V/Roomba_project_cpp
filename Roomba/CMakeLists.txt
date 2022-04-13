@@ -1,11 +1,11 @@
 # Works with 3.11 and tested through 3.23
-cmake_minimum_required(VERSION 3.11...3.23)
+cmake_minimum_required(VERSION 3.11)
 
 # Project name and a few useful settings. Other commands can pick up the results
 project(
   Testproj
   VERSION 0.1
-  DESCRIPTION "An example project with CMake and unit_tests"
+  DESCRIPTION "Roomba library"
   LANGUAGES CXX)
 
 # Only do these if this is the main project, and not if it is included through add_subdirectory
@@ -40,9 +40,16 @@ include(FetchContent)
 #  include(cmake/add_FetchContent_MakeAvailable.cmake)
 #endif()
 
+
+
+#SET(CMAKE_INCLUDE_PATH ${CMAKE_INCLUDE_PATH} "C:/Program Files/Boost/boost_1_79_0")
+#SET(CMAKE_LIBRARY_PATH ${CMAKE_LIBRARY_PATH} "C:/Program Files/Boost/boost_1_79_0/lib")
 # Accumulator library
 # This is header only, so could be replaced with git submodules or FetchContent
 find_package(Boost REQUIRED)
+IF (Boost_FOUND)
+    INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIR})
+ENDIF()
 # Adds Boost::boost
 
 # Formatting library

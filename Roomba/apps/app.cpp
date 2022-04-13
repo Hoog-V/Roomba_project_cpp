@@ -1,6 +1,5 @@
 #include <iostream>
 #include <UART/UART.hpp>
-#include <unistd.h>
 #include <thread>
 #include <algorithm>
 #include <array>
@@ -10,7 +9,7 @@
 int main(int argc, char **argv)
 {
 	UARTSettings p;
-	p.DevicePath = "/dev/ttyUSB0";
+	p.DevicePath = "COM3";
 	p.baudrate = UART::baud_115200;
 	UART * p1 = new UART(p);
 	Roomba::Roomba* rmb = new Roomba::Roomba(p1);
