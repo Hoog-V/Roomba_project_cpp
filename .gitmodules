@@ -1,0 +1,3 @@
+[submodule "Roomba/tests/googletest"]
+path = Roomba/tests/googletest
+url = https://github.com/google/googletest.git
