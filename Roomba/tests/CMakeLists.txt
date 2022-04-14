@@ -29,9 +29,9 @@ enable_testing()
 #    endif()
 #endif()
 
-#if(NOT EXISTS "${PROJECT_SOURCE_DIR}/tests/googletest/CMakeLists.txt")
-#    message(FATAL_ERROR "The submodules were not downloaded! GIT_SUBMODULE was turned off or failed. Please update submodules and try again.")
-#endif()
+if(NOT EXISTS "${PROJECT_SOURCE_DIR}/tests/googletest/CMakeLists.txt")
+    message(FATAL_ERROR "The submodules were not downloaded! GIT_SUBMODULE was turned off or failed. Please update submodules and try again.")
+endif()
 
 add_subdirectory(googletest)
 add_subdirectory(test)
