@@ -71,3 +71,90 @@ url = https://github.com/google/googletest.git
 [submodule "Roomba/external/Boost/libs/mp11"]
 	path = Roomba/external/Boost/libs/mp11
 	url = https://github.com/boostorg/mp11.git
+[submodule "Roomba/external/Boost/libs/align"]
+	path = Roomba/external/Boost/libs/align
+	url = https://github.com/boostorg/align.git
+[submodule "Roomba/external/Boost/libs/array"]
+	path = Roomba/external/Boost/libs/array
+	url = https://github.com/boostorg/array.git
+[submodule "Roomba/external/Boost/libs/bind"]
+	path = Roomba/external/Boost/libs/bind
+	url = https://github.com/boostorg/bind.git
+[submodule "Roomba/external/Boost/libs/coroutine"]
+	path = Roomba/external/Boost/libs/coroutine
+	url = https://github.com/boostorg/coroutine.git
+[submodule "Roomba/external/Boost/libs/date_time"]
+	path = Roomba/external/Boost/libs/date_time
+	url = https://github.com/boostorg/date_time.git
+[submodule "Roomba/external/Boost/libs/function"]
+	path = Roomba/external/Boost/libs/function
+	url = https://github.com/boostorg/function.git
+[submodule "Roomba/external/Boost/libs/regex"]
+	path = Roomba/external/Boost/libs/regex
+	url = https://github.com/boostorg/regex.git
+[submodule "Roomba/external/Boost/libs/smart_ptr"]
+	path = Roomba/external/Boost/libs/smart_ptr
+	url = https://github.com/boostorg/smart_ptr.git
+[submodule "Roomba/external/Boost/libs/exception"]
+	path = Roomba/external/Boost/libs/exception
+	url = https://github.com/boostorg/exception.git
+[submodule "Roomba/external/Boost/libs/context"]
+	path = Roomba/external/Boost/libs/context
+	url = https://github.com/boostorg/context.git
+[submodule "Roomba/external/Boost/libs/algorithm"]
+	path = Roomba/external/Boost/libs/algorithm
+	url = https://github.com/boostorg/algorithm.git
+[submodule "Roomba/external/Boost/libs/lexical_cast"]
+	path = Roomba/external/Boost/libs/lexical_cast
+	url = https://github.com/boostorg/lexical_cast.git
+[submodule "Roomba/external/Boost/libs/numeric_conversion"]
+	path = Roomba/external/Boost/libs/numeric_conversion
+	url = https://github.com/boostorg/numeric_conversion.git
+[submodule "Roomba/external/Boost/libs/range"]
+	path = Roomba/external/Boost/libs/range
+	url = https://github.com/boostorg/range.git
+[submodule "Roomba/external/Boost/libs/tokenizer"]
+	path = Roomba/external/Boost/libs/tokenizer
+	url = https://github.com/boostorg/tokenizer.git
+[submodule "Roomba/external/Boost/libs/type_index"]
+	path = Roomba/external/Boost/libs/type_index
+	url = https://github.com/boostorg/type_index.git
+[submodule "Roomba/external/Boost/libs/pool"]
+	path = Roomba/external/Boost/libs/pool
+	url = https://github.com/boostorg/pool.git
+[submodule "Roomba/external/Boost/libs/tuple"]
+	path = Roomba/external/Boost/libs/tuple
+	url = https://github.com/boostorg/tuple.git
+[submodule "Roomba/external/Boost/libs/concept_check"]
+	path = Roomba/external/Boost/libs/concept_check
+	url = https://github.com/boostorg/concept_check.git
+[submodule "Roomba/external/Boost/libs/container_hash"]
+	path = Roomba/external/Boost/libs/container_hash
+	url = https://github.com/boostorg/container_hash.git
+[submodule "Roomba/external/Boost/libs/iterator"]
+	path = Roomba/external/Boost/libs/iterator
+	url = https://github.com/boostorg/iterator.git
+[submodule "Roomba/external/Boost/libs/conversion"]
+	path = Roomba/external/Boost/libs/conversion
+	url = https://github.com/boostorg/conversion.git
+[submodule "Roomba/external/Boost/libs/detail"]
+	path = Roomba/external/Boost/libs/detail
+	url = https://github.com/boostorg/detail.git
+[submodule "Roomba/external/Boost/libs/optional"]
+	path = Roomba/external/Boost/libs/optional
+	url = https://github.com/boostorg/optional.git
+[submodule "Roomba/external/Boost/libs/unordered"]
+	path = Roomba/external/Boost/libs/unordered
+	url = https://github.com/boostorg/unordered.git
+[submodule "Roomba/external/Boost/libs/function_types"]
+	path = Roomba/external/Boost/libs/function_types
+	url = https://github.com/boostorg/function_types.git
+[submodule "Roomba/external/Boost/libs/fusion"]
+	path = Roomba/external/Boost/libs/fusion
+	url = https://github.com/boostorg/fusion.git
+[submodule "Roomba/external/Boost/libs/container"]
+	path = Roomba/external/Boost/libs/container
+	url = https://github.com/boostorg/container.git
+[submodule "Roomba/external/Boost/libs/intrusive"]
+	path = Roomba/external/Boost/libs/intrusive
+	url = https://github.com/boostorg/intrusive.git

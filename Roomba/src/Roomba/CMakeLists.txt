@@ -12,6 +12,8 @@ add_library(Roomba_lib Roomba.cpp ${HEADER_LIST})
 target_include_directories(Roomba_lib PUBLIC ${PROJECT_SOURCE_DIR}/include)
 
 # This depends on (header only) boost
+target_link_libraries(Roomba_lib PRIVATE boost_chrono)
+target_link_libraries(Roomba_lib PRIVATE boost_asio)
 target_link_libraries(Roomba_lib PRIVATE UART_lib)
 
 # All users of this library will need at least C++11

@@ -11,9 +11,10 @@ add_library(UART_lib UART.cpp ${HEADER_LIST})
 # We need this directory, and users of our library will need it too
 target_include_directories(UART_lib PUBLIC ${PROJECT_SOURCE_DIR}/include)
 
-
+target_link_libraries(UART_lib PRIVATE boost_asio)
 # All users of this library will need at least C++11
 target_compile_features(UART_lib PUBLIC cxx_std_20)
+
 
 # IDEs should put the headers in a nice place
 source_group(
