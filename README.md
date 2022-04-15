@@ -65,22 +65,22 @@ Onder uitklapmenu Linux and Embedded development with C++:
 - "Embedded and IoT tools"
 - "Legacy Embedded and IoT tools" <= Als hij er staat... Niet altijd het geval!
 
-![alt text](Documentatie/README_ATTR/Afbeeldingen/Installatie vsstudio/1.png)
+![alt text](Documentatie/README_ATTR/Afbeeldingen/Installatie_vsstudio/1.png)
 
-![alt text](Documentatie/README_ATTR/Afbeeldingen/Installatie vsstudio/2.png)
+![alt text](Documentatie/README_ATTR/Afbeeldingen/Installatie_vsstudio/2.png)
 
 Stap 3: Open Visual Studio en geef voorkeuren aan voor stijlgeving, thema's enz.
 
 Stap 4: Kies de optie "Clone repository".
 
-![alt text](Documentatie/README_ATTR/Afbeeldingen/Installatie vsstudio/3.png)
+![alt text](Documentatie/README_ATTR/Afbeeldingen/Installatie_vsstudio/3.png)
 
 Stap 5: Vul hier de clone link (met optie ssh en moet eindigen op .git) in van deze repo.
 Het clonen van de repo duurt even. Dit komt door alle submodules die erin zitten. Dus wees geduldig!
 
-![alt text](Documentatie/README_ATTR/Afbeeldingen/Installatie vsstudio/4.png)
+![alt text](Documentatie/README_ATTR/Afbeeldingen/Installatie_vsstudio/4.png)
 
-![alt text](Documentatie/README_ATTR/Afbeeldingen/Installatie vsstudio/3.5.png)
+![alt text](Documentatie/README_ATTR/Afbeeldingen/Installatie_vsstudio/3.5.png)
 
 ![alt text](Documentatie/README_ATTR/Afbeeldingen/Clone/1.png)
 
