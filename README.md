@@ -22,7 +22,7 @@ Stap 3: Open nu git bash vanuit het start menu.
 
 Stap 4: Tik het commando: *ssh-keygen* in en klik alleen maar op ENTER.
 
-![alt text](Documentatie/README_ATTR/Afbeeldingen//Git/2.png)
+![alt text](Documentatie/README_ATTR/Afbeeldingen/Git/2.png)
 
 Stap 5: Tik vervolgens het commando: *cat ~/.ssh/id_rsa.pub* in.
 Kopieer het resultaat van het commando naar je klembord.
@@ -37,7 +37,7 @@ Stap 7: Vul een beschrijvende naam voor je PC in en kopieer de ssh-key uit je kl
 
 Stap 8: Ga naar de Roomba Repo en klik op clone. Selecteer de optie ssh en kopieer de link.
 
-![alt text](Documentatie/README_ATTR/Afbeeldingen/Installatie vsstudio/4.png)
+![alt text](Documentatie/README_ATTR/Afbeeldingen/Installatie_vsstudio/4.png)
 
 Stap 9: Pak de git bash er weer bij en tik in: *git clone <link> --recursive* . Je krijgt de vraag over de identiteit van de github server typ hier yes in en druk op ENTER. Druk hierna gelijk op ctrl+c. Tenzij je de repo toch wilt clonen.
 
