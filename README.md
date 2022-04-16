@@ -5,6 +5,7 @@
 
 
 Doxygen is nodig om de documentatie te kunnen genereren en is een dependency van de library.
+
 Stap 1: Download en installeer [doxygen](https://www.doxygen.nl/download.html).
 Bij installatie alleen maar "volgende".
 Tip! Scroll goed naar beneden en klik onder "A binary distribution for Windows" het doxygen-x.x.x-setup.exe linkje aan.
@@ -26,6 +27,8 @@ Stap 4: Tik het commando: *ssh-keygen* in en klik alleen maar op ENTER.
 
 Stap 5: Tik vervolgens het commando: *cat ~/.ssh/id_rsa.pub* in.
 Kopieer het resultaat van het commando naar je klembord.
+
+**Dit doe je door de tekst te selecteren met muis en dan de rechtermuisknop in te drukken**
 
 ![alt text](Documentatie/README_ATTR/Afbeeldingen/Git/3.png)
 
