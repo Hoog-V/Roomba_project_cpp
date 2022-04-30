@@ -5,6 +5,7 @@ set(This UART_tests)
 set(Sources
         init_test.cpp
         ChangeBaud_test.cpp
+        SendBytes_test.cpp
         )
 
 add_executable(${This} ${Sources})
