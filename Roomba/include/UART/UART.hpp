@@ -6,7 +6,7 @@
 
 struct UARTSettings
 {
-	uint32_t baudrate = 0;
+	uint32_t baudrate;
 	std::string DevicePath;
 };
 
