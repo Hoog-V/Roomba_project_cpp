@@ -6,6 +6,19 @@
 
 UART::UART(const UARTSettings Settings)
 {
+
+        bool DevicePathEmpty = Settings.DevicePath.compare("") == 0;
+        if(DevicePathEmpty)
+        {
+            std::cerr << "DevicePath is empty!" << '\n';
+            throw "DevicePath is empty!";
+        }
+        bool BaudrateEmpty = Settings.baudrate == 0;
+        if(BaudrateEmpty)
+        {
+            std::cerr << "Baudrate is empty!" << '\n';
+            throw "Baudrate is empty";
+        }
 		std::cout << "New instance of the UART object" << '\n';
 		std::cout << "Uartsettings Path: " << Settings.DevicePath << " Baudrate: " << Settings.baudrate << '\n';
 		try{
