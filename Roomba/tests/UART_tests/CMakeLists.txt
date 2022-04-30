@@ -6,6 +6,7 @@ set(Sources
         init_test.cpp
         ChangeBaud_test.cpp
         SendBytes_test.cpp
+        ReadBytes_test.cpp
         )
 
 add_executable(${This} ${Sources})
