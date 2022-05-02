@@ -1,6 +1,3 @@
-//
-// Created by victor on 1-5-22.
-//
 #include <gtest/gtest.h>
 #include <UART/UART.hpp>
 
