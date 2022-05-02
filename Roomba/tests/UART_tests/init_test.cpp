@@ -2,8 +2,8 @@
 #include <UART/UART.hpp>
 
 /**
- * Tests if UART_init function checks its parameters
- * This test in particular tests if the UART_init function throws an exception when passing an empty devicepath
+ * Tests if UART constructor checks its parameters
+ * This test in particular tests if the UART constructor function throws an exception when passing an empty devicepath
  * in the Settings parameter
  */
 TEST(UART_init, EmptyDevicePath)
@@ -18,8 +18,8 @@ TEST(UART_init, EmptyDevicePath)
 }
 
 /**
- * Tests if UART_init function checks its parameters
- * This test in particular tests if the UART_init function throws an exception when passing an empty baudrate
+ * Tests if UART constructor checks its parameters
+ * This test in particular tests if the UART constructor function throws an exception when passing an empty baudrate
  * in the Settings parameter
  */
 TEST(UART_init, EmptyBaudrate)
@@ -33,8 +33,8 @@ TEST(UART_init, EmptyBaudrate)
 }
 
 /**
- * Tests if UART_init function checks its parameters
- * This test in particular tests if the UART_init function throws an exception when passing an invalid baudrate
+ * Tests if UART constructor checks its parameters
+ * This test in particular tests if the UART constructor function throws an exception when passing an invalid baudrate
  * in the Settings parameter
  */
 TEST(UART_init, InvalidBaudrate)
@@ -49,9 +49,9 @@ TEST(UART_init, InvalidBaudrate)
 }
 
 /**
- * Tests if UART_init function checks its parameters
- * This test in particular tests if the UART_init function throws no exception when passing
- * valid UART connection Settings
+ * Tests if UART constructor checks its parameters
+ * This test in particular tests if the UART constructor function throws no exception when passing
+ * valid UART connection settings
  */
 TEST(UART_init, ValidUartSettings)
 {
