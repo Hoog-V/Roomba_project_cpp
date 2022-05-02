@@ -3,7 +3,7 @@
 
 /**
  * Tests if UART constructor checks its parameters
- * This test in particular tests if the UART constructor function throws an exception when passing an empty devicepath
+ * This test in particular tests if the UART constructor function throws an exception when passing an empty device path
  * in the Settings parameter
  */
 TEST(UART_init, EmptyDevicePath)
@@ -19,7 +19,7 @@ TEST(UART_init, EmptyDevicePath)
 
 /**
  * Tests if UART constructor checks its parameters
- * This test in particular tests if the UART constructor function throws an exception when passing an empty baudrate
+ * This test in particular tests if the UART constructor function throws an exception when passing an empty baud rate
  * in the Settings parameter
  */
 TEST(UART_init, EmptyBaudrate)
@@ -34,7 +34,7 @@ TEST(UART_init, EmptyBaudrate)
 
 /**
  * Tests if UART constructor checks its parameters
- * This test in particular tests if the UART constructor function throws an exception when passing an invalid baudrate
+ * This test in particular tests if the UART constructor function throws an exception when passing an invalid baud rate
  * in the Settings parameter
  */
 TEST(UART_init, InvalidBaudrate)
