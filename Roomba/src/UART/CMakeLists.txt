@@ -11,6 +11,19 @@ add_library(UART_lib UART.cpp ${HEADER_LIST})
 # We need this directory, and users of our library will need it too
 target_include_directories(UART_lib PUBLIC ${PROJECT_SOURCE_DIR}/include)
 
+# Under linux/mac we need pthreads to be able to use boost
+# Let check and include!
+if (UNIX)
+  find_package( Threads )
+  if(Threads_FOUND)
+    target_link_libraries( UART_lib PRIVATE ${CMAKE_THREAD_LIBS_INIT} )
+  else()
+    message(STATUS "pthreads not found.. May introduce compilation errors!")
+  endif()
+endif (UNIX)
+
+
+# Library needs Boost if compiling under Posix platform (Windows, Linux, Mac)
 target_link_libraries(UART_lib PRIVATE boost_asio)
 # All users of this library will need at least C++11
 target_compile_features(UART_lib PUBLIC cxx_std_20)
