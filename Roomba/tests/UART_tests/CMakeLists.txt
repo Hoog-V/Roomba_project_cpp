@@ -14,6 +14,7 @@ target_link_libraries(${This} PUBLIC
         gtest_main
         UART_lib
         )
+target_link_libraries(${This} PRIVATE boost_asio)
 
 add_test(
         NAME ${This}
