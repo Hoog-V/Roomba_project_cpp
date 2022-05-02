@@ -32,10 +32,6 @@ TEST(UART_init, InvalidBaudrate)
     EXPECT_ANY_THROW({
         UART* u = new UART(TestSettings);
     });
-    TestSettings.baudrate = UART::baud_115200;
-    EXPECT_NO_THROW({
-        UART* u = new UART(TestSettings);
-    });
 }
 
 TEST(UART_init, ValidUartSettings)
