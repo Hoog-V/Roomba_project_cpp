@@ -5,15 +5,17 @@
 #include <gtest/gtest.h>
 #include <UART/UART.hpp>
 
-TEST(UART_init, EmptyDevicePath){
+TEST(UART_init, EmptyDevicePath)
+{
     UARTSettings TestSettings;
-    TestSettings.DevicePath = "COM1";
+    TestSettings.DevicePath = "/dev/ttyS0";
     EXPECT_ANY_THROW({
         UART* u = new UART(TestSettings);
     });
 }
 
-TEST(UART_init, EmptyBaudrate){
+TEST(UART_init, EmptyBaudrate)
+{
     UARTSettings TestSettings;
     TestSettings.DevicePath = "";
     TestSettings.baudrate = UART::baud_115200;
@@ -22,9 +24,10 @@ TEST(UART_init, EmptyBaudrate){
     });
 }
 
-TEST(UART_init, InvalidBaudrate){
+TEST(UART_init, InvalidBaudrate)
+{
     UARTSettings TestSettings;
-    TestSettings.DevicePath = "COM1";
+    TestSettings.DevicePath = "/dev/ttyS0";
     TestSettings.baudrate = std::rand() % 100; //Random number between 0 and 100
     EXPECT_ANY_THROW({
         UART* u = new UART(TestSettings);
@@ -35,9 +38,10 @@ TEST(UART_init, InvalidBaudrate){
     });
 }
 
-TEST(UART_init, ValidUartSettings){
+TEST(UART_init, ValidUartSettings)
+{
     UARTSettings TestSettings;
-    TestSettings.DevicePath = "COM1";
+    TestSettings.DevicePath = "/dev/ttyS0";
     TestSettings.baudrate = UART::baud_115200;
     EXPECT_NO_THROW({
         UART* u = new UART(TestSettings);
