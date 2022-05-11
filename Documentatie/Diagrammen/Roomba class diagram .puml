@@ -1,0 +1,117 @@
+@startuml Roomba
+
+class Roomba 
+class CleaningModes <<enumeration>>
+class LEDS <<enumeration>>
+class Motors <<enumeration>>
+class ControlModes <<enumeration>>
+class Sensors <<enumeration>>
+interface UART <<enumeration class>>
+interface Baudrates <<enumeration class>>
+
+Roomba <-left- CleaningModes
+Roomba <-up- LEDS
+Roomba <-up- Motors
+Roomba <-left- ControlModes
+Roomba <-down- Sensors
+Roomba <-up- UART
+Roomba <-left- Baudrates
+
+class Roomba {
+  - mUARTHandle : UART
+  - mSongNum : int
+  + Motors : enum
+  + CleaningModes : enum
+  + LEDS : enum
+  + Baudrates
+  + Sensors
+  + Notes : enum
+  --
+  + Roomba(mUARTHandle : UART) : void
+  + Rotate(angle : int) : void
+  + setMotor(motor : int, velocity : int) : void
+  + startCleaning(cleaningMode : cleaningModes) : void
+  + setDockMode() : void
+  + setControlMode(controlmode : controlModes) : void
+  + setLed( led : int, brightness : int) : void
+  + setBaudrate(baudrate : baudrates) : void
+  + getSensorData( sensor : int) : int
+  + setSongNum(songnum : int) : void
+  + turnOn() : void
+  + turnOff() : void
+  + ~Roomba() : void
+}
+
+class LEDS {
+DD
+MAX
+CLEAN
+SPOT
+STATUS
+}
+
+class Motors {
+Main_Brush
+Vacuum
+Side_Brush
+}
+
+interface Baudrates {
+300_bps
+600_bps
+1200_bps
+2400_bps
+4800_bps
+9600_bps
+14400_bps
+19200_bps
+28800_bps
+38400_bps
+57600_bps
+115200_bps
+}
+
+interface UART {
+- mUARTsettings : struct
+--
++ UART(mUARTsettings : struct)
++ changeBaud(baudrate : int)
++ sendBytes(byte : int, numOfbytes : int)
++ readBytes(buffer[] : int, numOfbytes : int)
++ ~UART()
+}
+
+class CleaningModes {
+Normal
+Full
+Spot
+}
+
+class ControlModes {
+Passive
+Safe
+Full
+}
+
+class Sensors {
+Bumps_wheeldrop
+Wall
+Cliff_Left
+Cliff_Right
+VirtualWall
+MotorOvercurrent
+DirtDetector_Left
+DirtDetector_Right
+RCM
+Buttons
+Distance
+Angle
+ChargingState
+Voltage
+Current
+Temperature
+Charge
+Capacity
+}
+
+@enduml
