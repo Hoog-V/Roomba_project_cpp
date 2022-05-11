@@ -6,16 +6,16 @@ class LEDS <<enumeration>>
 class Motors <<enumeration>>
 class ControlModes <<enumeration>>
 class Sensors <<enumeration>>
-interface UART <<enumeration class>>
+interface UART
 interface Baudrates <<enumeration class>>
 
-Roomba <-left- CleaningModes
+Roomba <-left- CleaningModes : 1
 Roomba <-up- LEDS
-Roomba <-up- Motors
-Roomba <-left- ControlModes
+Roomba <-up- Motors 
+Roomba <-left- ControlModes : 1
 Roomba <-down- Sensors
-Roomba <-up- UART
-Roomba <-left- Baudrates
+Roomba <-up- UART : 1
+Roomba <-left- Baudrates : 1
 
 class Roomba {
   - mUARTHandle : UART
