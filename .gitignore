@@ -36,3 +36,9 @@ build/
 out/
 .vs/
 .vscode/
+
+# CLion files
+.idea/
+
+# Eclipse files
+.eclipse/
