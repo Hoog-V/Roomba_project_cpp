@@ -4,7 +4,8 @@
 
 /**
  * Tests if UART_ChangeBaud function checks its parameters
- * This test in particular tests if the UART_ChangeBaud function throws an exception when passing an invalid baudrate
+ * This test in particular tests if the UART_ChangeBaud function throws an exception when passing an invalid baudrate.
+ * Which in this case is a pointer to uninitialized memory location :)
  */
 TEST(UART_ChangeBaud, InvalidBaudrate)
 {
@@ -14,7 +15,7 @@ TEST(UART_ChangeBaud, InvalidBaudrate)
 
     UART *UartHandle = new UART(TestSettings);
 
-    baudrates InvalidBaud;
+    baudrates InvalidBaud; //Create a pointer
    // const uint32_t InvalidBaud = std::rand() % 100; //Random number between 0 and 100;
     EXPECT_ANY_THROW({
         UartHandle->changeBaud(InvalidBaud);
