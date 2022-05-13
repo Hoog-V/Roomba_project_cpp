@@ -12,7 +12,7 @@ De meest gebruikte ide's zijn:
 - VSCode
 - CLion
 - Visual Studio
-Maar gebruik vooral wat jezelf fijn vindt :)
+Maar gebruik vooral wat jezelf fijn vindt >:)
 
 
 ## Bookmarks
@@ -43,7 +43,7 @@ Maar gebruik vooral wat jezelf fijn vindt :)
   Dan weet je zeker dat je niet vergeet de functie te testen.
 - Maak pull requests aan als je klaar bent met het schrijven van een feature of refactoren.
   Op deze manier kunnen mensen nog eventjes de code controleren voordat het in de main komt.
-  
+- Als je een git message maakt. begin dan met -enh -add -wip (of een andere die logisch is)  
 ## Testen
 
 ---
