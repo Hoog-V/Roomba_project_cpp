@@ -117,12 +117,12 @@ void Roomba::turnOn()
 	;
 }
 
-void Roomba::setBaudRate(baudrate BaudRate)
+void Roomba::setBaudRate(baudrates BaudRate)
 {
-	std::array <uint8_t, 2> commands{command::Baud, BaudRate};
+	std::array <uint8_t, 2> commands{command::Baud, baudmapping.at(BaudRate)};
 	mUARTHandle->sendBytes(commands, std::size(commands));
 	SLEEP(100);
-	mUARTHandle->changeBaud( baud_mapping.at(BaudRate) );
+	mUARTHandle->changeBaud(BaudRate);
 }
 
 void Roomba::setLed(uint8_t led, LedState state)

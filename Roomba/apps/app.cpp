@@ -10,7 +10,7 @@ int main(int argc, char **argv)
 {
 	UARTSettings p;
 	p.DevicePath = "COM3";
-	p.baudrate = UART::baud_115200;
+	p.baudrate = baudrates::baud_115200;
 	UART * p1 = new UART(p);
 	Roomba::Roomba* rmb = new Roomba::Roomba(p1);
 	//rmb->setDockMode();
