@@ -27,7 +27,7 @@ class UART {
 public:
     UART(const UARTSettings Settings);
 
-    void changeBaud(baudrates baudrate);
+    void changeBaud(const baudrates baudrate);
 
     void sendByte(const uint8_t byte);
 

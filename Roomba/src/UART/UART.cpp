@@ -40,7 +40,7 @@ UART::~UART() {
         std::cout << "Serial port succesfully closed!" << '\n';
 }
 
-void UART::changeBaud(baudrates baudrate) {
+void UART::changeBaud(const baudrates baudrate) {
     boost::system::error_code ec;
     uint32_t BaudrateVal = static_cast<uint32_t>(baudrate);
 
