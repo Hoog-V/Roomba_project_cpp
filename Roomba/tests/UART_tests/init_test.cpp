@@ -21,14 +21,15 @@ TEST(UART_init, EmptyDevicePath)
 /**
  * Tests if UART constructor checks its parameters
  * This test in particular tests if the UART constructor function throws an exception when passing an empty baud rate
- * in the Settings parameter
+ * in the Settings parameter. If all goes well the baudrate should default to 115200 baud
  */
 TEST(UART_init, EmptyBaudrate)
 {
     UARTSettings TestSettings;
     TestSettings.DevicePath = TestPath;
 
-    EXPECT_ANY_THROW({
+    EXPECT_NO_THROW({
+        std::cout << static_cast<uint32_t>(TestSettings.baudrate) << '\n';
         UART* UartHandle = new UART(TestSettings);
     });
 }

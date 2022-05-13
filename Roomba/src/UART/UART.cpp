@@ -3,16 +3,28 @@
 #include <filesystem>
 #include <iostream>
 #include <boost/asio.hpp>
+#include <type_traits>
 
 UART::UART(const UARTSettings Settings)
 {
+        const uint32_t BaudrateVal = static_cast<uint32_t>(Settings.baudrate); //Casts enum to uint32_t value
 
 		std::cout << "New instance of the UART object" << '\n';
-		std::cout << "Uartsettings Path: " << Settings.DevicePath << " Baudrate: " << static_cast<uint32_t>(Settings.baudrate) << '\n';
+		std::cout << "Uartsettings Path: " << Settings.DevicePath << " Baudrate: " << BaudrateVal << '\n';
 
-        uint32_t BaudrateVal = static_cast<uint32_t>(Settings.baudrate);
 
-        try{
+
+        bool InvalidBaudrate = (BaudrateVal < 300 || BaudrateVal > 115200);
+
+        if(InvalidBaudrate)
+            throw "Invalid Baudrate";
+
+        bool emptyDevicePath = (Settings.DevicePath == "");
+        if(emptyDevicePath)
+            throw "Empty DevicePath!";
+
+        try
+        {
 			mSerialPort = serial_port_ptr(new boost::asio::serial_port(mIOService));
 			mSerialPort->open(Settings.DevicePath);
 			mSerialPort->set_option(boost::asio::serial_port_base::baud_rate(BaudrateVal));
@@ -38,11 +50,18 @@ void UART::changeBaud(baudrates baudrate)
 {
 	boost::system::error_code ec;
     uint32_t BaudrateVal = static_cast<uint32_t>(baudrate);
-	mSerialPort->set_option(boost::asio::serial_port_base::baud_rate(BaudrateVal));
-	if(ec)
-		std::cerr << "Changing baudrate failed!" << '\n';
-	else
-		std::cout << "Succesfully changed baudrate!" << '\n';
+    bool InvalidBaudrate = (BaudrateVal < 300 || BaudrateVal > 115200);
+    if(InvalidBaudrate) {
+        std::cout << "Invalid baudrate!" << '\n';
+        throw "Invalid Baudrate";
+    }
+    else {
+        mSerialPort->set_option(boost::asio::serial_port_base::baud_rate(BaudrateVal));
+        if (ec)
+            std::cerr << "Changing baudrate failed!" << '\n';
+        else
+            std::cout << "Succesfully changed baudrate!" << '\n';
+    }
 }
 
 

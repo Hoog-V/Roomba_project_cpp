@@ -24,7 +24,7 @@ enum class baudrates : uint32_t
 
 struct UARTSettings
 {
-    baudrates baudrate;
+    baudrates baudrate = baudrates::baud_115200;
     std::string DevicePath;
 };
 
