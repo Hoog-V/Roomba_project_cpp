@@ -35,22 +35,6 @@ TEST(UART_init, EmptyBaudrate)
 
 /**
  * Tests if UART constructor checks its parameters
- * This test in particular tests if the UART constructor function throws an exception when passing an invalid baud rate
- * in the Settings parameter
- */
-TEST(UART_init, InvalidBaudrate)
-{
-    UARTSettings TestSettings;
-    TestSettings.DevicePath = TestPath;
-   // TestSettings.baudrate = std::rand() % 100; //Random number between 0 and 100
-
-    EXPECT_ANY_THROW({
-        //UART* UartHandle = new UART(TestSettings);
-    });
-}
-
-/**
- * Tests if UART constructor checks its parameters
  * This test in particular tests if the UART constructor function throws no exception when passing
  * valid UART connection settings
  */
