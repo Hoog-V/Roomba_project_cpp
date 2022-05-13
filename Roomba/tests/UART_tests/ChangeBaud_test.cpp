@@ -33,6 +33,6 @@ TEST(UART_ChangeBaud, ValidBaudrate)
     UART *UartHandle = new UART(TestSettings);
 
     EXPECT_NO_THROW({
-        UartHandle->changeBaud(UART::baud_9600);
+        UartHandle->changeBaud(UART::baudrates::baud_9600);
     });
 }

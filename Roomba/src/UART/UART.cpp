@@ -6,6 +6,7 @@
 
 UART::UART(const UARTSettings Settings)
 {
+
 		std::cout << "New instance of the UART object" << '\n';
 		std::cout << "Uartsettings Path: " << Settings.DevicePath << " Baudrate: " << Settings.baudrate << '\n';
 		try{
