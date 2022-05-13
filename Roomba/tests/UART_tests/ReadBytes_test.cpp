@@ -17,10 +17,10 @@ TEST(UART_ReadBytes, OutOfBoundsCheck)
     TestSettings.baudrate = TestBaud;
     TestSettings.DevicePath = TestPath;
 
-    UART* UartHandle = new UART(TestSettings);
+    UART *UartHandle = new UART(TestSettings);
 
-    std::array <uint8_t, 10>TinyBuffer;
-    const uint8_t OutOfBoundsVal = 2*TinyBuffer.size();
+    std::array<uint8_t, 10> TinyBuffer;
+    const uint8_t OutOfBoundsVal = 2 * TinyBuffer.size();
     EXPECT_ANY_THROW({
         UartHandle->readBytes(TinyBuffer, OutOfBoundsVal);
     });
@@ -38,9 +38,9 @@ TEST(UART_ReadBytes, numOfBytesZero)
     TestSettings.baudrate = TestBaud;
     TestSettings.DevicePath = TestPath;
 
-    UART* UartHandle = new UART(TestSettings);
+    UART *UartHandle = new UART(TestSettings);
 
-    std::array <uint8_t, 10>TinyBuffer;
+    std::array<uint8_t, 10> TinyBuffer;
     EXPECT_ANY_THROW({
         UartHandle->readBytes(TinyBuffer, 0);
     });
