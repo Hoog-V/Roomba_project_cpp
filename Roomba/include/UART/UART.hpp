@@ -7,13 +7,6 @@
 class UART
 {
 public:
-
-    struct UARTSettings
-    {
-        uint32_t baudrate;
-        std::string DevicePath;
-    };
-
     enum class baudrates : uint32_t
     {
         baud_300=300,
@@ -26,7 +19,14 @@ public:
         baud_57600=57600,
         baud_115200=115200
     };
-	UART(const UARTSettings Settings);
+
+    struct UARTSettings
+    {
+        baudrates baudrate;
+        std::string DevicePath;
+    };
+
+    UART(const UARTSettings Settings);
 	void changeBaud(baudrates baudrate);
 	void sendByte(const uint8_t byte);
 	template <typename arr, std::size_t size> void sendBytes(std::array<arr,size> &buffer, const uint8_t numOfbytes);
