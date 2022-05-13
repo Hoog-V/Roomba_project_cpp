@@ -4,28 +4,33 @@
 #include <boost/asio.hpp>
 #include <stdint.h>
 
+
+
+
+
+
+enum class baudrates : uint32_t
+{
+    baud_300=300,
+    baud_600=600,
+    baud_1200=1200,
+    baud_2400=2400,
+    baud_4800=4800,
+    baud_9600=9600,
+    baud_19200=19200,
+    baud_57600=57600,
+    baud_115200=115200
+};
+
+struct UARTSettings
+{
+    baudrates baudrate;
+    std::string DevicePath;
+};
+
 class UART
 {
 public:
-    enum class baudrates : uint32_t
-    {
-        baud_300=300,
-        baud_600=600,
-        baud_1200=1200,
-        baud_2400=2400,
-        baud_4800=4800,
-        baud_9600=9600,
-        baud_19200=19200,
-        baud_57600=57600,
-        baud_115200=115200
-    };
-
-    struct UARTSettings
-    {
-        baudrates baudrate;
-        std::string DevicePath;
-    };
-
     UART(const UARTSettings Settings);
 	void changeBaud(baudrates baudrate);
 	void sendByte(const uint8_t byte);
@@ -37,6 +42,8 @@ private:
 	serial_port_ptr mSerialPort;
 	boost::asio::io_service mIOService;
 };
+
+
 
 #include <UART/UART-tmp-func.inl>
 

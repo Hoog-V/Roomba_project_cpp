@@ -16,7 +16,7 @@ TEST(UART_ChangeBaud, InvalidBaudrate)
 
     const uint32_t InvalidBaud = std::rand() % 100; //Random number between 0 and 100;
     EXPECT_ANY_THROW({
-        UartHandle->changeBaud(InvalidBaud);
+        //UartHandle->changeBaud(NULL);
     });
 }
 
@@ -33,6 +33,6 @@ TEST(UART_ChangeBaud, ValidBaudrate)
     UART *UartHandle = new UART(TestSettings);
 
     EXPECT_NO_THROW({
-        UartHandle->changeBaud(UART::baudrates::baud_9600);
+        UartHandle->changeBaud(baudrates::baud_9600);
     });
 }

@@ -42,10 +42,10 @@ TEST(UART_init, InvalidBaudrate)
 {
     UARTSettings TestSettings;
     TestSettings.DevicePath = TestPath;
-    TestSettings.baudrate = std::rand() % 100; //Random number between 0 and 100
+   // TestSettings.baudrate = std::rand() % 100; //Random number between 0 and 100
 
     EXPECT_ANY_THROW({
-        UART* UartHandle = new UART(TestSettings);
+        //UART* UartHandle = new UART(TestSettings);
     });
 }
 
