@@ -39,3 +39,4 @@ endif()
 
 add_subdirectory(googletest)
 add_subdirectory(test)
+add_subdirectory(UART_tests)
