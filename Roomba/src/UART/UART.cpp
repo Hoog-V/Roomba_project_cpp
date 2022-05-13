@@ -15,7 +15,6 @@ UART::UART(const UARTSettings Settings)
 
 
         bool InvalidBaudrate = (BaudrateVal < 300 || BaudrateVal > 115200);
-
         if(InvalidBaudrate)
             throw "Invalid Baudrate";
 
@@ -50,11 +49,11 @@ void UART::changeBaud(baudrates baudrate)
 {
 	boost::system::error_code ec;
     uint32_t BaudrateVal = static_cast<uint32_t>(baudrate);
+
     bool InvalidBaudrate = (BaudrateVal < 300 || BaudrateVal > 115200);
-    if(InvalidBaudrate) {
-        std::cout << "Invalid baudrate!" << '\n';
+    if(InvalidBaudrate)
         throw "Invalid Baudrate";
-    }
+
     else {
         mSerialPort->set_option(boost::asio::serial_port_base::baud_rate(BaudrateVal));
         if (ec)
