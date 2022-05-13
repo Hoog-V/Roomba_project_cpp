@@ -1,5 +1,6 @@
 #include <gtest/gtest.h>
 #include <UART/UART.hpp>
+#include "UARTDefines.hpp"
 
 
 /**
@@ -13,8 +14,8 @@
 TEST(UART_ReadBytes, OutOfBoundsCheck)
 {
     UARTSettings TestSettings;
-    TestSettings.baudrate = UART::baud_115200;
-    TestSettings.DevicePath = "/dev/ttyS0";
+    TestSettings.baudrate = TestBaud;
+    TestSettings.DevicePath = TestPath;
 
     UART* UartHandle = new UART(TestSettings);
 
@@ -34,8 +35,8 @@ TEST(UART_ReadBytes, OutOfBoundsCheck)
 TEST(UART_ReadBytes, numOfBytesZero)
 {
     UARTSettings TestSettings;
-    TestSettings.baudrate = UART::baud_115200;
-    TestSettings.DevicePath = "/dev/ttyS0";
+    TestSettings.baudrate = TestBaud;
+    TestSettings.DevicePath = TestPath;
 
     UART* UartHandle = new UART(TestSettings);
 

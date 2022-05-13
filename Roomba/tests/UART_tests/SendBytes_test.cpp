@@ -1,5 +1,6 @@
 #include <gtest/gtest.h>
 #include <UART/UART.hpp>
+#include <UARTDefines.hpp>
 #include <array>
 
 
@@ -14,15 +15,18 @@
 TEST(UART_SendBytes, OutOfBoundsCheck)
 {
     UARTSettings TestSettings;
-    TestSettings.baudrate = UART::baud_115200;
-    TestSettings.DevicePath = "/dev/ttyS0";
+    TestSettings.baudrate = TestBaud;
+    TestSettings.DevicePath = TestPath;
 
     UART* UartHandle = new UART(TestSettings);
 
     std::array <uint8_t, 10>TestCommands;
     TestCommands.fill(0);
+
+    const uint8_t OutOfBoundsVal = 2*TestCommands.size();
+
     EXPECT_ANY_THROW({
-       UartHandle->sendBytes(TestCommands, 20);
+       UartHandle->sendBytes(TestCommands, OutOfBoundsVal);
     });
 }
 
@@ -35,8 +39,8 @@ TEST(UART_SendBytes, OutOfBoundsCheck)
 TEST(UART_SendBytes, numOfBytesZero)
 {
     UARTSettings TestSettings;
-    TestSettings.baudrate = UART::baud_115200;
-    TestSettings.DevicePath = "/dev/ttyS0";
+    TestSettings.baudrate = TestBaud;
+    TestSettings.DevicePath = TestPath;
 
     UART* UartHandle = new UART(TestSettings);
 

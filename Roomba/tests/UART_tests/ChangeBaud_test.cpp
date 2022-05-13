@@ -1,5 +1,6 @@
 #include <gtest/gtest.h>
 #include <UART/UART.hpp>
+#include "UARTDefines.hpp"
 
 /**
  * Tests if UART_ChangeBaud function checks its parameters
@@ -8,12 +9,12 @@
 TEST(UART_ChangeBaud, InvalidBaudrate)
 {
     UARTSettings TestSettings;
-    TestSettings.DevicePath = "/dev/ttyS0";
-    TestSettings.baudrate = UART::baud_115200;
+    TestSettings.DevicePath = TestPath;
+    TestSettings.baudrate = TestBaud;
 
     UART *UartHandle = new UART(TestSettings);
 
-    const uint32_t InvalidBaud = 100;
+    const uint32_t InvalidBaud = std::rand() % 100; //Random number between 0 and 100;
     EXPECT_ANY_THROW({
         UartHandle->changeBaud(InvalidBaud);
     });
@@ -26,8 +27,8 @@ TEST(UART_ChangeBaud, InvalidBaudrate)
 TEST(UART_ChangeBaud, ValidBaudrate)
 {
     UARTSettings TestSettings;
-    TestSettings.DevicePath = "/dev/ttyS0";
-    TestSettings.baudrate = UART::baud_115200;
+    TestSettings.DevicePath = TestPath;
+    TestSettings.baudrate = TestBaud;
 
     UART *UartHandle = new UART(TestSettings);
 
