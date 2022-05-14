@@ -3,10 +3,10 @@
 
 void IO::SetBRCPinHIGH()
 {
-    mUARTHandle->setRTSHigh();
+    mUARTHandle->setDTRHigh();
 }
 
 void IO::SetBRCPinLOW()
 {
-    mUARTHandle->setRTSLow();
+    mUARTHandle->setDTRLow();
 }
