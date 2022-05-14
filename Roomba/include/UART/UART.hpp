@@ -37,6 +37,10 @@ public:
     template<typename arr, std::size_t size>
     void readBytes(std::array<arr, size> &buffer, const uint8_t numOfbytes);
 
+    void setDTRPinHigh();
+
+    void setDTRPinLow();
+
     ~UART();
 
 private:
@@ -44,7 +48,6 @@ private:
     serial_port_ptr mSerialPort;
     boost::asio::io_service mIOService;
 };
-
 
 #include <UART/UART-tmp-func.inl>
 

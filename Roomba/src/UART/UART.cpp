@@ -62,3 +62,16 @@ void UART::sendByte(const uint8_t byte) {
     boost::system::error_code ec;
     mSerialPort->write_some(boost::asio::buffer(&buff, sizeof(buff)), ec);
 }
+
+
+void UART::setDTRPinHigh() {
+    const int NativeHandle = mSerialPort->native_handle();
+    const int Pin = TIOCM_DTR;
+    ioctl(NativeHandle, TIOCMBIS, &Pin);
+}
+
+void UART::setDTRPinLow() {
+    const int NativeHandle = mSerialPort->native_handle();
+    const int Pin = TIOCM_DTR;
+    ioctl(NativeHandle, TIOCMBIC, &Pin);
+}
