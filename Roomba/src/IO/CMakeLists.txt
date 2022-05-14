@@ -5,9 +5,19 @@
 #file(GLOB HEADER_LIST CONFIGURE_DEPENDS "${PROJECT_SOURCE_DIR}}/include/UART/*.hpp")
 set(HEADER_LIST "${PROJECT_SOURCE_DIR}/include/IO/IO.hpp")
 
-# Make an automatic library - will be static or dynamic based on user setting
-add_library(IO_lib IO.cpp ${HEADER_LIST})
+include(CheckIncludeFile)
+CHECK_INCLUDE_FILE(/opt/vc/include/bcm_host.h RPI)
 
+if(RPI)
+  message("-- RPI detected!")
+  set(SOURCE_LIST "${PROJECT_SOURCE_DIR}/src/IO/RPI/IO.cpp")
+else()
+  message("-- Normal PC detected")
+  set(SOURCE_LIST "${PROJECT_SOURCE_DIR}/src/IO/PC/IO.cpp")
+endif()
+
+# Make an automatic library - will be static or dynamic based on user setting
+add_library(IO_lib ${SOURCE_LIST} ${HEADER_LIST})
 # We need this directory, and users of our library will need it too
 target_include_directories(IO_lib PUBLIC ${PROJECT_SOURCE_DIR}/include)
 
