@@ -8,10 +8,10 @@
 
 int main(int argc, char **argv)
 {
-	UARTSettings p;
+	UART::UARTSettings p;
 	p.DevicePath = "COM3";
-	p.baudrate = baudrates::baud_115200;
-	UART * p1 = new UART(p);
+	p.Baudrate = UART::Baudrates::baud_115200;
+	UART::UART * p1 = new UART::UART(p);
 	Roomba::Roomba* rmb = new Roomba::Roomba(p1);
 	//rmb->setDockMode();
 	rmb->setLed(Roomba::leds::LED_Dock, Roomba::LedState::On);

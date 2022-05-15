@@ -13,11 +13,11 @@
  * in the NumOfBytes parameter of the SendBytes function.
  */
 TEST(UART_SendBytes, OutOfBoundsCheck) {
-    UARTSettings TestSettings;
-    TestSettings.baudrate = TestBaud;
+    UART::UARTSettings TestSettings;
+    TestSettings.Baudrate = TestBaud;
     TestSettings.DevicePath = TestPath;
 
-    UART *UartHandle = new UART(TestSettings);
+    UART::UART *UartHandle = new UART::UART(TestSettings);
 
     std::array<uint8_t, 10> TestCommands;
     TestCommands.fill(0);
@@ -36,11 +36,11 @@ TEST(UART_SendBytes, OutOfBoundsCheck) {
  * the NumOfBytes parameter.
  */
 TEST(UART_SendBytes, numOfBytesZero) {
-    UARTSettings TestSettings;
-    TestSettings.baudrate = TestBaud;
+    UART::UARTSettings TestSettings;
+    TestSettings.Baudrate = TestBaud;
     TestSettings.DevicePath = TestPath;
 
-    UART *UartHandle = new UART(TestSettings);
+    UART::UART *UartHandle = new UART::UART(TestSettings);
 
     std::array<uint8_t, 10> TestCommands;
     TestCommands.fill(0);

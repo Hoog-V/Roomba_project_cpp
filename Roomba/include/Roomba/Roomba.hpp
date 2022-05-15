@@ -40,7 +40,7 @@ namespace Roomba {
 
     class Roomba {
     public:
-        Roomba(UART *UARTHandle) {
+        Roomba(UART::UART *UARTHandle) {
             mUARTHandle = UARTHandle;
             mCurrControlMode = control::No_init;
         }
@@ -59,7 +59,7 @@ namespace Roomba {
 
         void setPowerLed(uint8_t color, uint8_t intensity);
 
-        void setBaudRate(baudrates BaudRate);
+        void setBaudRate(UART::Baudrates BaudRate);
 
         void getSensorData(uint16_t sensor);
 
@@ -82,18 +82,18 @@ namespace Roomba {
 
         bool mGetCurrLedState();
 
-        UART *mUARTHandle;
+        UART::UART *mUARTHandle;
         control mCurrControlMode;
-        const std::map<baudrates, uint8_t> baudmapping{
-                {baudrates::baud_300,    0},
-                {baudrates::baud_600,    1},
-                {baudrates::baud_1200,   2},
-                {baudrates::baud_2400,   3},
-                {baudrates::baud_4800,   4},
-                {baudrates::baud_9600,   5},
-                {baudrates::baud_19200,  7},
-                {baudrates::baud_57600,  10},
-                {baudrates::baud_115200, 11}
+        const std::map<UART::Baudrates, uint8_t> baudmapping{
+                {UART::Baudrates::baud_300,    0},
+                {UART::Baudrates::baud_600,    1},
+                {UART::Baudrates::baud_1200,   2},
+                {UART::Baudrates::baud_2400,   3},
+                {UART::Baudrates::baud_4800,   4},
+                {UART::Baudrates::baud_9600,   5},
+                {UART::Baudrates::baud_19200,  7},
+                {UART::Baudrates::baud_57600,  10},
+                {UART::Baudrates::baud_115200, 11}
         };
     };
 

@@ -8,12 +8,12 @@
  * in the Settings parameter
  */
 TEST(UART_init, EmptyDevicePath) {
-    UARTSettings TestSettings;
+    UART::UARTSettings TestSettings;
     TestSettings.DevicePath = "";
-    TestSettings.baudrate = TestBaud;
+    TestSettings.Baudrate = TestBaud;
 
     EXPECT_ANY_THROW({
-        UART *UartHandle = new UART(TestSettings);
+       UART::UART *UartHandle = new UART::UART(TestSettings);
     });
 }
 
@@ -23,12 +23,12 @@ TEST(UART_init, EmptyDevicePath) {
  * in the Settings parameter. If all goes well the baudrate should default to 115200 baud
  */
 TEST(UART_init, EmptyBaudrate) {
-    UARTSettings TestSettings;
+    UART::UARTSettings TestSettings;
     TestSettings.DevicePath = TestPath;
 
     EXPECT_NO_THROW({
-        std::cout << static_cast<uint32_t>(TestSettings.baudrate) << '\n';
-        UART *UartHandle = new UART(TestSettings);
+        std::cout << static_cast<uint32_t>(TestSettings.Baudrate) << '\n';
+        UART::UART *UartHandle = new UART::UART(TestSettings);
     });
 }
 
@@ -38,11 +38,11 @@ TEST(UART_init, EmptyBaudrate) {
  * valid UART connection settings
  */
 TEST(UART_init, ValidUartSettings) {
-    UARTSettings TestSettings;
+    UART::UARTSettings TestSettings;
     TestSettings.DevicePath = TestPath;
-    TestSettings.baudrate = TestBaud;
+    TestSettings.Baudrate = TestBaud;
 
     EXPECT_NO_THROW({
-        UART *UartHandle = new UART(TestSettings);
+        UART::UART *UartHandle = new UART::UART(TestSettings);
     });
 }

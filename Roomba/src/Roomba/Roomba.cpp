@@ -117,7 +117,7 @@ void Roomba::turnOn()
 	;
 }
 
-void Roomba::setBaudRate(baudrates BaudRate)
+void Roomba::setBaudRate(UART::Baudrates BaudRate)
 {
 	std::array <uint8_t, 2> commands{command::Baud, baudmapping.at(BaudRate)};
 	mUARTHandle->sendBytes(commands, std::size(commands));
