@@ -119,7 +119,12 @@ void Roomba::turnOn()
 
 void Roomba::setBaudRate(UART::Baudrates BaudRate)
 {
-	std::array <uint8_t, 2> commands{command::Baud, baudmapping.at(BaudRate)};
+    const uint8_t BaudCMD = static_cast<uint8_t>(BaudRate)-1; // -1 because commands are shifted by one to allow invalid
+                                                              // baudrate checking.
+    if(BaudCMD == 0 || BaudCMD > 12)
+        throw std::invalid_argument("Invalid BaudRate or pointer passed in to parameter BaudRate");
+
+	std::array <uint8_t, 2> commands{command::Baud, BaudCMD};
 	mUARTHandle->sendBytes(commands, std::size(commands));
 	SLEEP(100);
 	mUARTHandle->changeBaud(BaudRate);
@@ -145,5 +150,7 @@ bool Roomba::mGetCurrLedState()
 {
 return true;
 }
+
+
 
 }

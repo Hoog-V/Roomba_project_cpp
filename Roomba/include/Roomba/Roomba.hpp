@@ -84,17 +84,6 @@ namespace Roomba {
 
         UART::UART *mUARTHandle;
         control mCurrControlMode;
-        const std::map<UART::Baudrates, uint8_t> baudmapping{
-                {UART::Baudrates::baud_300,    0},
-                {UART::Baudrates::baud_600,    1},
-                {UART::Baudrates::baud_1200,   2},
-                {UART::Baudrates::baud_2400,   3},
-                {UART::Baudrates::baud_4800,   4},
-                {UART::Baudrates::baud_9600,   5},
-                {UART::Baudrates::baud_19200,  7},
-                {UART::Baudrates::baud_57600,  10},
-                {UART::Baudrates::baud_115200, 11}
-        };
     };
 
 }

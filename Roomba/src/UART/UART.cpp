@@ -7,8 +7,7 @@ namespace UART {
 
 
     UART::UART(const UARTSettings Settings) {
-        const uint32_t BaudrateVal = ImplicitBaud.at(Settings.Baudrate);
-
+        const uint32_t BaudrateVal = mBaudEnumToImplicitValue(Settings.Baudrate);
         bool emptyDevicePath = (Settings.DevicePath == "");
         if (emptyDevicePath)
             throw "Empty DevicePath!";
@@ -34,7 +33,7 @@ namespace UART {
 
     void UART::changeBaud(const Baudrates Baudrate) {
         boost::system::error_code ec;
-        const uint32_t BaudrateVal = ImplicitBaud.at(Baudrate);
+        const uint32_t BaudrateVal = mBaudEnumToImplicitValue(Baudrate);
         mSerialPort->set_option(boost::asio::serial_port_base::baud_rate(BaudrateVal));
         if (ec)
             std::cerr << "Changing baudrate failed!" << '\n';
@@ -60,6 +59,20 @@ namespace UART {
         const int NativeHandle = mSerialPort->native_handle();
         const int Pin = TIOCM_DTR;
         ioctl(NativeHandle, TIOCMBIC, &Pin);
+    }
+
+    /**
+    * Converts Baudrates enum to an implicit uint32_t value.
+    * If invalid Baudrate or pointer is passed in to arguments it will throw an exception
+    */
+    uint32_t UART::mBaudEnumToImplicitValue(Baudrates BaudRate) {
+        int Index = static_cast<uint32_t>(BaudRate);
+        std::cout << Index << '\n';
+        if (Index == 0)
+            throw std::invalid_argument("Baudrate is invalid or an empty pointer!");
+
+        uint32_t baud = mBaudImplicit.at(Index);
+        return baud;
     }
 
 }

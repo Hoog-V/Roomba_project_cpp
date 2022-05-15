@@ -8,16 +8,20 @@
 
 namespace UART {
 
-    enum class Baudrates : uint32_t {
-        baud_300 = 300,
-        baud_600 = 600,
-        baud_1200 = 1200,
-        baud_2400 = 2400,
-        baud_4800 = 4800,
-        baud_9600 = 9600,
-        baud_19200 = 19200,
-        baud_57600 = 57600,
-        baud_115200 = 115200
+    enum class Baudrates : int8_t {
+        baud_invalid = 0,
+        baud_300,
+        baud_600,
+        baud_1200,
+        baud_2400,
+        baud_4800,
+        baud_9600,
+        baud_14400,
+        baud_19200,
+        baud_28800,
+        baud_38400,
+        baud_57600,
+        baud_115200
     };
 
     struct UARTSettings {
@@ -47,20 +51,13 @@ namespace UART {
         ~UART();
 
     private:
+        const std::array <uint32_t, 13> mBaudImplicit = {0, 300, 600, 1200, 2400, 4800, 9600, 14400, 19200, 28800, 38400,
+                                                         57600, 115200};
         typedef boost::shared_ptr<boost::asio::serial_port> serial_port_ptr;
         serial_port_ptr mSerialPort;
         boost::asio::io_service mIOService;
-        const std::map<Baudrates, uint32_t> ImplicitBaud{
-                {Baudrates::baud_300,    300},
-                {Baudrates::baud_600,    600},
-                {Baudrates::baud_1200,   1200},
-                {Baudrates::baud_2400,   2400},
-                {Baudrates::baud_4800,   4800},
-                {Baudrates::baud_9600,   9600},
-                {Baudrates::baud_19200,  19200},
-                {Baudrates::baud_57600,  57600},
-                {Baudrates::baud_115200, 115200}
-        };
+
+        uint32_t mBaudEnumToImplicitValue(Baudrates BaudRate);
     };
 
 #include <UART/UART-tmp-func.inl>
