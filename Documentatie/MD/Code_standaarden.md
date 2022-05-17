@@ -16,9 +16,8 @@
  
   **Gebruik altijd haakjes als er meer dan 1 lijn code in de if statement staat. Anders snapt de compiler het niet!**
 
-- Haakjes op volgende regel bij definitie functie of loop:
-   void TestFun()
-   {
+- Haakjes op dezelfde regel bij definitie functie of loop:
+   void TestFun(){
 
    }
    
