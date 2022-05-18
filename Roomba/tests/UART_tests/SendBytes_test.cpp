@@ -12,21 +12,20 @@
  * This is done by entering a bigger size (than the array which stores the bytes to send)
  * in the NumOfBytes parameter of the SendBytes function.
  */
-TEST(UART_SendBytes, OutOfBoundsCheck)
-{
-    UARTSettings TestSettings;
-    TestSettings.baudrate = TestBaud;
+TEST(UART_SendBytes, OutOfBoundsCheck) {
+    UART::UARTSettings TestSettings;
+    TestSettings.Baudrate = TestBaud;
     TestSettings.DevicePath = TestPath;
 
-    UART* UartHandle = new UART(TestSettings);
+    UART::UART *UartHandle = new UART::UART(TestSettings);
 
-    std::array <uint8_t, 10>TestCommands;
+    std::array<uint8_t, 10> TestCommands;
     TestCommands.fill(0);
 
-    const uint8_t OutOfBoundsVal = 2*TestCommands.size();
+    const uint8_t OutOfBoundsVal = 2 * TestCommands.size();
 
     EXPECT_ANY_THROW({
-       UartHandle->sendBytes(TestCommands, OutOfBoundsVal);
+        UartHandle->sendBytes(TestCommands, OutOfBoundsVal);
     });
 }
 
@@ -36,15 +35,14 @@ TEST(UART_SendBytes, OutOfBoundsCheck)
  * This test in particular tests if the UART_SendBytes function throws an exception when passing a zero in to
  * the NumOfBytes parameter.
  */
-TEST(UART_SendBytes, numOfBytesZero)
-{
-    UARTSettings TestSettings;
-    TestSettings.baudrate = TestBaud;
+TEST(UART_SendBytes, numOfBytesZero) {
+    UART::UARTSettings TestSettings;
+    TestSettings.Baudrate = TestBaud;
     TestSettings.DevicePath = TestPath;
 
-    UART* UartHandle = new UART(TestSettings);
+    UART::UART *UartHandle = new UART::UART(TestSettings);
 
-    std::array <uint8_t, 10>TestCommands;
+    std::array<uint8_t, 10> TestCommands;
     TestCommands.fill(0);
     EXPECT_ANY_THROW({
         UartHandle->sendBytes(TestCommands, 0);

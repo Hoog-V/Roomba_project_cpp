@@ -3,8 +3,8 @@
 
 #include <UART/UART.hpp>
 
-const char TestPath[] = "/dev/ttyS0"; //standard path for linux
-const uint32_t TestBaud = UART::baud_115200;
+const char TestPath[] = "/dev/pts/2"; //standard path for linux (virtual file descriptor)
+const UART::Baudrates TestBaud = UART::Baudrates::baud_115200;
 
 #endif
 

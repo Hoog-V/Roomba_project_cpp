@@ -7,45 +7,28 @@
  * This test in particular tests if the UART constructor function throws an exception when passing an empty device path
  * in the Settings parameter
  */
-TEST(UART_init, EmptyDevicePath)
-{
-    UARTSettings TestSettings;
+TEST(UART_init, EmptyDevicePath) {
+    UART::UARTSettings TestSettings;
     TestSettings.DevicePath = "";
-    TestSettings.baudrate = TestBaud;
+    TestSettings.Baudrate = TestBaud;
 
     EXPECT_ANY_THROW({
-        UART* UartHandle = new UART(TestSettings);
+       UART::UART *UartHandle = new UART::UART(TestSettings);
     });
 }
 
 /**
  * Tests if UART constructor checks its parameters
  * This test in particular tests if the UART constructor function throws an exception when passing an empty baud rate
- * in the Settings parameter
+ * in the Settings parameter. If all goes well the baudrate should default to 115200 baud
  */
-TEST(UART_init, EmptyBaudrate)
-{
-    UARTSettings TestSettings;
+TEST(UART_init, EmptyBaudrate) {
+    UART::UARTSettings TestSettings;
     TestSettings.DevicePath = TestPath;
 
-    EXPECT_ANY_THROW({
-        UART* UartHandle = new UART(TestSettings);
-    });
-}
-
-/**
- * Tests if UART constructor checks its parameters
- * This test in particular tests if the UART constructor function throws an exception when passing an invalid baud rate
- * in the Settings parameter
- */
-TEST(UART_init, InvalidBaudrate)
-{
-    UARTSettings TestSettings;
-    TestSettings.DevicePath = TestPath;
-    TestSettings.baudrate = std::rand() % 100; //Random number between 0 and 100
-
-    EXPECT_ANY_THROW({
-        UART* UartHandle = new UART(TestSettings);
+    EXPECT_NO_THROW({
+        std::cout << static_cast<uint32_t>(TestSettings.Baudrate) << '\n';
+        UART::UART *UartHandle = new UART::UART(TestSettings);
     });
 }
 
@@ -54,13 +37,12 @@ TEST(UART_init, InvalidBaudrate)
  * This test in particular tests if the UART constructor function throws no exception when passing
  * valid UART connection settings
  */
-TEST(UART_init, ValidUartSettings)
-{
-    UARTSettings TestSettings;
+TEST(UART_init, ValidUartSettings) {
+    UART::UARTSettings TestSettings;
     TestSettings.DevicePath = TestPath;
-    TestSettings.baudrate = TestBaud;
+    TestSettings.Baudrate = TestBaud;
 
     EXPECT_NO_THROW({
-        UART* UartHandle = new UART(TestSettings);
+        UART::UART *UartHandle = new UART::UART(TestSettings);
     });
 }
