@@ -1,6 +1,5 @@
 var NAVTREEINDEX1 =
 {
-"namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada8094ebdcc64f14f9d775a231b821b302":[6,0,0,3,16],
 "namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada934d89a760eb8f77a89058d6c314e579":[6,0,0,3,8],
 "namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada96fa1234f5806fa9d4690c948c031c80":[6,0,0,3,11],
 "namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada9793b6fc7387a2c49a6f7fa9046c5aed":[6,0,0,3,17],
