@@ -1,0 +1,116 @@
+\hypertarget{_roomba_8hpp}{}\doxysection{Roomba/include/\+Roomba/\+Roomba.hpp File Reference}
+\label{_roomba_8hpp}\index{Roomba/include/Roomba/Roomba.hpp@{Roomba/include/Roomba/Roomba.hpp}}
+{\ttfamily \#include $<$UART/\+UART.\+hpp$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_roomba_1_1_roomba}{Roomba\+::\+Roomba}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_roomba}{Roomba}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{namespace_roomba_acb7a202beeb36883e7ceddba1effd492}{Roomba\+::cleaning}} \{ \mbox{\hyperlink{namespace_roomba_acb7a202beeb36883e7ceddba1effd492a6c9d6b8aea6f3d16847bdebe05878a2d}{Roomba\+::\+Spot}}
+, \mbox{\hyperlink{namespace_roomba_acb7a202beeb36883e7ceddba1effd492a37d12e2cfbef6e6105297374d02f3998}{Roomba\+::\+Clean}}
+, \mbox{\hyperlink{namespace_roomba_acb7a202beeb36883e7ceddba1effd492a6a061313d22e51e0f25b7cd4dc065233}{Roomba\+::\+Max}}
+ \}
+\item 
+enum class \mbox{\hyperlink{namespace_roomba_a5209de87fc9bed4bd208eae71aab67c3}{Roomba\+::control}} \{ \mbox{\hyperlink{namespace_roomba_a5209de87fc9bed4bd208eae71aab67c3ae08ddc53e5ae70c38395a66a719bafa6}{Roomba\+::\+No\+\_\+init}}
+, \mbox{\hyperlink{namespace_roomba_a5209de87fc9bed4bd208eae71aab67c3af80bc338b6146b566004a046f8137c85}{Roomba\+::\+Passive}}
+, \mbox{\hyperlink{namespace_roomba_a5209de87fc9bed4bd208eae71aab67c3ac6eea0560cd6f377e78dff2c85cc9122}{Roomba\+::\+Safe}}
+, \mbox{\hyperlink{namespace_roomba_a5209de87fc9bed4bd208eae71aab67c3abbd47109890259c0127154db1af26c75}{Roomba\+::\+Full}}
+ \}
+\item 
+enum \mbox{\hyperlink{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157}{Roomba\+::baudrate}} \+: uint8\+\_\+t \{ \newline
+\mbox{\hyperlink{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157aee551a12cd964d67b93e9345cf79abe6}{Roomba\+::b300}}
+, \mbox{\hyperlink{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157a479449bd2c455431080788b89294f9af}{Roomba\+::b600}}
+, \mbox{\hyperlink{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157ae4ba49feec8c13d79a60b2df8d0b1cf6}{Roomba\+::b1200}}
+, \mbox{\hyperlink{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157a04ab3719856f0f0ea5d3516220b870d6}{Roomba\+::b2400}}
+, \newline
+\mbox{\hyperlink{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157afa99a2eebad056c76de23f690697943b}{Roomba\+::b4800}}
+, \mbox{\hyperlink{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157a2bf6faab7956c6b0198b91722509204d}{Roomba\+::b9600}}
+, \mbox{\hyperlink{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157a2b018867524d1978cfb43981b9a8834c}{Roomba\+::b14400}}
+, \mbox{\hyperlink{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157aa2c46e0e80e6a04b63ed99d4c471e700}{Roomba\+::b19200}}
+, \newline
+\mbox{\hyperlink{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157a82b927969e7bdfafa648c810105bb85e}{Roomba\+::b28800}}
+, \mbox{\hyperlink{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157a53360a497b56642f2554b65a126d2b3f}{Roomba\+::b38400}}
+, \mbox{\hyperlink{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157aff5c130feb1934ee3cbac43744bd6fb2}{Roomba\+::b57600}}
+, \mbox{\hyperlink{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157aa42793fc546dc13947241c9f48d8b1f1}{Roomba\+::b115200}}
+ \}
+\item 
+enum class \mbox{\hyperlink{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9}{Roomba\+::sensors}} \+: uint8\+\_\+t \{ \newline
+\mbox{\hyperlink{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a0f3470bb1e5e50ad508ed02686fb7e48}{Roomba\+::\+Bumps\+\_\+wheeldrop}}
+, \mbox{\hyperlink{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a94e8a499539d1a472f3b5dbbb85508c0}{Roomba\+::\+Wall}}
+, \mbox{\hyperlink{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9aacdbf79991f3f5bbbf3923ddfecfb309}{Roomba\+::\+Cliff\+\_\+\+Left}}
+, \mbox{\hyperlink{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a03f9c3d9ad51d5fdf173cb04581029e5}{Roomba\+::\+Cliff\+\_\+\+Right}}
+, \newline
+\mbox{\hyperlink{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a3f5f6f25724f44e1486a8b4f5ba59496}{Roomba\+::\+Virtual\+Wall}}
+, \mbox{\hyperlink{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a3849583e7458522e9c10d9c1e29b76b4}{Roomba\+::\+Motor\+Overcurrent}}
+, \mbox{\hyperlink{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a5287845298b1ac299c1a81579916ae20}{Roomba\+::\+Dirt\+Detector\+\_\+\+Left}}
+, \mbox{\hyperlink{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9aa17b98b1d9e833f8d77be36c70d656bc}{Roomba\+::\+Dirt\+Detector\+\_\+\+Right}}
+, \newline
+\mbox{\hyperlink{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a606364c763bc356ff095571271fd2df8}{Roomba\+::\+RCM}}
+, \mbox{\hyperlink{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a5b3ec15499a125805b5bbf8e4afcec8c}{Roomba\+::\+Buttons}}
+, \mbox{\hyperlink{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a0aa6f4210bf373c95eda00232e93cd98}{Roomba\+::\+Distance}}
+, \mbox{\hyperlink{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a45f4ce6c3306644b1efe333f4f8d6929}{Roomba\+::\+Angle}}
+, \newline
+\mbox{\hyperlink{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a94b7604ba5089281c904b68779c4a238}{Roomba\+::\+Charging\+State}}
+, \mbox{\hyperlink{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a4a92fbe41f6463598c39850b8335096c}{Roomba\+::\+Voltage}}
+, \mbox{\hyperlink{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a222a267cc5778206b253be35ee3ddab5}{Roomba\+::\+Current}}
+, \mbox{\hyperlink{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9aee7a8e262285ed49ea1b4e4ae11525bd}{Roomba\+::\+Temperature}}
+, \newline
+\mbox{\hyperlink{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a517349a3cdc1acf50617693e3ba33988}{Roomba\+::\+Charge}}
+, \mbox{\hyperlink{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a3b8f7696879f77dfc8c74aa8df8db24b}{Roomba\+::\+Capacity}}
+ \}
+\item 
+enum \mbox{\hyperlink{namespace_roomba_ab8b7e4427d000b9e9eb73c03a2ecf599}{Roomba\+::leds}} \+: uint8\+\_\+t \{ \mbox{\hyperlink{namespace_roomba_ab8b7e4427d000b9e9eb73c03a2ecf599a8e34bb5523ed0eb2786b4ab28b329683}{Roomba\+::\+LED\+\_\+\+Debris}} =1
+, \mbox{\hyperlink{namespace_roomba_ab8b7e4427d000b9e9eb73c03a2ecf599a1ee373621a62e8a52918463fd56ac073}{Roomba\+::\+LED\+\_\+\+Spot}} =2
+, \mbox{\hyperlink{namespace_roomba_ab8b7e4427d000b9e9eb73c03a2ecf599adffa3ad6295a6eab704050fa86fc03ee}{Roomba\+::\+LED\+\_\+\+Dock}} =4
+, \mbox{\hyperlink{namespace_roomba_ab8b7e4427d000b9e9eb73c03a2ecf599a4138a19a783ec825dbd1c1a39ee3065e}{Roomba\+::\+LED\+\_\+\+Check\+\_\+\+Robot}} =8
+ \}
+\item 
+enum \mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ad}{Roomba\+::command}} \+: uint8\+\_\+t \{ \newline
+\mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada9f9b0b38673157c3f125d58a8bb603da}{Roomba\+::\+Start}} =128
+, \mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0adaa244e03f1422979c5b30ac8804046653}{Roomba\+::\+Baud}}
+, \mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0adaebd9ec9946c2e9cad9166132dd3024b4}{Roomba\+::\+Control}}
+, \mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0adabae317a5112bb5bb9a0fa19021676f28}{Roomba\+::\+Safe}}
+, \newline
+\mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada0f3dd17e9b71dc8d5601fea2900fdfae}{Roomba\+::\+Full}}
+, \mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0adadc1b003bceb16d445fb31a2e40f256be}{Roomba\+::\+Power}}
+, \mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada58c314c67ebef171368e4dabc4a8aba0}{Roomba\+::\+Spot}}
+, \mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada3ffa183f1b604e80424f742102011739}{Roomba\+::\+Clean}}
+, \newline
+\mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada934d89a760eb8f77a89058d6c314e579}{Roomba\+::\+Max\+\_\+\+Clean}}
+, \mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0adaa692ea5675145bf31203bdef69c0cf51}{Roomba\+::\+Drive}}
+, \mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada12a8e33086d7cc4f12569944cba68a86}{Roomba\+::\+Motors}}
+, \mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada96fa1234f5806fa9d4690c948c031c80}{Roomba\+::\+Leds}}
+, \newline
+\mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada5e74bd0d2ff2a13b41e5ef9949ba52e0}{Roomba\+::\+Song}}
+, \mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada4ce5989cd157ef79ece4c3f1dbf6b804}{Roomba\+::\+Play}}
+, \mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0adaea362a99e78a753418c391e4e175ea0a}{Roomba\+::\+Query}}
+, \mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0adaf41351e1fbebd8a2c15c3aaa45015f52}{Roomba\+::\+Dock}}
+, \newline
+\mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada8094ebdcc64f14f9d775a231b821b302}{Roomba\+::\+Motor\+\_\+\+PWM}}
+, \mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada9793b6fc7387a2c49a6f7fa9046c5aed}{Roomba\+::\+Drive\+\_\+\+Wheels}}
+, \mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada2ba4e7d82ce1cad88b192c5222c13d05}{Roomba\+::\+Stream}} =148
+, \mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada27c11206dc038e97f1fbc0d4f49496f9}{Roomba\+::\+Query\+\_\+\+List}}
+, \newline
+\mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0adaa3625cf3f6654ec0dfa811066fac61e5}{Roomba\+::\+Do\+\_\+\+Stream}}
+, \mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada08cdfe713c0db7de775fe096a4d2e071}{Roomba\+::\+Schedule\+\_\+\+Leds}} = 162
+, \mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada52d9df5e6ff38943c5d23f17b809a718}{Roomba\+::\+Digit\+\_\+\+Leds\+\_\+\+Raw}}
+, \mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0adaa266c5f936ce11caff6ec389402c80f2}{Roomba\+::\+Digit\+\_\+\+Leds\+\_\+\+Ascii}}
+, \newline
+\mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada2801a86fdc6b3ae6a48a3b47a5762a24}{Roomba\+::\+Buttons}}
+, \mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0adae13146ee672b941e124f32d429c43832}{Roomba\+::\+Schedule}} =167
+, \mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada4a3b2f9219e44db7de1eb691dc35c6b3}{Roomba\+::\+Set\+\_\+\+Date\+\_\+\+Time}}
+, \mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada25526a868c9fde996821141e110f9b4b}{Roomba\+::\+Stop}} =173
+ \}
+\item 
+enum class \mbox{\hyperlink{namespace_roomba_abafdf9a69b834e4c38d5972260a93487}{Roomba\+::\+Led\+State}} \{ \mbox{\hyperlink{namespace_roomba_abafdf9a69b834e4c38d5972260a93487a521c36a31c2762741cf0f8890cbe05e3}{Roomba\+::\+On}}
+, \mbox{\hyperlink{namespace_roomba_abafdf9a69b834e4c38d5972260a93487ad15305d7a4e34e02489c74a5ef542f36}{Roomba\+::\+Off}}
+ \}
+\end{DoxyCompactItemize}
