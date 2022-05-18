@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['init_5ftest_2ecpp_0',['init_test.cpp',['../init__test_8cpp.html',1,'']]]
+  ['getsensordata_0',['getSensorData',['../class_roomba_1_1_roomba.html#aab325cb00efdbbe5757d820d42e09c15',1,'Roomba::Roomba']]]
 ];

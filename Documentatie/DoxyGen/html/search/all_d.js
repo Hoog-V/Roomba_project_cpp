@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['passive_0',['Passive',['../namespace_roomba.html#a5209de87fc9bed4bd208eae71aab67c3af80bc338b6146b566004a046f8137c85',1,'Roomba']]],
-  ['play_1',['Play',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada4ce5989cd157ef79ece4c3f1dbf6b804',1,'Roomba']]],
-  ['power_2',['Power',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0adadc1b003bceb16d445fb31a2e40f256be',1,'Roomba']]]
+  ['off_0',['Off',['../namespace_roomba.html#abafdf9a69b834e4c38d5972260a93487ad15305d7a4e34e02489c74a5ef542f36',1,'Roomba']]],
+  ['omgeving_5fopzetten_2emd_1',['Omgeving_opzetten.md',['../_omgeving__opzetten_8md.html',1,'']]],
+  ['on_2',['On',['../namespace_roomba.html#abafdf9a69b834e4c38d5972260a93487a521c36a31c2762741cf0f8890cbe05e3',1,'Roomba']]],
+  ['ontwikkel_20omgeving_20opzetten_3',['Ontwikkel omgeving opzetten',['../md__c___users_crtak__roomba_project_cpp__documentatie__m_d__omgeving_opzetten.html',1,'']]]
 ];
