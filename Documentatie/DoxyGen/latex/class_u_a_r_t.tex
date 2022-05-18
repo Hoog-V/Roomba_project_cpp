@@ -1,0 +1,129 @@
+\hypertarget{class_u_a_r_t}{}\doxysection{UART Class Reference}
+\label{class_u_a_r_t}\index{UART@{UART}}
+
+
+{\ttfamily \#include $<$UART.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_u_a_r_t_a73ec710a86941eaf7f98f9a1fb550827}{baudrates}} \+: uint32\+\_\+t \{ \newline
+\mbox{\hyperlink{class_u_a_r_t_a73ec710a86941eaf7f98f9a1fb550827a5b502cb6ad9b894d328a9460479c4ef8}{baud\+\_\+300}} =300
+, \mbox{\hyperlink{class_u_a_r_t_a73ec710a86941eaf7f98f9a1fb550827ab9e64656e4fc8fe9d4ec1a681f28a848}{baud\+\_\+600}} =600
+, \mbox{\hyperlink{class_u_a_r_t_a73ec710a86941eaf7f98f9a1fb550827ae2a25e4d539bbba3a52afadf7bb73a08}{baud\+\_\+1200}} =1200
+, \mbox{\hyperlink{class_u_a_r_t_a73ec710a86941eaf7f98f9a1fb550827a2d7913fe641c3cb4769ae10ce5735bbc}{baud\+\_\+2400}} =2400
+, \newline
+\mbox{\hyperlink{class_u_a_r_t_a73ec710a86941eaf7f98f9a1fb550827a116616f8f476d57d8954d3c16b45c284}{baud\+\_\+4800}} =4800
+, \mbox{\hyperlink{class_u_a_r_t_a73ec710a86941eaf7f98f9a1fb550827a295eda9e3c2a6d8915001ca353aa7a6b}{baud\+\_\+9600}} =9600
+, \mbox{\hyperlink{class_u_a_r_t_a73ec710a86941eaf7f98f9a1fb550827a5db4b51ccd07146992e0df6278b28207}{baud\+\_\+19200}} =19200
+, \mbox{\hyperlink{class_u_a_r_t_a73ec710a86941eaf7f98f9a1fb550827a510a2894f7b09a94cb2c135537f3e7ab}{baud\+\_\+57600}} =57600
+, \newline
+\mbox{\hyperlink{class_u_a_r_t_a73ec710a86941eaf7f98f9a1fb550827af56424b3e771dbe775b48fa52685919b}{baud\+\_\+115200}} =115200
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_u_a_r_t_af4ff5ef9289e3918963c32e997aba7ed}{UART}} (const \mbox{\hyperlink{struct_u_a_r_t_settings}{UARTSettings}} Settings)
+\item 
+void \mbox{\hyperlink{class_u_a_r_t_aa5e4b71d90b2374def21a1b989a01d05}{change\+Baud}} (const uint32\+\_\+t baudrate)
+\item 
+void \mbox{\hyperlink{class_u_a_r_t_a903e90323d8518958533668b2042fbbe}{send\+Byte}} (const uint8\+\_\+t byte)
+\item 
+{\footnotesize template$<$typename arr , std\+::size\+\_\+t size$>$ }\\void \mbox{\hyperlink{class_u_a_r_t_aec93c6217f5a4fb24a551837bb2c2717}{send\+Bytes}} (std\+::array$<$ arr, size $>$ \&buffer, const uint8\+\_\+t num\+Ofbytes)
+\item 
+{\footnotesize template$<$typename arr , std\+::size\+\_\+t size$>$ }\\void \mbox{\hyperlink{class_u_a_r_t_a84a515beb63bb5fe7fd7d8815f192d06}{read\+Bytes}} (std\+::array$<$ arr, size $>$ \&buffer, const uint8\+\_\+t num\+Ofbytes)
+\item 
+\mbox{\hyperlink{class_u_a_r_t_a79aea29bd989d2e2ce9692042375b83e}{$\sim$\+UART}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_u_a_r_t_a73ec710a86941eaf7f98f9a1fb550827}\label{class_u_a_r_t_a73ec710a86941eaf7f98f9a1fb550827}} 
+\index{UART@{UART}!baudrates@{baudrates}}
+\index{baudrates@{baudrates}!UART@{UART}}
+\doxysubsubsection{\texorpdfstring{baudrates}{baudrates}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_u_a_r_t_a73ec710a86941eaf7f98f9a1fb550827}{UART\+::baudrates}} \+: uint32\+\_\+t}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{baud\_300@{baud\_300}!UART@{UART}}\index{UART@{UART}!baud\_300@{baud\_300}}}\mbox{\Hypertarget{class_u_a_r_t_a73ec710a86941eaf7f98f9a1fb550827a5b502cb6ad9b894d328a9460479c4ef8}\label{class_u_a_r_t_a73ec710a86941eaf7f98f9a1fb550827a5b502cb6ad9b894d328a9460479c4ef8}} 
+baud\+\_\+300&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{baud\_600@{baud\_600}!UART@{UART}}\index{UART@{UART}!baud\_600@{baud\_600}}}\mbox{\Hypertarget{class_u_a_r_t_a73ec710a86941eaf7f98f9a1fb550827ab9e64656e4fc8fe9d4ec1a681f28a848}\label{class_u_a_r_t_a73ec710a86941eaf7f98f9a1fb550827ab9e64656e4fc8fe9d4ec1a681f28a848}} 
+baud\+\_\+600&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{baud\_1200@{baud\_1200}!UART@{UART}}\index{UART@{UART}!baud\_1200@{baud\_1200}}}\mbox{\Hypertarget{class_u_a_r_t_a73ec710a86941eaf7f98f9a1fb550827ae2a25e4d539bbba3a52afadf7bb73a08}\label{class_u_a_r_t_a73ec710a86941eaf7f98f9a1fb550827ae2a25e4d539bbba3a52afadf7bb73a08}} 
+baud\+\_\+1200&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{baud\_2400@{baud\_2400}!UART@{UART}}\index{UART@{UART}!baud\_2400@{baud\_2400}}}\mbox{\Hypertarget{class_u_a_r_t_a73ec710a86941eaf7f98f9a1fb550827a2d7913fe641c3cb4769ae10ce5735bbc}\label{class_u_a_r_t_a73ec710a86941eaf7f98f9a1fb550827a2d7913fe641c3cb4769ae10ce5735bbc}} 
+baud\+\_\+2400&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{baud\_4800@{baud\_4800}!UART@{UART}}\index{UART@{UART}!baud\_4800@{baud\_4800}}}\mbox{\Hypertarget{class_u_a_r_t_a73ec710a86941eaf7f98f9a1fb550827a116616f8f476d57d8954d3c16b45c284}\label{class_u_a_r_t_a73ec710a86941eaf7f98f9a1fb550827a116616f8f476d57d8954d3c16b45c284}} 
+baud\+\_\+4800&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{baud\_9600@{baud\_9600}!UART@{UART}}\index{UART@{UART}!baud\_9600@{baud\_9600}}}\mbox{\Hypertarget{class_u_a_r_t_a73ec710a86941eaf7f98f9a1fb550827a295eda9e3c2a6d8915001ca353aa7a6b}\label{class_u_a_r_t_a73ec710a86941eaf7f98f9a1fb550827a295eda9e3c2a6d8915001ca353aa7a6b}} 
+baud\+\_\+9600&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{baud\_19200@{baud\_19200}!UART@{UART}}\index{UART@{UART}!baud\_19200@{baud\_19200}}}\mbox{\Hypertarget{class_u_a_r_t_a73ec710a86941eaf7f98f9a1fb550827a5db4b51ccd07146992e0df6278b28207}\label{class_u_a_r_t_a73ec710a86941eaf7f98f9a1fb550827a5db4b51ccd07146992e0df6278b28207}} 
+baud\+\_\+19200&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{baud\_57600@{baud\_57600}!UART@{UART}}\index{UART@{UART}!baud\_57600@{baud\_57600}}}\mbox{\Hypertarget{class_u_a_r_t_a73ec710a86941eaf7f98f9a1fb550827a510a2894f7b09a94cb2c135537f3e7ab}\label{class_u_a_r_t_a73ec710a86941eaf7f98f9a1fb550827a510a2894f7b09a94cb2c135537f3e7ab}} 
+baud\+\_\+57600&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{baud\_115200@{baud\_115200}!UART@{UART}}\index{UART@{UART}!baud\_115200@{baud\_115200}}}\mbox{\Hypertarget{class_u_a_r_t_a73ec710a86941eaf7f98f9a1fb550827af56424b3e771dbe775b48fa52685919b}\label{class_u_a_r_t_a73ec710a86941eaf7f98f9a1fb550827af56424b3e771dbe775b48fa52685919b}} 
+baud\+\_\+115200&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_u_a_r_t_af4ff5ef9289e3918963c32e997aba7ed}\label{class_u_a_r_t_af4ff5ef9289e3918963c32e997aba7ed}} 
+\index{UART@{UART}!UART@{UART}}
+\index{UART@{UART}!UART@{UART}}
+\doxysubsubsection{\texorpdfstring{UART()}{UART()}}
+{\footnotesize\ttfamily UART\+::\+UART (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_u_a_r_t_settings}{UARTSettings}}}]{Settings }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_u_a_r_t_a79aea29bd989d2e2ce9692042375b83e}\label{class_u_a_r_t_a79aea29bd989d2e2ce9692042375b83e}} 
+\index{UART@{UART}!````~UART@{$\sim$UART}}
+\index{````~UART@{$\sim$UART}!UART@{UART}}
+\doxysubsubsection{\texorpdfstring{$\sim$UART()}{~UART()}}
+{\footnotesize\ttfamily UART\+::$\sim$\+UART (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_a_r_t_aa5e4b71d90b2374def21a1b989a01d05}\label{class_u_a_r_t_aa5e4b71d90b2374def21a1b989a01d05}} 
+\index{UART@{UART}!changeBaud@{changeBaud}}
+\index{changeBaud@{changeBaud}!UART@{UART}}
+\doxysubsubsection{\texorpdfstring{changeBaud()}{changeBaud()}}
+{\footnotesize\ttfamily void UART\+::change\+Baud (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t}]{baudrate }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_u_a_r_t_a84a515beb63bb5fe7fd7d8815f192d06}\label{class_u_a_r_t_a84a515beb63bb5fe7fd7d8815f192d06}} 
+\index{UART@{UART}!readBytes@{readBytes}}
+\index{readBytes@{readBytes}!UART@{UART}}
+\doxysubsubsection{\texorpdfstring{readBytes()}{readBytes()}}
+{\footnotesize\ttfamily template$<$typename arr , std\+::size\+\_\+t size$>$ \\
+void UART\+::read\+Bytes (\begin{DoxyParamCaption}\item[{std\+::array$<$ arr, size $>$ \&}]{buffer,  }\item[{const uint8\+\_\+t}]{num\+Ofbytes }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_u_a_r_t_a903e90323d8518958533668b2042fbbe}\label{class_u_a_r_t_a903e90323d8518958533668b2042fbbe}} 
+\index{UART@{UART}!sendByte@{sendByte}}
+\index{sendByte@{sendByte}!UART@{UART}}
+\doxysubsubsection{\texorpdfstring{sendByte()}{sendByte()}}
+{\footnotesize\ttfamily void UART\+::send\+Byte (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t}]{byte }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_u_a_r_t_aec93c6217f5a4fb24a551837bb2c2717}\label{class_u_a_r_t_aec93c6217f5a4fb24a551837bb2c2717}} 
+\index{UART@{UART}!sendBytes@{sendBytes}}
+\index{sendBytes@{sendBytes}!UART@{UART}}
+\doxysubsubsection{\texorpdfstring{sendBytes()}{sendBytes()}}
+{\footnotesize\ttfamily template$<$typename arr , std\+::size\+\_\+t size$>$ \\
+void UART\+::send\+Bytes (\begin{DoxyParamCaption}\item[{std\+::array$<$ arr, size $>$ \&}]{buffer,  }\item[{const uint8\+\_\+t}]{num\+Ofbytes }\end{DoxyParamCaption})}
+
