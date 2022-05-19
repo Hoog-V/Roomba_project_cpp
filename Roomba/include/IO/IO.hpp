@@ -7,8 +7,8 @@ public:
     IO(UART *UARTHandle){
         mUARTHandle = UARTHandle;
     }
-    void SetBRCPinHIGH();
-    void SetBRCPinLOW();
+    void SetPinHIGH();
+    void SetPinLOW();
 private:
     UART *mUARTHandle;
 };

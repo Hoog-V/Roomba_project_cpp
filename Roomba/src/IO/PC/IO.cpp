@@ -1,12 +1,12 @@
 #include <IO/IO.hpp>
 #include <UART/UART.hpp>
 
-void IO::SetBRCPinHIGH()
+void IO::SetPinHIGH()
 {
     mUARTHandle->setDTRHigh();
 }
 
-void IO::SetBRCPinLOW()
+void IO::SetPinLOW()
 {
     mUARTHandle->setDTRLow();
 }
