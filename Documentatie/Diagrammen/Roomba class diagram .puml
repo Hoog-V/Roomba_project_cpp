@@ -45,7 +45,7 @@ class Roomba {
   + ~Roomba() : void
 }
 
-class LEDS {
+enum LEDS {
 DD
 MAX
 CLEAN
@@ -53,7 +53,7 @@ SPOT
 STATUS
 }
 
-class Motors {
+enum Motors {
 Main_Brush
 Vacuum
 Side_Brush
@@ -86,19 +86,19 @@ class UART {
 + ~UART() : void
 }
 
-class CleaningModes {
+enum CleaningModes {
 Normal
 Full
 Spot
 }
 
-class ControlModes {
+enum ControlModes {
 Passive
 Safe
 Full
 }
 
-class Sensors {
+enum Sensors {
 Bumps_wheeldrop
 Wall
 Cliff_Left
