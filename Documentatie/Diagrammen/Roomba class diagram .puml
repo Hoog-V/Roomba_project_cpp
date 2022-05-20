@@ -1,18 +1,19 @@
 @startuml Roomba
 
 class Roomba 
-class CleaningModes <<enumeration>>
-class LEDS <<enumeration>>
-class Motors <<enumeration>>
-class ControlModes <<enumeration>>
-class Sensors <<enumeration>>
-interface UART
-interface Baudrates <<enumeration class>>
+enum CleaningModes <<enumeration class>>
+enum LEDS <<enumeration>>
+enum Motors <<enumeration>>
+enum Control <<enumeration class>>
+enum Sensors <<enumeration class>>
+
+class UART
+enum Baudrates <<enumeration class>>
 
 Roomba <-left- CleaningModes : 1
 Roomba <-up- LEDS
 Roomba <-up- Motors 
-Roomba <-left- ControlModes : 1
+Roomba <-left- Control : 1
 Roomba <-down- Sensors
 Roomba <-up- UART : 1
 Roomba <-left- Baudrates : 1
@@ -27,19 +28,17 @@ UART <-right- IO : 1
 class Roomba {
   - mUARTHandle : UART
   - mSongNum : int
-  + Motors : enum
-  + CleaningModes : enum
-  + LEDS : enum
-  + Baudrates
-  + Sensors
-  + Notes : enum
+  - mCurrControlMode : Control
+  - mSetPassiveMode : bool
+  - mSetSafeMode : bool
+  - mSetFullMode : bool
   --
   + Roomba(mUARTHandle : UART) : void
   + Rotate(angle : int) : void
   + setMotor(motor : int, velocity : int) : void
   + startCleaning(cleaningMode : cleaningModes) : void
   + setDockMode() : void
-  + setControlMode(controlmode : controlModes) : void
+  + setControlMode(controlmode : Control) : void
   + setLed( led : int, brightness : int) : void
   + setBaudrate(baudrate : baudrates) : void
   + getSensorData( sensor : int) : int
@@ -96,7 +95,7 @@ Full
 Spot
 }
 
-enum ControlModes {
+enum Control {
 Passive
 Safe
 Full
