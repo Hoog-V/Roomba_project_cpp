@@ -78,12 +78,12 @@ baud_115200
 class UART {
 - mUARTsettings : struct
 --
-+ UART(mUARTsettings : struct)
-+ changeBaud(baudrate : enum)
-+ sendBytes(buffer[] : int, numOfbytes : int)
-+ sendByte(byte : int)
-+ readBytes(buffer[] : int, numOfbytes : int)
-+ ~UART()
++ UART(mUARTsettings : struct) : void
++ changeBaud(baudrate : enum) : void
++ sendBytes(buffer[] : int, numOfbytes : int) : void
++ sendByte(byte : int) : void
++ readBytes(buffer[] : int, numOfbytes : int) : void
++ ~UART() : void
 }
 
 class CleaningModes {
