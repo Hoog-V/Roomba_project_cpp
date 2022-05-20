@@ -69,15 +69,15 @@ namespace Roomba {
 
         void turnOff();
 
-        void Roomba::driveCommand();
+        void driveCommand(uint16_t velocity, uint16_t radius);
 
-        void Roomba::driveForward();
+        void driveForward();
         
-        void Roomba::driveBackward();
+        void driveBackward();
 
-        void Roomba::driveLeft();
+        void driveLeft();
 
-        void Roomba::driveRight();
+        void driveRight();
 
         ~Roomba() {
             mUARTHandle->sendByte(command::Stop);
