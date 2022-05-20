@@ -17,6 +17,9 @@ Roomba <-down- Sensors
 Roomba <-up- UART : 1
 Roomba <-left- Baudrates : 1
 
+
+UART <-left- Baudrates : 1
+
 class Roomba {
   - mUARTHandle : UART
   - mSongNum : int
@@ -56,27 +59,29 @@ Vacuum
 Side_Brush
 }
 
-interface Baudrates {
-300_bps
-600_bps
-1200_bps
-2400_bps
-4800_bps
-9600_bps
-14400_bps
-19200_bps
-28800_bps
-38400_bps
-57600_bps
-115200_bps
+enum Baudrates {
+baud_invalid = 0
+baud_300
+baud_600
+baud_1200
+baud_2400
+baud_4800
+baud_9600
+baud_14400
+baud_19200
+baud_28800
+baud_38400
+baud_57600
+baud_115200
 }
 
-interface UART {
+class UART {
 - mUARTsettings : struct
 --
 + UART(mUARTsettings : struct)
-+ changeBaud(baudrate : int)
-+ sendBytes(byte : int, numOfbytes : int)
++ changeBaud(baudrate : enum)
++ sendBytes(buffer[] : int, numOfbytes : int)
++ sendByte(byte : int)
 + readBytes(buffer[] : int, numOfbytes : int)
 + ~UART()
 }
