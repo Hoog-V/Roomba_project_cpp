@@ -3,10 +3,10 @@
 
 void IO::SetPinHIGH()
 {
-    mUARTHandle->setDTRPinHigh();
+    mUARTHandle->unsetDTRPin();
 }
 
 void IO::SetPinLOW()
 {
-    mUARTHandle->setDTRPinLow();
+    mUARTHandle->setDTRPin();
 }

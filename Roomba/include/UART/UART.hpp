@@ -44,9 +44,9 @@ namespace UART {
         template<typename arr, std::size_t size>
         void readBytes(std::array<arr, size> &buffer, const uint8_t numOfbytes);
 
-        void setDTRPinHigh();
+        void unsetDTRPin();
 
-        void setDTRPinLow();
+        void setDTRPin();
 
         ~UART();
 
@@ -58,6 +58,7 @@ namespace UART {
         boost::asio::io_service mIOService;
 
         uint32_t mBaudEnumToImplicitValue(Baudrates BaudRate);
+        UARTSettings mUARTSettings;
     };
 
 #include <UART/UART-tmp-func.inl>

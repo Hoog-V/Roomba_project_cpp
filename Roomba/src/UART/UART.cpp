@@ -3,6 +3,11 @@
 #include <iostream>
 #include <boost/asio.hpp>
 
+//Unfornately needed for setting and unsetting the DTR pin under Windows
+#if defined(_WIN32) || defined(_WIN64)
+#include <Windows.h>
+#endif
+
 namespace UART {
 
 
@@ -14,7 +19,7 @@ namespace UART {
 
         std::cout << "New instance of the UART object" << '\n';
         std::cout << "Uartsettings Path: " << Settings.DevicePath << " Baudrate: " << BaudrateVal << '\n';
-
+        mUARTSettings = Settings;
         mSerialPort = serial_port_ptr(new boost::asio::serial_port(mIOService));
         mSerialPort->open(Settings.DevicePath);
         mSerialPort->set_option(boost::asio::serial_port_base::baud_rate(BaudrateVal));
@@ -49,16 +54,30 @@ namespace UART {
     }
 
 
-    void UART::setDTRPinHigh() {
-        const int NativeHandle = mSerialPort->native_handle();
-        const int Pin = TIOCM_DTR;
-        ioctl(NativeHandle, TIOCMBIS, &Pin);
+    void UART::unsetDTRPin() {
+        using namespace boost::asio;
+        
+        serial_port::native_handle_type NativeHandle = mSerialPort->native_handle();
+
+        #if defined(_WIN32) || defined(_WIN64)
+         EscapeCommFunction(NativeHandle, SETDTR);
+        #else
+         const int Pin = TIOCM_DTR;
+         ioctl(NativeHandle, TIOCMBIS, &Pin);
+        #endif    
     }
 
-    void UART::setDTRPinLow() {
-        const int NativeHandle = mSerialPort->native_handle();
+    void UART::setDTRPin() {
+        using namespace boost::asio;
+
+        serial_port::native_handle_type NativeHandle = mSerialPort->native_handle();
+
+        #if defined(_WIN32) || defined(_WIN64)
+        EscapeCommFunction(NativeHandle, CLRDTR);
+        #else
         const int Pin = TIOCM_DTR;
         ioctl(NativeHandle, TIOCMBIC, &Pin);
+        #endif   
     }
 
     /**
