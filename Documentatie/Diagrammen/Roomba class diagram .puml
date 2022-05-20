@@ -20,6 +20,10 @@ Roomba <-left- Baudrates : 1
 
 UART <-left- Baudrates : 1
 
+IO <-down- Roomba : 1
+
+UART <-right- IO : 1
+
 class Roomba {
   - mUARTHandle : UART
   - mSongNum : int
@@ -118,5 +122,16 @@ Temperature
 Charge
 Capacity
 }
+
+
+class IO {
+- mUARTHandle : UART
+--
++ IO(mUARTHandle : UART) : void
++ SetPinHigh() : void
++ SetPinLow() : void
++ ~IO() : void
+}
+
 
 @enduml
