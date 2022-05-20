@@ -4,9 +4,19 @@
 #include <crossplatform/function.hpp>
 
 namespace Roomba{
-
+/// Roomba Dockmode which makes the Roomba go to his docking station.
+///
+/// This is the detailed description, more stuff here. 
 void Roomba::setDockMode()
 {
+	/// @param A this discribes parameter A
+	/// @param B this discribes parameter B
+	/// @returns nothing important
+	/// @see anotherfunction() anotherfunction2()
+	/// @note a little side note
+	/// @attention a little more important than a note
+	/// @warning a warning is super important! 
+	
 	if(mCurrControlMode == control::No_init)
 		setControlMode(control::Passive);
 	mUARTHandle->sendByte(command::Dock);
