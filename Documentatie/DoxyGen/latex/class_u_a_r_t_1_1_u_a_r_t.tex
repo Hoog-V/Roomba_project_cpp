@@ -1,0 +1,81 @@
+\hypertarget{class_u_a_r_t_1_1_u_a_r_t}{}\doxysection{UART\+::UART Class Reference}
+\label{class_u_a_r_t_1_1_u_a_r_t}\index{UART::UART@{UART::UART}}
+
+
+{\ttfamily \#include $<$UART.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_u_a_r_t_1_1_u_a_r_t_ac86fb775908be06fa9f661c4dee7c920}{UART}} (const \mbox{\hyperlink{struct_u_a_r_t_1_1_u_a_r_t_settings}{UARTSettings}} Settings)
+\item 
+void \mbox{\hyperlink{class_u_a_r_t_1_1_u_a_r_t_ac38d89d641948668d6c65fb00e7c01d1}{change\+Baud}} (const \mbox{\hyperlink{namespace_u_a_r_t_a5f6ba0e04c3a031981c58788fb317736}{Baudrates}} baudrate)
+\item 
+void \mbox{\hyperlink{class_u_a_r_t_1_1_u_a_r_t_ac624e37e687facf363918557dd4167ff}{send\+Byte}} (const uint8\+\_\+t byte)
+\item 
+{\footnotesize template$<$typename arr , std\+::size\+\_\+t size$>$ }\\void \mbox{\hyperlink{class_u_a_r_t_1_1_u_a_r_t_a148f78f4fdea54562cd5e6cd032d53dd}{send\+Bytes}} (std\+::array$<$ arr, size $>$ \&buffer, const uint8\+\_\+t num\+Ofbytes)
+\item 
+{\footnotesize template$<$typename arr , std\+::size\+\_\+t size$>$ }\\void \mbox{\hyperlink{class_u_a_r_t_1_1_u_a_r_t_a3c28ee6b5c298942d3cb7a98aaccbd75}{read\+Bytes}} (std\+::array$<$ arr, size $>$ \&buffer, const uint8\+\_\+t num\+Ofbytes)
+\item 
+void \mbox{\hyperlink{class_u_a_r_t_1_1_u_a_r_t_a8de223b1fdd87b130fd8c708270a76ec}{set\+DTRPin\+High}} ()
+\item 
+void \mbox{\hyperlink{class_u_a_r_t_1_1_u_a_r_t_ae22a929fd09819ee1a007c5a42e618f6}{set\+DTRPin\+Low}} ()
+\item 
+\mbox{\hyperlink{class_u_a_r_t_1_1_u_a_r_t_af702c2a4a83c86e2afebdca3f006aee5}{$\sim$\+UART}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_u_a_r_t_1_1_u_a_r_t_ac86fb775908be06fa9f661c4dee7c920}\label{class_u_a_r_t_1_1_u_a_r_t_ac86fb775908be06fa9f661c4dee7c920}} 
+\index{UART::UART@{UART::UART}!UART@{UART}}
+\index{UART@{UART}!UART::UART@{UART::UART}}
+\doxysubsubsection{\texorpdfstring{UART()}{UART()}}
+{\footnotesize\ttfamily UART\+::\+UART\+::\+UART (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_u_a_r_t_1_1_u_a_r_t_settings}{UARTSettings}}}]{Settings }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_u_a_r_t_1_1_u_a_r_t_af702c2a4a83c86e2afebdca3f006aee5}\label{class_u_a_r_t_1_1_u_a_r_t_af702c2a4a83c86e2afebdca3f006aee5}} 
+\index{UART::UART@{UART::UART}!````~UART@{$\sim$UART}}
+\index{````~UART@{$\sim$UART}!UART::UART@{UART::UART}}
+\doxysubsubsection{\texorpdfstring{$\sim$UART()}{~UART()}}
+{\footnotesize\ttfamily UART\+::\+UART\+::$\sim$\+UART (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_a_r_t_1_1_u_a_r_t_ac38d89d641948668d6c65fb00e7c01d1}\label{class_u_a_r_t_1_1_u_a_r_t_ac38d89d641948668d6c65fb00e7c01d1}} 
+\index{UART::UART@{UART::UART}!changeBaud@{changeBaud}}
+\index{changeBaud@{changeBaud}!UART::UART@{UART::UART}}
+\doxysubsubsection{\texorpdfstring{changeBaud()}{changeBaud()}}
+{\footnotesize\ttfamily void UART\+::\+UART\+::change\+Baud (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespace_u_a_r_t_a5f6ba0e04c3a031981c58788fb317736}{Baudrates}}}]{baudrate }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_u_a_r_t_1_1_u_a_r_t_a3c28ee6b5c298942d3cb7a98aaccbd75}\label{class_u_a_r_t_1_1_u_a_r_t_a3c28ee6b5c298942d3cb7a98aaccbd75}} 
+\index{UART::UART@{UART::UART}!readBytes@{readBytes}}
+\index{readBytes@{readBytes}!UART::UART@{UART::UART}}
+\doxysubsubsection{\texorpdfstring{readBytes()}{readBytes()}}
+{\footnotesize\ttfamily template$<$typename arr , std\+::size\+\_\+t size$>$ \\
+void UART\+::\+UART\+::read\+Bytes (\begin{DoxyParamCaption}\item[{std\+::array$<$ arr, size $>$ \&}]{buffer,  }\item[{const uint8\+\_\+t}]{num\+Ofbytes }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_u_a_r_t_1_1_u_a_r_t_ac624e37e687facf363918557dd4167ff}\label{class_u_a_r_t_1_1_u_a_r_t_ac624e37e687facf363918557dd4167ff}} 
+\index{UART::UART@{UART::UART}!sendByte@{sendByte}}
+\index{sendByte@{sendByte}!UART::UART@{UART::UART}}
+\doxysubsubsection{\texorpdfstring{sendByte()}{sendByte()}}
+{\footnotesize\ttfamily void UART\+::\+UART\+::send\+Byte (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t}]{byte }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_u_a_r_t_1_1_u_a_r_t_a148f78f4fdea54562cd5e6cd032d53dd}\label{class_u_a_r_t_1_1_u_a_r_t_a148f78f4fdea54562cd5e6cd032d53dd}} 
+\index{UART::UART@{UART::UART}!sendBytes@{sendBytes}}
+\index{sendBytes@{sendBytes}!UART::UART@{UART::UART}}
+\doxysubsubsection{\texorpdfstring{sendBytes()}{sendBytes()}}
+{\footnotesize\ttfamily template$<$typename arr , std\+::size\+\_\+t size$>$ \\
+void UART\+::\+UART\+::send\+Bytes (\begin{DoxyParamCaption}\item[{std\+::array$<$ arr, size $>$ \&}]{buffer,  }\item[{const uint8\+\_\+t}]{num\+Ofbytes }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_u_a_r_t_1_1_u_a_r_t_a8de223b1fdd87b130fd8c708270a76ec}\label{class_u_a_r_t_1_1_u_a_r_t_a8de223b1fdd87b130fd8c708270a76ec}} 
+\index{UART::UART@{UART::UART}!setDTRPinHigh@{setDTRPinHigh}}
+\index{setDTRPinHigh@{setDTRPinHigh}!UART::UART@{UART::UART}}
+\doxysubsubsection{\texorpdfstring{setDTRPinHigh()}{setDTRPinHigh()}}
+{\footnotesize\ttfamily void UART\+::\+UART\+::set\+DTRPin\+High (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_u_a_r_t_1_1_u_a_r_t_ae22a929fd09819ee1a007c5a42e618f6}\label{class_u_a_r_t_1_1_u_a_r_t_ae22a929fd09819ee1a007c5a42e618f6}} 
+\index{UART::UART@{UART::UART}!setDTRPinLow@{setDTRPinLow}}
+\index{setDTRPinLow@{setDTRPinLow}!UART::UART@{UART::UART}}
+\doxysubsubsection{\texorpdfstring{setDTRPinLow()}{setDTRPinLow()}}
+{\footnotesize\ttfamily void UART\+::\+UART\+::set\+DTRPin\+Low (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
