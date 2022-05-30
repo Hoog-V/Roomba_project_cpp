@@ -69,7 +69,7 @@ namespace Roomba {
 
         void turnOff();
 
-        void driveCommand(uint16_t velocity, uint16_t radius);
+        void driveCommand(int16_t velocity, int16_t radius);
 
         void driveForward();
         
