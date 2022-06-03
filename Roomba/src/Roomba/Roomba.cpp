@@ -162,5 +162,34 @@ return true;
 }
 
 
+/// velocity value may be between 500 and -500
+/// radius value may be between 2000 and -2000
+void Roomba::driveCommand(int16_t velocity, int16_t radius){
+	std::array<uint8_t, 5> commands {command::Drive, static_cast<uint8_t>(velocity & 0xFF),
+                                                     static_cast<uint8_t>(velocity >> 8) ,
+                                                     static_cast<uint8_t>(radius & 0xFF),
+                                                     static_cast<uint8_t>(radius >> 8)};
+	mUARTHandle->sendBytes(commands, std::size(commands));
+}
+
+void Roomba::driveForward()
+{
+	driveCommand(500, 32768);
+}
+
+void Roomba::driveBackward()
+{
+	driveCommand(-500, 32768);
+}
+
+void Roomba::driveLeft()
+{
+	driveCommand(0, -2000);
+}
+
+void Roomba::driveRight()
+{
+	driveCommand(0, 2000);
+}
 
 }
