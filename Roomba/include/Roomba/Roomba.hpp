@@ -23,22 +23,7 @@ namespace Roomba {
         Charge, Capacity
     };
 
-    enum leds : uint8_t {
-        LED_Debris = 1, LED_Spot = 2, LED_Dock = 4, LED_Check_Robot = 8
-    };
-
-    enum command : uint8_t {
-        Start = 128, Baud, Control, Safe, Full, Power, Spot, Clean,
-        Max_Clean, Drive, Motors, Leds, Song, Play, Query, Dock,
-        Motor_PWM, Drive_Wheels, Stream = 148, Query_List, Do_Stream,
-        Schedule_Leds = 162, Digit_Leds_Raw, Digit_Leds_Ascii,
-        Buttons, Schedule = 167, Set_Date_Time, Stop = 173
-    };
-
-
-    enum class LedState {
-        On, Off
-    };
+   
 
     class Roomba {
     public:
@@ -57,10 +42,7 @@ namespace Roomba {
 
         void setControlMode(control ControlMode);
 
-        void setLed(uint8_t led, LedState state);
-
-        void setPowerLed(uint8_t color, uint8_t intensity);
-
+       
         void setBaudRate(UART::Baudrates BaudRate);
 
         void getSensorData(uint16_t sensor);
