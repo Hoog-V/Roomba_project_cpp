@@ -9,8 +9,8 @@
  */
 TEST(UART_ChangeBaud, InvalidBaudrate) {
     UART::UARTSettings TestSettings;
-    TestSettings.DevicePath = TestPath;
-    TestSettings.Baudrate = TestBaud;
+    TestSettings.devicePath = TestPath;
+    TestSettings.baudrate = TestBaud;
 
     UART::UART *UartHandle = new UART::UART(TestSettings);
 
@@ -26,8 +26,8 @@ TEST(UART_ChangeBaud, InvalidBaudrate) {
  */
 TEST(UART_ChangeBaud, ValidBaudrate) {
     UART::UARTSettings TestSettings;
-    TestSettings.DevicePath = TestPath;
-    TestSettings.Baudrate = TestBaud;
+    TestSettings.devicePath = TestPath;
+    TestSettings.baudrate = TestBaud;
 
     UART::UART *UartHandle = new UART::UART(TestSettings);
 

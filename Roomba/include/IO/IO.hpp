@@ -4,11 +4,11 @@
 
 class IO{
 public:
-    IO(UART::UART *UARTHandle){
-        mUARTHandle = UARTHandle;
+    IO(UART::UART *uartHandle){
+        mUartHandle = uartHandle;
     }
-    void SetPinHIGH();
-    void SetPinLOW();
+    void setPinHigh();
+    void setPinLow();
 private:
-    UART::UART *mUARTHandle;
+    UART::UART *mUartHandle;
 };

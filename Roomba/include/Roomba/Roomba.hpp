@@ -36,14 +36,14 @@ namespace Roomba {
     };
 
 
-    enum class LedState {
+    enum class ledState {
         On, Off
     };
 
     class Roomba {
     public:
         Roomba(UART::UART *UARTHandle) {
-            mUARTHandle = UARTHandle;
+            mUartHandle = UARTHandle;
             mCurrControlMode = control::No_init;
         }
 
@@ -57,11 +57,11 @@ namespace Roomba {
 
         void setControlMode(control ControlMode);
 
-        void setLed(uint8_t led, LedState state);
+        void setLed(uint8_t led, ledState state);
 
         void setPowerLed(uint8_t color, uint8_t intensity);
 
-        void setBaudRate(UART::Baudrates BaudRate);
+        void setBaudRate(UART::Baudrates baudRate);
 
         void getSensorData(uint16_t sensor);
 
@@ -87,7 +87,7 @@ namespace Roomba {
         void driveRight();
 
         ~Roomba() {
-            mUARTHandle->sendByte(command::Stop);
+            mUartHandle->sendByte(command::Stop);
         }
 
     private:
@@ -99,7 +99,7 @@ namespace Roomba {
 
         bool mGetCurrLedState();
 
-        UART::UART *mUARTHandle;
+        UART::UART *mUartHandle;
         control mCurrControlMode;
     };
 
