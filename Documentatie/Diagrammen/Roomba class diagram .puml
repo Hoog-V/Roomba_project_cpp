@@ -1,38 +1,44 @@
 @startuml Roomba
 
 class Roomba 
-class CleaningModes <<enumeration>>
-class LEDS <<enumeration>>
-class Motors <<enumeration>>
-class ControlModes <<enumeration>>
-class Sensors <<enumeration>>
-interface UART
-interface Baudrates <<enumeration class>>
+enum CleaningModes <<enumeration class>>
+enum LEDS <<enumeration>>
+enum Motors <<enumeration>>
+enum Control <<enumeration class>>
+enum Sensors <<enumeration class>>
+
+class UART
+enum Baudrates <<enumeration class>>
 
 Roomba <-left- CleaningModes : 1
 Roomba <-up- LEDS
 Roomba <-up- Motors 
-Roomba <-left- ControlModes : 1
+Roomba <-left- Control : 1
 Roomba <-down- Sensors
 Roomba <-up- UART : 1
 Roomba <-left- Baudrates : 1
 
+
+UART <-left- Baudrates : 1
+
+IO <-down- Roomba : 1
+
+UART <-right- IO : 1
+
 class Roomba {
   - mUARTHandle : UART
   - mSongNum : int
-  + Motors : enum
-  + CleaningModes : enum
-  + LEDS : enum
-  + Baudrates
-  + Sensors
-  + Notes : enum
+  - mCurrControlMode : Control
+  - mSetPassiveMode : bool
+  - mSetSafeMode : bool
+  - mSetFullMode : bool
   --
   + Roomba(mUARTHandle : UART) : void
   + Rotate(angle : int) : void
   + setMotor(motor : int, velocity : int) : void
   + startCleaning(cleaningMode : cleaningModes) : void
   + setDockMode() : void
-  + setControlMode(controlmode : controlModes) : void
+  + setControlMode(controlmode : Control) : void
   + setLed( led : int, brightness : int) : void
   + setBaudrate(baudrate : baudrates) : void
   + getSensorData( sensor : int) : int
@@ -42,7 +48,7 @@ class Roomba {
   + ~Roomba() : void
 }
 
-class LEDS {
+enum LEDS {
 DD
 MAX
 CLEAN
@@ -50,50 +56,52 @@ SPOT
 STATUS
 }
 
-class Motors {
+enum Motors {
 Main_Brush
 Vacuum
 Side_Brush
 }
 
-interface Baudrates {
-300_bps
-600_bps
-1200_bps
-2400_bps
-4800_bps
-9600_bps
-14400_bps
-19200_bps
-28800_bps
-38400_bps
-57600_bps
-115200_bps
+enum Baudrates {
+baud_invalid = 0
+baud_300
+baud_600
+baud_1200
+baud_2400
+baud_4800
+baud_9600
+baud_14400
+baud_19200
+baud_28800
+baud_38400
+baud_57600
+baud_115200
 }
 
-interface UART {
+class UART {
 - mUARTsettings : struct
 --
-+ UART(mUARTsettings : struct)
-+ changeBaud(baudrate : int)
-+ sendBytes(byte : int, numOfbytes : int)
-+ readBytes(buffer[] : int, numOfbytes : int)
-+ ~UART()
++ UART(mUARTsettings : struct) : void
++ changeBaud(baudrate : enum) : void
++ sendBytes(buffer[] : int, numOfbytes : int) : void
++ sendByte(byte : int) : void
++ readBytes(buffer[] : int, numOfbytes : int) : void
++ ~UART() : void
 }
 
-class CleaningModes {
+enum CleaningModes {
 Normal
 Full
 Spot
 }
 
-class ControlModes {
+enum Control {
 Passive
 Safe
 Full
 }
 
-class Sensors {
+enum Sensors {
 Bumps_wheeldrop
 Wall
 Cliff_Left
@@ -113,5 +121,16 @@ Temperature
 Charge
 Capacity
 }
+
+
+class IO {
+- mUARTHandle : UART
+--
++ IO(mUARTHandle : UART) : void
++ SetPinHigh() : void
++ SetPinLow() : void
++ ~IO() : void
+}
+
 
 @enduml
