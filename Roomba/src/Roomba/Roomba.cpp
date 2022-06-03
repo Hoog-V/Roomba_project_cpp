@@ -22,8 +22,6 @@ namespace Roomba {
         mCurrControlMode = control::Passive;
     }
 
-
-<<<<<<< HEAD
     bool Roomba::mSetPassiveMode() {
         switch (mCurrControlMode) {
             case control::No_init: {
@@ -160,27 +158,27 @@ namespace Roomba {
         mUARTHandle->sendBytes(commands, std::size(commands));
     }
 
-    void Roomba::setSongNum(uint8_t songNum, uint8_t songLength, ...) {
-        std::array<uint8_t, 32> commands{command::Song, songLength};
-        int lenList = (songLength * 2);
-        bool checkControlMode = mCurrControlMode == control::Passive || mCurrControlMode == control::No_init;
+//    void Roomba::setSongNum(uint8_t songNum, uint8_t songLength, ...) {
+//        std::array<uint8_t, 32> commands{command::Song, songLength};
+//        int lenList = (songLength * 2);
+//        bool checkControlMode = mCurrControlMode == control::Passive || mCurrControlMode == control::No_init;
+//
+//        if(songLength > 16)
+//            return;
+//
+//        if (checkControlMode)
+//            setControlMode(control::Safe);
+//
+//        va_list vaList;
+//        va_start(vaList, lenList);
+//
+//        for(int i = 2; i < songLength * 2; i++) {
+//            commands[i] = va_arg(vaList, uint8_t);
+//        }
+//
+//        mUARTHandle->sendBytes(commands, std::size(commands));
+//    }
 
-        if(songLength > 16)
-            return;
-
-        if (checkControlMode)
-            setControlMode(control::Safe);
-
-        va_list vaList;
-        va_start(vaList, lenList);
-
-        for(int i = 2; i < songLength * 2; i++) {
-            commands[i] = va_arg(vaList, uint8_t);
-        }
-
-        mUARTHandle->sendBytes(commands, std::size(commands));
-    }
-=======
 /// velocity value may be between 500 and -500
 /// radius value may be between 2000 and -2000
 void Roomba::driveCommand(int16_t velocity, int16_t radius){
@@ -210,6 +208,5 @@ void Roomba::driveRight()
 {
 	driveCommand(0, 2000);
 }
->>>>>>> 6202ae8fa79f438e4205ff44626bbaf9a034b1ac
 
 }

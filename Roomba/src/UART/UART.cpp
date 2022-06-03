@@ -54,24 +54,17 @@ namespace UART {
     }
 
 
-<<<<<<< HEAD
-    /*void UART::setDTRPinHigh() {
-        const int NativeHandle = mSerialPort->native_handle();
-        const int Pin = TIOCM_DTR;
-        ioctl(NativeHandle, TIOCMBIS, &Pin);
-=======
     void UART::unsetDTRPin() {
         using namespace boost::asio;
-        
+
         serial_port::native_handle_type NativeHandle = mSerialPort->native_handle();
 
-        #if defined(_WIN32) || defined(_WIN64)
-         EscapeCommFunction(NativeHandle, SETDTR);
-        #else
-         const int Pin = TIOCM_DTR;
-         ioctl(NativeHandle, TIOCMBIS, &Pin);
-        #endif    
->>>>>>> 6202ae8fa79f438e4205ff44626bbaf9a034b1ac
+#if defined(_WIN32) || defined(_WIN64)
+        EscapeCommFunction(NativeHandle, SETDTR);
+#else
+        const int Pin = TIOCM_DTR;
+        ioctl(NativeHandle, TIOCMBIS, &Pin);
+#endif
     }
 
     void UART::setDTRPin() {
@@ -79,17 +72,13 @@ namespace UART {
 
         serial_port::native_handle_type NativeHandle = mSerialPort->native_handle();
 
-        #if defined(_WIN32) || defined(_WIN64)
+#if defined(_WIN32) || defined(_WIN64)
         EscapeCommFunction(NativeHandle, CLRDTR);
-        #else
+#else
         const int Pin = TIOCM_DTR;
         ioctl(NativeHandle, TIOCMBIC, &Pin);
-<<<<<<< HEAD
-    }*/
-=======
-        #endif   
+#endif
     }
->>>>>>> 6202ae8fa79f438e4205ff44626bbaf9a034b1ac
 
     /**
     * Converts Baudrates enum to an implicit uint32_t value.
