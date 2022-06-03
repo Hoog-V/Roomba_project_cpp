@@ -2,6 +2,8 @@
 
 #include <UART/UART.hpp>
 #include <map>
+#include <stdarg.h>
+
 
 namespace Roomba {
 
@@ -63,7 +65,12 @@ namespace Roomba {
 
         void getSensorData(uint16_t sensor);
 
-        void setSongNum(uint8_t songnum);
+        /*
+         * ...(Variable Length Argument) = NoteNumber N & NoteDuration N
+         */
+        void setSongNum(uint8_t songNum, uint8_t songLength, ...);
+
+        void playSongNum(uint8_t songNum);
 
         void turnOn();
 

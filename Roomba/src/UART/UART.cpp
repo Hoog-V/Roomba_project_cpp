@@ -49,7 +49,7 @@ namespace UART {
     }
 
 
-    void UART::setDTRPinHigh() {
+    /*void UART::setDTRPinHigh() {
         const int NativeHandle = mSerialPort->native_handle();
         const int Pin = TIOCM_DTR;
         ioctl(NativeHandle, TIOCMBIS, &Pin);
@@ -59,7 +59,7 @@ namespace UART {
         const int NativeHandle = mSerialPort->native_handle();
         const int Pin = TIOCM_DTR;
         ioctl(NativeHandle, TIOCMBIC, &Pin);
-    }
+    }*/
 
     /**
     * Converts Baudrates enum to an implicit uint32_t value.
