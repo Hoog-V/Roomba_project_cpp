@@ -2,13 +2,16 @@
 
 #include <UART/UART.hpp>
 
-class IO{
+class IO {
 public:
-    IO(UART::UART *uartHandle){
+    IO(UART::UART *uartHandle) {
         mUartHandle = uartHandle;
     }
+
     void setPinHigh();
+
     void setPinLow();
+
 private:
     UART::UART *mUartHandle;
 };

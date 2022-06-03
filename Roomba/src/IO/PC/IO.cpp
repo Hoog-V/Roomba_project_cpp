@@ -1,12 +1,10 @@
 #include <IO/IO.hpp>
 #include <UART/UART.hpp>
 
-void IO::setPinHigh()
-{
+void IO::setPinHigh() {
     mUartHandle->resetDTRPin();
 }
 
-void IO::setPinLow()
-{
+void IO::setPinLow() {
     mUartHandle->setDTRPin();
 }

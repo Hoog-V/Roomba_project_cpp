@@ -51,14 +51,15 @@ namespace UART {
         ~UART();
 
     private:
-        const std::array <uint32_t, 13> mBaudMapping = {0, 300, 600, 1200, 2400, 4800, 9600, 14400, 19200, 28800, 38400,
-                                                        57600, 115200};
+        const std::array<uint32_t, 13> mBaudMapping = {0, 300, 600, 1200, 2400, 4800, 9600, 14400, 19200, 28800, 38400,
+                                                       57600, 115200};
 
         typedef boost::shared_ptr<boost::asio::serial_port> mSerialPortPtr;
         mSerialPortPtr mSerialPort;
         boost::asio::io_service mIOService;
 
         uint32_t mBaudEnumToAbsoluteValue(Baudrates baudrate);
+
         UARTSettings mUartSettings;
     };
 

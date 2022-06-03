@@ -17,7 +17,6 @@ int main(int argc, char **argv)
 	//rmb->setLed(Roomba::leds::LED_Dock, Roomba::ledState::On);
 	//rmb->setControlMode(Roomba::control::Passive);
     rmb->turnOn();
-
 	delete p1;
 	return (0);
 }

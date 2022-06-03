@@ -169,7 +169,7 @@ namespace Roomba {
         int lenList = (songLength * 2);
         bool checkControlMode = mCurrControlMode == control::Passive || mCurrControlMode == control::No_init;
 
-        if(songLength > 16)
+        if (songLength > 16)
             return;
 
         if (checkControlMode)
@@ -178,7 +178,7 @@ namespace Roomba {
         va_list vaList;
         va_start(vaList, lenList);
 
-        for(int i = 2; i < songLength * 2; i++) {
+        for (int i = 2; i < songLength * 2; i++) {
             commands[i] = va_arg(vaList, uint8_t);
         }
 
@@ -187,32 +187,28 @@ namespace Roomba {
 
 /// velocity value may be between 500 and -500
 /// radius value may be between 2000 and -2000
-void Roomba::driveCommand(int16_t velocity, int16_t radius){
-	std::array<uint8_t, 5> commands {command::Drive, static_cast<uint8_t>(velocity & 0xFF),
-                                                     static_cast<uint8_t>(velocity >> 8) ,
-                                                     static_cast<uint8_t>(radius & 0xFF),
-                                                     static_cast<uint8_t>(radius >> 8)};
-	mUartHandle->sendBytes(commands, std::size(commands));
-}
+    void Roomba::driveCommand(int16_t velocity, int16_t radius) {
+        std::array<uint8_t, 5> commands{command::Drive, static_cast<uint8_t>(velocity & 0xFF),
+                                        static_cast<uint8_t>(velocity >> 8),
+                                        static_cast<uint8_t>(radius & 0xFF),
+                                        static_cast<uint8_t>(radius >> 8)};
+        mUartHandle->sendBytes(commands, std::size(commands));
+    }
 
-void Roomba::driveForward()
-{
-	driveCommand(500, 32768);
-}
+    void Roomba::driveForward() {
+        driveCommand(500, 32768);
+    }
 
-void Roomba::driveBackward()
-{
-	driveCommand(-500, 32768);
-}
+    void Roomba::driveBackward() {
+        driveCommand(-500, 32768);
+    }
 
-void Roomba::driveLeft()
-{
-	driveCommand(0, -2000);
-}
+    void Roomba::driveLeft() {
+        driveCommand(0, -2000);
+    }
 
-void Roomba::driveRight()
-{
-	driveCommand(0, 2000);
-}
+    void Roomba::driveRight() {
+        driveCommand(0, 2000);
+    }
 
 }
