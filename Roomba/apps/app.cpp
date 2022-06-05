@@ -5,9 +5,7 @@
 #include <array>
 #include <Roomba/Roomba.hpp>
 #include <crossplatform/function.hpp>
-
-int main(int argc, char **argv)
-{
+int main(int argc, char **argv) {
 	UART::UARTSettings p;
 	p.devicePath = "COM6";
 	p.baudrate = UART::Baudrates::baud_115200;
