@@ -97,8 +97,6 @@ namespace Roomba {
 
         bool mSetFullMode();
 
-        bool mGetCurrLedState();
-
         UART::UART *mUartHandle;
         control mCurrControlMode;
     };

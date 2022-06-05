@@ -120,9 +120,8 @@ namespace Roomba {
     }
 
     void Roomba::setBaudRate(UART::Baudrates baudRate) {
-        const uint8_t BaudCMD =
-                static_cast<uint8_t>(baudRate) - 1; // -1 because commands are shifted by one to allow invalid
-        // baudrate checking.
+        const uint8_t BaudCMD = static_cast<uint8_t>(baudRate) - 1; // -1 because commands are shifted by one to allow
+                                                                    // invalid baudrate checking.
         if (BaudCMD == 0 || BaudCMD > 12)
             throw std::invalid_argument("Invalid baudRate or pointer passed in to parameter baudRate");
 
@@ -148,11 +147,6 @@ namespace Roomba {
 
         std::array<uint8_t, 4> commands{command::Leds, 4, color, intensity};
         mUartHandle->sendBytes(commands, std::size(commands));
-    }
-
-
-    bool Roomba::mGetCurrLedState() {
-        return true;
     }
 
     void Roomba::playSongNum(uint8_t songNum) {
