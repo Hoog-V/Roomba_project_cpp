@@ -19,22 +19,22 @@ namespace Roomba {
 
         if (mCurrControlMode == control::No_init)
             setControlMode(control::Passive);
-        mUARTHandle->sendByte(command::Dock);
+        mUartHandle->sendByte(command::Dock);
         mCurrControlMode = control::Passive;
     }
 
     bool Roomba::mSetPassiveMode() {
         switch (mCurrControlMode) {
             case control::No_init: {
-                mUARTHandle->sendByte(command::Start);
+                mUartHandle->sendByte(command::Start);
                 SLEEP(25);
                 break;
             }
             case control::Safe:
             case control::Full: {
-                mUARTHandle->sendByte(command::Spot);
+                mUartHandle->sendByte(command::Spot);
                 SLEEP(220);
-                mUARTHandle->sendByte(command::Spot);
+                mUartHandle->sendByte(command::Spot);
                 SLEEP(25);
                 break;
             }
@@ -51,7 +51,7 @@ namespace Roomba {
             mSetPassiveMode();
         else if (mCurrControlMode == control::Safe)
             return (false);
-        mUARTHandle->sendByte(command::Safe);
+        mUartHandle->sendByte(command::Safe);
         SLEEP(25);
         return (true);
     }
@@ -62,7 +62,7 @@ namespace Roomba {
         else if (mCurrControlMode == control::Full)
             return (false);
 
-        mUARTHandle->sendByte(command::Full);
+        mUartHandle->sendByte(command::Full);
         SLEEP(25);
         return (true);
     }
@@ -91,13 +91,13 @@ namespace Roomba {
 
         switch (cleaningMode) {
             case cleaning::Spot:
-                mUARTHandle->sendByte(command::Spot);
+                mUartHandle->sendByte(command::Spot);
                 break;
             case cleaning::Max:
-                mUARTHandle->sendByte(command::Max_Clean);
+                mUartHandle->sendByte(command::Max_Clean);
                 break;
             case cleaning::Clean:
-                mUARTHandle->sendByte(command::Clean);
+                mUartHandle->sendByte(command::Clean);
                 break;
         }
         mCurrControlMode = control::Passive;
@@ -106,39 +106,38 @@ namespace Roomba {
     void Roomba::turnOff() {
         if (mCurrControlMode == control::No_init)
             setControlMode(control::Passive);
-        mUARTHandle->sendByte(command::Power);
+        mUartHandle->sendByte(command::Power);
         mCurrControlMode = control::Passive;
     }
 
     void Roomba::turnOn() {
-        IO *gpio = new IO(mUARTHandle);
+        IO *gpio = new IO(mUartHandle);
 
-        gpio->SetPinHIGH();
+        gpio->setPinHigh();
         SLEEP(1000);
-        gpio->SetPinLOW();
+        gpio->setPinLow();
         SLEEP(100);
     }
 
-    void Roomba::setBaudRate(UART::Baudrates BaudRate) {
-        const uint8_t BaudCMD =
-                static_cast<uint8_t>(BaudRate) - 1; // -1 because commands are shifted by one to allow invalid
-        // baudrate checking.
+    void Roomba::setBaudRate(UART::Baudrates baudRate) {
+        const uint8_t BaudCMD = static_cast<uint8_t>(baudRate) - 1; // -1 because commands are shifted by one to allow
+                                                                    // invalid baudrate checking.
         if (BaudCMD == 0 || BaudCMD > 12)
-            throw std::invalid_argument("Invalid BaudRate or pointer passed in to parameter BaudRate");
+            throw std::invalid_argument("Invalid baudRate or pointer passed in to parameter baudRate");
 
         std::array<uint8_t, 2> commands{command::Baud, BaudCMD};
-        mUARTHandle->sendBytes(commands, std::size(commands));
+        mUartHandle->sendBytes(commands, std::size(commands));
         SLEEP(100);
-        mUARTHandle->changeBaud(BaudRate);
+        mUartHandle->changeBaud(baudRate);
     }
 
-    void Roomba::setLed(uint8_t led, LedState state) {
+    void Roomba::setLed(uint8_t led, ledState state) {
         bool checkControlMode = mCurrControlMode == control::Passive || mCurrControlMode == control::No_init;
         if (checkControlMode)
             setControlMode(control::Safe);
-        uint8_t ledBits = state == LedState::Off ? 0 : led;
+        uint8_t ledBits = state == ledState::Off ? 0 : led;
         std::array<uint8_t, 4> commands{command::Leds, ledBits, 0, 128};
-        mUARTHandle->sendBytes(commands, std::size(commands));
+        mUartHandle->sendBytes(commands, std::size(commands));
     }
 
     void Roomba::setPowerLed(uint8_t color, uint8_t intensity) {
@@ -147,12 +146,7 @@ namespace Roomba {
             setControlMode(control::Safe);
 
         std::array<uint8_t, 4> commands{command::Leds, 4, color, intensity};
-        mUARTHandle->sendBytes(commands, std::size(commands));
-    }
-
-
-    bool Roomba::mGetCurrLedState() {
-        return true;
+        mUartHandle->sendBytes(commands, std::size(commands));
     }
 
     void Roomba::playSongNum(uint8_t songNum) {
@@ -161,7 +155,7 @@ namespace Roomba {
             setControlMode(control::Safe);
 
         std::array<uint8_t, 2> commands{command::Play, songNum};
-        mUARTHandle->sendBytes(commands, std::size(commands));
+        mUartHandle->sendBytes(commands, std::size(commands));
     }
 
     void Roomba::setSongNum(uint8_t songNum, uint8_t songLength, ...) {
@@ -169,7 +163,7 @@ namespace Roomba {
         int lenList = (songLength * 2);
         bool checkControlMode = mCurrControlMode == control::Passive || mCurrControlMode == control::No_init;
 
-        if(songLength > 16)
+        if (songLength > 16)
             return;
 
         if (checkControlMode)
@@ -178,41 +172,37 @@ namespace Roomba {
         va_list vaList;
         va_start(vaList, lenList);
 
-        for(int i = 2; i < songLength * 2; i++) {
+        for (int i = 2; i < songLength * 2; i++) {
             commands[i] = va_arg(vaList, uint8_t);
         }
 
-        mUARTHandle->sendBytes(commands, std::size(commands));
+        mUartHandle->sendBytes(commands, std::size(commands));
+    }
+
+    void Roomba::driveForward() {
+        driveCommand(500, 32768);
+    }
+
+    void Roomba::driveBackward() {
+        driveCommand(-500, 32768);
+    }
+
+    void Roomba::driveLeft() {
+        driveCommand(0, -2000);
+    }
+
+    void Roomba::driveRight() {
+        driveCommand(0, 2000);
     }
 
 /// velocity value may be between 500 and -500
 /// radius value may be between 2000 and -2000
-void Roomba::driveCommand(int16_t velocity, int16_t radius){
-	std::array<uint8_t, 5> commands {command::Drive, static_cast<uint8_t>(velocity & 0xFF),
-                                                     static_cast<uint8_t>(velocity >> 8) ,
-                                                     static_cast<uint8_t>(radius & 0xFF),
-                                                     static_cast<uint8_t>(radius >> 8)};
-	mUARTHandle->sendBytes(commands, std::size(commands));
-}
-
-void Roomba::driveForward()
-{
-	driveCommand(500, 32768);
-}
-
-void Roomba::driveBackward()
-{
-	driveCommand(-500, 32768);
-}
-
-void Roomba::driveLeft()
-{
-	driveCommand(0, -2000);
-}
-
-void Roomba::driveRight()
-{
-	driveCommand(0, 2000);
-}
+    void Roomba::driveCommand(int16_t velocity, int16_t radius) {
+        std::array<uint8_t, 5> commands{command::Drive, static_cast<uint8_t>(velocity & 0xFF),
+                                        static_cast<uint8_t>(velocity >> 8),
+                                        static_cast<uint8_t>(radius & 0xFF),
+                                        static_cast<uint8_t>(radius >> 8)};
+        mUartHandle->sendBytes(commands, std::size(commands));
+    }
 
 }

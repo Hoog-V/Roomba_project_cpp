@@ -14,8 +14,8 @@
  */
 TEST(UART_SendBytes, OutOfBoundsCheck) {
     UART::UARTSettings TestSettings;
-    TestSettings.Baudrate = TestBaud;
-    TestSettings.DevicePath = TestPath;
+    TestSettings.baudrate = TestBaud;
+    TestSettings.devicePath = TestPath;
 
     UART::UART *UartHandle = new UART::UART(TestSettings);
 
@@ -37,8 +37,8 @@ TEST(UART_SendBytes, OutOfBoundsCheck) {
  */
 TEST(UART_SendBytes, numOfBytesZero) {
     UART::UARTSettings TestSettings;
-    TestSettings.Baudrate = TestBaud;
-    TestSettings.DevicePath = TestPath;
+    TestSettings.baudrate = TestBaud;
+    TestSettings.devicePath = TestPath;
 
     UART::UART *UartHandle = new UART::UART(TestSettings);
 

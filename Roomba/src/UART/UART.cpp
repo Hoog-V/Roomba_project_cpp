@@ -3,7 +3,7 @@
 #include <iostream>
 #include <boost/asio.hpp>
 
-//Unfornately needed for setting and unsetting the DTR pin under Windows
+//Unfornately needed for setting and resetting the DTR pin under Windows
 #if defined(_WIN32) || defined(_WIN64)
 #include <Windows.h>
 #endif
@@ -11,18 +11,18 @@
 namespace UART {
 
 
-    UART::UART(const UARTSettings Settings) {
-        const uint32_t BaudrateVal = mBaudEnumToImplicitValue(Settings.Baudrate);
-        bool emptyDevicePath = (Settings.DevicePath == "");
+    UART::UART(const UARTSettings settings) {
+        const uint32_t baudrateVal = mBaudEnumToAbsoluteValue(settings.baudrate);
+        bool emptyDevicePath = (settings.devicePath == "");
         if (emptyDevicePath)
-            throw "Empty DevicePath!";
+            throw "Empty devicePath!";
 
         std::cout << "New instance of the UART object" << '\n';
-        std::cout << "Uartsettings Path: " << Settings.DevicePath << " Baudrate: " << BaudrateVal << '\n';
-        mUARTSettings = Settings;
-        mSerialPort = serial_port_ptr(new boost::asio::serial_port(mIOService));
-        mSerialPort->open(Settings.DevicePath);
-        mSerialPort->set_option(boost::asio::serial_port_base::baud_rate(BaudrateVal));
+        std::cout << "Uartsettings Path: " << settings.devicePath << " baudrate: " << baudrateVal << '\n';
+        mUartSettings = settings;
+        mSerialPort = mSerialPortPtr(new boost::asio::serial_port(mIOService));
+        mSerialPort->open(settings.devicePath);
+        mSerialPort->set_option(boost::asio::serial_port_base::baud_rate(baudrateVal));
     }
 
     UART::~UART() {
@@ -36,10 +36,10 @@ namespace UART {
             std::cout << "Serial port succesfully closed!" << '\n';
     }
 
-    void UART::changeBaud(const Baudrates Baudrate) {
+    void UART::changeBaud(const Baudrates baudrate) {
         boost::system::error_code ec;
-        const uint32_t BaudrateVal = mBaudEnumToImplicitValue(Baudrate);
-        mSerialPort->set_option(boost::asio::serial_port_base::baud_rate(BaudrateVal));
+        const uint32_t baudrateVal = mBaudEnumToAbsoluteValue(baudrate);
+        mSerialPort->set_option(boost::asio::serial_port_base::baud_rate(baudrateVal));
         if (ec)
             std::cerr << "Changing baudrate failed!" << '\n';
         else
@@ -54,43 +54,43 @@ namespace UART {
     }
 
 
-    void UART::unsetDTRPin() {
+    void UART::resetDTRPin() {
         using namespace boost::asio;
 
-        serial_port::native_handle_type NativeHandle = mSerialPort->native_handle();
+        serial_port::native_handle_type nativeHandle = mSerialPort->native_handle();
 
 #if defined(_WIN32) || defined(_WIN64)
-        EscapeCommFunction(NativeHandle, SETDTR);
+        EscapeCommFunction(nativeHandle, SETDTR);
 #else
         const int Pin = TIOCM_DTR;
-        ioctl(NativeHandle, TIOCMBIS, &Pin);
+        ioctl(nativeHandle, TIOCMBIS, &Pin);
 #endif
     }
 
     void UART::setDTRPin() {
         using namespace boost::asio;
 
-        serial_port::native_handle_type NativeHandle = mSerialPort->native_handle();
+        serial_port::native_handle_type nativeHandle = mSerialPort->native_handle();
 
 #if defined(_WIN32) || defined(_WIN64)
-        EscapeCommFunction(NativeHandle, CLRDTR);
+        EscapeCommFunction(nativeHandle, CLRDTR);
 #else
         const int Pin = TIOCM_DTR;
-        ioctl(NativeHandle, TIOCMBIC, &Pin);
+        ioctl(nativeHandle, TIOCMBIC, &Pin);
 #endif
     }
 
     /**
     * Converts Baudrates enum to an implicit uint32_t value.
-    * If invalid Baudrate or pointer is passed in to arguments it will throw an exception
+    * If invalid baudrate or pointer is passed in to arguments it will throw an exception
     */
-    uint32_t UART::mBaudEnumToImplicitValue(Baudrates BaudRate) {
-        int Index = static_cast<uint32_t>(BaudRate);
-        std::cout << Index << '\n';
-        if (Index == 0)
-            throw std::invalid_argument("Baudrate is invalid or an empty pointer!");
+    uint32_t UART::mBaudEnumToAbsoluteValue(Baudrates baudrate) {
+        int baudEnumIndex = static_cast<uint32_t>(baudrate);
+        std::cout << baudEnumIndex << '\n';
+        if (baudEnumIndex == 0)
+            throw std::invalid_argument("baudrate is invalid or an empty pointer!");
 
-        uint32_t baud = mBaudImplicit.at(Index);
+        uint32_t baud = mBaudMapping.at(baudEnumIndex);
         return baud;
     }
 
