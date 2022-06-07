@@ -46,6 +46,7 @@ class Roomba {
   - mSetFullMode : bool
   --
   + Roomba(mCommunicationSettings : struct) : void
+  + ~Roomba() : void
   + Rotate(angle : int) : void
   + setMotor(motor : int, velocity : int) : void
   + startCleaning(cleaningMode : cleaningModes) : void
@@ -57,7 +58,6 @@ class Roomba {
   + setSongNum(songnum : int) : void
   + turnOn() : void
   + turnOff() : void
-  + ~Roomba() : void
 }
 
 enum LEDS {
@@ -127,11 +127,11 @@ Capacity
 abstract class IO {
 - mCommunicationSettings : struct
 --
-+ Create(mCommunicationSettings : struct) : void
 ~ IO(mCommunicationSettings : struct) : virtual void
+~ ~IO() : virtual void
 ~ SetPinHigh() : virtual void
 ~ SetPinLow() : virtual void
-~ ~IO() : virtual void
++ Create(mCommunicationSettings : struct) : void
 }
 
 class IOPC {
