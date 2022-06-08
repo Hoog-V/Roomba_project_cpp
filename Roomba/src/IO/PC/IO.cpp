@@ -2,9 +2,9 @@
 #include <UART/UART.hpp>
 
 void IO::setPinHigh() {
-    mUartHandle->resetDTRPin();
+    this->mUartHandle->resetDTRPin();
 }
 
 void IO::setPinLow() {
-    mUartHandle->setDTRPin();
+    this->mUartHandle->setDTRPin();
 }
