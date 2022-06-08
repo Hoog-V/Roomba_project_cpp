@@ -42,10 +42,6 @@ namespace UART {
 
         virtual void sendByte(const uint8_t byte)= 0;
 
-        virtual void resetDTRPin()=0;
-
-        virtual void setDTRPin()=0;
-
         virtual void sendBytes(uint8_t* buffer, const uint8_t numOfBytes) =0;
 
         virtual void readBytes(uint8_t* buffer, const uint8_t numOfBytes) = 0;

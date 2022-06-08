@@ -1,10 +1,10 @@
 #pragma once
 
 #include <UART/UART.hpp>
-
+#include <UART/PC/UARTPC.hpp>
 class IO {
 public:
-    IO(UART::UART *uartHandle) {
+    IO(UART::UARTPC *uartHandle) {
         mUartHandle = uartHandle;
     }
 
@@ -13,5 +13,5 @@ public:
     void setPinLow();
 
 private:
-    UART::UART *mUartHandle;
+    UART::UARTPC *mUartHandle;
 };

@@ -111,7 +111,7 @@ namespace Roomba {
     }
 
     void Roomba::turnOn() {
-        IO *gpio = new IO(mUartHandle);
+        IO *gpio = new IO((UART::UARTPC *)mUartHandle);
 
         gpio->setPinHigh();
         SLEEP(1000);
