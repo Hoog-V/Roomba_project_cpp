@@ -23,7 +23,6 @@ namespace Roomba {
         Charge, Capacity
     };
 
-
     enum leds : uint8_t {
         LED_Debris = 1, LED_Spot = 2, LED_Dock = 4, LED_Check_Robot = 8
     };
