@@ -54,12 +54,16 @@ namespace UART {
         mSerialPort->write_some(boost::asio::buffer(&buff, sizeof(buff)), ec);
     }
 
-    void UARTPC::sendBytes(uint8_t* buffer, const uint8_t numOfBytes){
+    void UARTPC::sendBytes(uint8_t* buffer, const uint32_t numOfBytes){
+        if (numOfBytes < 1)
+            throw "Number of bytes to read is zero or negative";
         boost::system::error_code ec;
         mSerialPort->write_some(boost::asio::mutable_buffer(buffer, numOfBytes), ec);
     }
 
-    void UARTPC::readBytes(uint8_t* buffer, const uint8_t numOfBytes){
+    void UARTPC::readBytes(uint8_t* buffer, const uint32_t numOfBytes){
+        if (numOfBytes < 1)
+            throw "Number of bytes to read is zero or negative";
         boost::system::error_code ec;
         mSerialPort->read_some(boost::asio::mutable_buffer(buffer, numOfBytes), ec);
     }
