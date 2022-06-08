@@ -5,7 +5,6 @@
 #include <boost/asio.hpp>
 #include <stdint.h>
 #include <map>
-#include <boost/any.hpp>
 #include <exception>
 
 
