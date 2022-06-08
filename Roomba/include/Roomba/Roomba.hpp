@@ -3,7 +3,7 @@
 #include <UART/UART.hpp>
 #include <map>
 #include <stdarg.h>
-
+#include <IO/IO.hpp>
 
 namespace Roomba {
 
@@ -44,6 +44,7 @@ namespace Roomba {
     public:
         Roomba(UART::UART *UARTHandle) {
             mUartHandle = UARTHandle;
+            mIOHandle =  new IO(mUartHandle);
             mCurrControlMode = control::No_init;
         }
 
@@ -96,7 +97,7 @@ namespace Roomba {
         bool mSetSafeMode();
 
         bool mSetFullMode();
-
+        IO* mIOHandle;
         UART::UART* mUartHandle;
         control mCurrControlMode;
     };

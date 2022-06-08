@@ -2,9 +2,11 @@
 #include <UART/UART.hpp>
 
 void IO::setPinHigh() {
-    mUartHandle->resetDTRPin();
+    UART::UARTPC* mUartHandlePC = static_cast<UART::UARTPC*>(mUartHandle);
+    mUartHandlePC->resetDTRPin();
 }
 
 void IO::setPinLow() {
-    mUartHandle->setDTRPin();
+    UART::UARTPC* mUartHandlePC = static_cast<UART::UARTPC*>(mUartHandle);
+    mUartHandlePC->setDTRPin();
 }

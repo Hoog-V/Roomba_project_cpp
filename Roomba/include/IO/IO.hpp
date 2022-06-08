@@ -4,7 +4,7 @@
 #include <UART/PC/UARTPC.hpp>
 class IO {
 public:
-    IO(UART::UARTPC *uartHandle) {
+    IO(UART::UART *uartHandle) {
         mUartHandle = uartHandle;
     }
 
@@ -13,5 +13,5 @@ public:
     void setPinLow();
 
 private:
-    UART::UARTPC *mUartHandle;
+    UART::UART *mUartHandle;
 };
