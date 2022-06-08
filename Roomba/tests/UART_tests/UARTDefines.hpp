@@ -2,7 +2,6 @@
 #define UARTDEFINESHPP
 
 #include <UART/UART.hpp>
-#include <UART/PC/UARTPC.hpp>
 
 const char TestPath[] = "/dev/pts/2"; //standard path for linux (virtual file descriptor)
 const UART::Baudrates TestBaud = UART::Baudrates::baud_115200;

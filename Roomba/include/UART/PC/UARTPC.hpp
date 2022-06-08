@@ -9,7 +9,7 @@
 
 namespace UART{
     enum class connectionMethod{
-        USB, ESP
+        USB
     };
 
     class UARTPC : public UART {
