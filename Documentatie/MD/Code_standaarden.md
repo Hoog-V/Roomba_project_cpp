@@ -1,4 +1,4 @@
-- Gebruik van CamelCase <- dus TestFun bijv. nu is library mixed case gebruikt dat is fout :| ,
+- Gebruik van camelCase <- dus testFun bijv. nu is library mixed case gebruikt dat is fout :| ,
 
 - Gebruik van getters en setters waar het kan (-> setPin of setLED)
 
@@ -22,7 +22,7 @@
 
 - Haakjes openen op dezelfde regel bij definitie functie of loop:
    
-   void TestFun(){
+   void testFun(){
 
    
    }

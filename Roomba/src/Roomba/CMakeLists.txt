@@ -15,6 +15,7 @@ target_include_directories(Roomba_lib PUBLIC ${PROJECT_SOURCE_DIR}/include)
 target_link_libraries(Roomba_lib PRIVATE boost_chrono)
 target_link_libraries(Roomba_lib PRIVATE boost_asio)
 target_link_libraries(Roomba_lib PRIVATE UART_lib)
+target_link_libraries(Roomba_lib PRIVATE IO_lib)
 
 # All users of this library will need at least C++11
 target_compile_features(Roomba_lib PUBLIC cxx_std_20)
