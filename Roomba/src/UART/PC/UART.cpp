@@ -19,17 +19,17 @@ namespace UART {
 
         std::cout << "New instance of the UART object" << '\n';
         std::cout << "Uartsettings Path: " << settings.devicePath << " baudrate: " << baudrateVal << '\n';
-        mUartSettings = settings;
-        mSerialPort = mSerialPortPtr(new boost::asio::serial_port(mIOService));
-        mSerialPort->open(settings.devicePath);
-        mSerialPort->set_option(boost::asio::serial_port_base::baud_rate(baudrateVal));
+        this->mUartSettings = settings;
+        this->mSerialPort = mSerialPortPtr(new boost::asio::serial_port(mIOService));
+        this->mSerialPort->open(settings.devicePath);
+        this->mSerialPort->set_option(boost::asio::serial_port_base::baud_rate(baudrateVal));
     }
 
     UARTPC::~UARTPC()  {
         boost::system::error_code ec;
         std::cout << "Destructor Called\n";
-        mSerialPort->close(ec);
-        mIOService.stop();
+        this->mSerialPort->close(ec);
+        this->mIOService.stop();
         if (ec)
             std::cerr << "Closing serialport failed!" << '\n';
         else
@@ -38,8 +38,8 @@ namespace UART {
 
     void UARTPC::changeBaud(const Baudrates baudrate) {
         boost::system::error_code ec;
-        const uint32_t baudrateVal = mBaudEnumToAbsoluteValue(baudrate);
-        mSerialPort->set_option(boost::asio::serial_port_base::baud_rate(baudrateVal));
+        const uint32_t baudrateVal = this->mBaudEnumToAbsoluteValue(baudrate);
+        this->mSerialPort->set_option(boost::asio::serial_port_base::baud_rate(baudrateVal));
         if (ec)
             std::cerr << "Changing baudrate failed!" << '\n';
         else
@@ -50,21 +50,21 @@ namespace UART {
     void UARTPC::sendByte(const uint8_t byte) {
         uint8_t buff = byte;
         boost::system::error_code ec;
-        mSerialPort->write_some(boost::asio::buffer(&buff, sizeof(buff)), ec);
+        this->mSerialPort->write_some(boost::asio::buffer(&buff, sizeof(buff)), ec);
     }
 
     void UARTPC::sendBytes(uint8_t* buffer, const uint32_t numOfBytes){
         if (numOfBytes < 1)
             throw "Number of bytes to read is zero or negative";
         boost::system::error_code ec;
-        mSerialPort->write_some(boost::asio::mutable_buffer(buffer, numOfBytes), ec);
+        this->mSerialPort->write_some(boost::asio::mutable_buffer(buffer, numOfBytes), ec);
     }
 
     void UARTPC::readBytes(uint8_t* buffer, const uint32_t numOfBytes){
         if (numOfBytes < 1)
             throw "Number of bytes to read is zero or negative";
         boost::system::error_code ec;
-        mSerialPort->read_some(boost::asio::mutable_buffer(buffer, numOfBytes), ec);
+        this->mSerialPort->read_some(boost::asio::mutable_buffer(buffer, numOfBytes), ec);
     }
 
 
@@ -111,11 +111,10 @@ namespace UART {
     }
 
     UART* UART::Create(const UARTSettings Settings){
-        if(Settings.connectionMethod  == connectionMethod::USB) {
+
+        if (Settings.connectionMethod == connectionMethod::USB) {
             return new UARTPC(Settings);
         }
-        else {
-            return NULL;
-        }
+        throw std::exception();
     }
 }

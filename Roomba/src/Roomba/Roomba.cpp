@@ -124,7 +124,7 @@ namespace Roomba {
             throw std::invalid_argument("Invalid baudRate or pointer passed in to parameter baudRate");
 
         std::array<uint8_t, 2> commands{command::Baud, BaudCMD};
-        mUartHandle->sendBytes(commands.data(), std::size(commands));
+        mUartHandle->sendBytes(commands.data(), commands.size());
         SLEEP(100);
         mUartHandle->changeBaud(baudRate);
     }

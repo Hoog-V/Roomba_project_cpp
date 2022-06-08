@@ -8,6 +8,7 @@
 #include "UART/UART.hpp"
 
 namespace UART{
+
     enum class connectionMethod{
         USB
     };
@@ -35,5 +36,5 @@ namespace UART{
         mSerialPortPtr mSerialPort;
         boost::asio::io_service mIOService;
     };
-//#include "UART-tmp-func.inl"
+
 }

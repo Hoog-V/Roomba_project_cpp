@@ -45,6 +45,11 @@ namespace UART {
         virtual void sendBytes(uint8_t* buffer, const uint32_t numOfBytes) =0;
 
         virtual void readBytes(uint8_t* buffer, const uint32_t numOfBytes) = 0;
+
+        virtual void resetDTRPin(){}
+
+        virtual void setDTRPin(){}
+
     protected:
         const std::array<uint32_t, 13> mBaudMapping = {0, 300, 600, 1200, 2400, 4800, 9600, 14400, 19200, 28800, 38400,
                                                        57600, 115200};
