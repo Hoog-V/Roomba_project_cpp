@@ -9,11 +9,12 @@
  */
 TEST(UART_init, EmptyDevicePath) {
     UART::UARTSettings TestSettings;
-    TestSettings.DevicePath = "";
-    TestSettings.Baudrate = TestBaud;
+    TestSettings.devicePath = "";
+    TestSettings.baudrate = TestBaud;
+    TestSettings.connectionMethod = TestMethod;
 
     EXPECT_ANY_THROW({
-       UART::UART *UartHandle = new UART::UART(TestSettings);
+        UART::UART *UartHandle = UART::UART::Create(TestSettings);
     });
 }
 
@@ -24,11 +25,12 @@ TEST(UART_init, EmptyDevicePath) {
  */
 TEST(UART_init, EmptyBaudrate) {
     UART::UARTSettings TestSettings;
-    TestSettings.DevicePath = TestPath;
+    TestSettings.devicePath = TestPath;
+    TestSettings.connectionMethod = TestMethod;
 
     EXPECT_NO_THROW({
-        std::cout << static_cast<uint32_t>(TestSettings.Baudrate) << '\n';
-        UART::UART *UartHandle = new UART::UART(TestSettings);
+        std::cout << static_cast<uint32_t>(TestSettings.baudrate) << '\n';
+        UART::UART *UartHandle = UART::UART::Create(TestSettings);
     });
 }
 
@@ -39,10 +41,11 @@ TEST(UART_init, EmptyBaudrate) {
  */
 TEST(UART_init, ValidUartSettings) {
     UART::UARTSettings TestSettings;
-    TestSettings.DevicePath = TestPath;
-    TestSettings.Baudrate = TestBaud;
+    TestSettings.devicePath = TestPath;
+    TestSettings.baudrate = TestBaud;
+    TestSettings.connectionMethod = TestMethod;
 
     EXPECT_NO_THROW({
-        UART::UART *UartHandle = new UART::UART(TestSettings);
+        UART::UART *UartHandle = UART::UART::Create(TestSettings);
     });
 }

@@ -1,23 +1,15 @@
-#include <iostream>
 #include <UART/UART.hpp>
-#include <thread>
-#include <algorithm>
 #include <array>
-#include <Roomba/Roomba.hpp>
-#include <crossplatform/function.hpp>
+#include "Roomba/Roomba.hpp"
 
-int main(int argc, char **argv)
-{
+
+int main(int argc, char **argv) {
 	UART::UARTSettings p;
-	p.DevicePath = "COM6";
-	p.Baudrate = UART::Baudrates::baud_115200;
-	UART::UART * p1 = new UART::UART(p);
-	Roomba::Roomba* rmb = new Roomba::Roomba(p1);
-	//rmb->setDockMode();
-	//rmb->setLed(Roomba::leds::LED_Dock, Roomba::LedState::On);
-	//rmb->setControlMode(Roomba::control::Passive);
-    rmb->turnOn();
-
-	delete p1;
+	p.devicePath = "/dev/ttyUSB0";
+	p.baudrate = UART::Baudrates::baud_115200;
+    p.connectionMethod = UART::connectionMethod::USB;
+	UART::UART * p1 = UART::UART::Create(p);;
+    Roomba::Roomba* rmb = new Roomba::Roomba(p1);
+    rmb->setDockMode();
 	return (0);
 }

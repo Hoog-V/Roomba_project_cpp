@@ -1,5 +1,4 @@
 #include <gtest/gtest.h>
-#include <UART/UART.hpp>
 #include "UARTDefines.hpp"
 
 /**
@@ -9,10 +8,11 @@
  */
 TEST(UART_ChangeBaud, InvalidBaudrate) {
     UART::UARTSettings TestSettings;
-    TestSettings.DevicePath = TestPath;
-    TestSettings.Baudrate = TestBaud;
+    TestSettings.devicePath = TestPath;
+    TestSettings.baudrate = TestBaud;
+    TestSettings.connectionMethod = TestMethod;
 
-    UART::UART *UartHandle = new UART::UART(TestSettings);
+    UART::UART *UartHandle = UART::UART::Create(TestSettings);
 
     UART::Baudrates InvalidBaud; //Create a pointer
     EXPECT_THROW({
@@ -26,10 +26,11 @@ TEST(UART_ChangeBaud, InvalidBaudrate) {
  */
 TEST(UART_ChangeBaud, ValidBaudrate) {
     UART::UARTSettings TestSettings;
-    TestSettings.DevicePath = TestPath;
-    TestSettings.Baudrate = TestBaud;
+    TestSettings.devicePath = TestPath;
+    TestSettings.baudrate = TestBaud;
+    TestSettings.connectionMethod = TestMethod;
 
-    UART::UART *UartHandle = new UART::UART(TestSettings);
+    UART::UART *UartHandle = UART::UART::Create(TestSettings);
 
     EXPECT_NO_THROW({
         UartHandle->changeBaud(UART::Baudrates::baud_9600);

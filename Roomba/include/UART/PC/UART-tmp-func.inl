@@ -1,11 +1,11 @@
 #pragma once
 
 template<typename arr, std::size_t size>
-void UART::readBytes(std::array<arr, size> &buffer, const uint8_t numOfbytes) {
-    if (numOfbytes < 1)
+void UARTPC::readBytes(std::array<arr, size> &buffer, const uint8_t numOfBytes) {
+    if (numOfBytes < 1)
         throw "Number of bytes to read is zero or negative";
 
-    if (numOfbytes > buffer.size())
+    if (numOfBytes > buffer.size())
         throw "Out of bounds!";
     boost::system::error_code ec;
     mSerialPort->read_some(boost::asio::mutable_buffer(buffer.data(), buffer.size()), ec);
@@ -13,12 +13,12 @@ void UART::readBytes(std::array<arr, size> &buffer, const uint8_t numOfbytes) {
 
 
 template<typename arr, std::size_t size>
-void UART::sendBytes(std::array<arr, size> &buffer, const uint8_t numOfbytes) {
-    if (numOfbytes < 1)
+void UARTPC::sendBytes(std::array<arr, size> &buffer, const uint8_t numOfBytes) {
+    if (numOfBytes < 1)
         throw "Number of bytes to send is zero or negative";
 
-    if (numOfbytes < 1 || numOfbytes > buffer.size())
+    if (numOfBytes < 1 || numOfBytes > buffer.size())
         throw "Out of bounds!";
     boost::system::error_code ec;
-    mSerialPort->write_some(boost::asio::mutable_buffer(buffer.data(), numOfbytes), ec);
+    mSerialPort->write_some(boost::asio::mutable_buffer(buffer.data(), numOfBytes), ec);
 }

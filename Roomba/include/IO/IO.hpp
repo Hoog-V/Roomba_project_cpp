@@ -1,14 +1,17 @@
 #pragma once
 
 #include <UART/UART.hpp>
-
-class IO{
+#include <UART/PC/UARTPC.hpp>
+class IO {
 public:
-    IO(UART::UART *UARTHandle){
-        mUARTHandle = UARTHandle;
+    IO(UART::UART *uartHandle) {
+        mUartHandle = uartHandle;
     }
-    void SetPinHIGH();
-    void SetPinLOW();
+
+    void setPinHigh();
+
+    void setPinLow();
+
 private:
-    UART::UART *mUARTHandle;
+    UART::UART *mUartHandle;
 };
