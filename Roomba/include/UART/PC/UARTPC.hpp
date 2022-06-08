@@ -14,18 +14,15 @@ namespace UART{
 
     class UARTPC : public UART {
     public:
-
-        explicit UARTPC(const UARTSettings settings);
+        UARTPC(const UARTSettings settings);
 
         void changeBaud(const Baudrates baudrate);
 
         void sendByte(const uint8_t byte);
 
-        template<typename arr, std::size_t size>
-        void sendBytes(std::array<arr, size> &buffer, const uint8_t numOfBytes);
+        void sendBytes(uint8_t* buffer, const uint8_t numOfBytes);
 
-        template<typename arr, std::size_t size>
-        void readBytes(std::array<arr, size> &buffer, const uint8_t numOfBytes);
+        void readBytes(uint8_t* buffer, const uint8_t numOfBytes);
 
         void resetDTRPin();
 
@@ -38,5 +35,5 @@ namespace UART{
         mSerialPortPtr mSerialPort;
         boost::asio::io_service mIOService;
     };
-#include "UART-tmp-func.inl"
+//#include "UART-tmp-func.inl"
 }

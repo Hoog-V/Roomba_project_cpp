@@ -54,6 +54,16 @@ namespace UART {
         mSerialPort->write_some(boost::asio::buffer(&buff, sizeof(buff)), ec);
     }
 
+    void UARTPC::sendBytes(uint8_t* buffer, const uint8_t numOfBytes){
+        boost::system::error_code ec;
+        mSerialPort->write_some(boost::asio::mutable_buffer(buffer, numOfBytes), ec);
+    }
+
+    void UARTPC::readBytes(uint8_t* buffer, const uint8_t numOfBytes){
+        boost::system::error_code ec;
+        mSerialPort->read_some(boost::asio::mutable_buffer(buffer, numOfBytes), ec);
+    }
+
 
     void UARTPC::resetDTRPin() {
         using namespace boost::asio;

@@ -126,7 +126,7 @@ namespace Roomba {
             throw std::invalid_argument("Invalid baudRate or pointer passed in to parameter baudRate");
 
         std::array<uint8_t, 2> commands{command::Baud, BaudCMD};
-        mUartHandle->sendBytes(commands, std::size(commands));
+        mUartHandle->sendBytes(commands.data(), std::size(commands));
         SLEEP(100);
         mUartHandle->changeBaud(baudRate);
     }
@@ -137,7 +137,7 @@ namespace Roomba {
             setControlMode(control::Safe);
         uint8_t ledBits = state == ledState::Off ? 0 : led;
         std::array<uint8_t, 4> commands{command::Leds, ledBits, 0, 128};
-        mUartHandle->sendBytes(commands, std::size(commands));
+        mUartHandle->sendBytes(commands.data(), std::size(commands));
     }
 
     void Roomba::setPowerLed(uint8_t color, uint8_t intensity) {
@@ -146,7 +146,7 @@ namespace Roomba {
             setControlMode(control::Safe);
 
         std::array<uint8_t, 4> commands{command::Leds, 4, color, intensity};
-        mUartHandle->sendBytes(commands, std::size(commands));
+        mUartHandle->sendBytes(commands.data(), std::size(commands));
     }
 
     void Roomba::playSongNum(uint8_t songNum) {
@@ -155,7 +155,7 @@ namespace Roomba {
             setControlMode(control::Safe);
 
         std::array<uint8_t, 2> commands{command::Play, songNum};
-        mUartHandle->sendBytes(commands, std::size(commands));
+        mUartHandle->sendBytes(commands.data(), std::size(commands));
     }
 
     void Roomba::setSongNum(uint8_t songNum, uint8_t songLength, ...) {
@@ -176,7 +176,7 @@ namespace Roomba {
             commands[i] = va_arg(vaList, uint8_t);
         }
 
-        mUartHandle->sendBytes(commands, std::size(commands));
+        mUartHandle->sendBytes(commands.data(), std::size(commands));
     }
 
     void Roomba::driveForward() {
@@ -202,7 +202,7 @@ namespace Roomba {
                                         static_cast<uint8_t>(velocity >> 8),
                                         static_cast<uint8_t>(radius & 0xFF),
                                         static_cast<uint8_t>(radius >> 8)};
-        mUartHandle->sendBytes(commands, std::size(commands));
+        mUartHandle->sendBytes(commands.data(), std::size(commands));
     }
 
 }
