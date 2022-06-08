@@ -7,33 +7,46 @@ enum Motors <<enumeration>>
 enum Control <<enumeration class>>
 enum Sensors <<enumeration class>>
 
-class UART
+
+abstract class UART <<abstract class>>
+class UARTESP <<class>>
+class UARTPC <<class>>
+
+abstract class IO <<abstract class>>
+
 enum Baudrates <<enumeration class>>
 
 Roomba <-left- CleaningModes : 1
 Roomba <-up- LEDS
 Roomba <-up- Motors 
 Roomba <-left- Control : 1
-Roomba <-down- Sensors
-Roomba <-up- UART : 1
+Roomba <-right- Sensors
+Roomba <-down- UART : 1
 Roomba <-left- Baudrates : 1
 
+UART <-down- UARTPC :1
+UART <-down- UARTESP:1
 
 UART <-left- Baudrates : 1
 
-IO <-down- Roomba : 1
+Roomba <-down- IO : 1
+IO <-down- IOPC : 1
+IO <-down- IOESP :1
 
-UART <-right- IO : 1
+
+
 
 class Roomba {
+  - mCommunicationSettings : struct
+  - mIOHandle : IO
   - mUARTHandle : UART
-  - mSongNum : int
   - mCurrControlMode : Control
   - mSetPassiveMode : bool
   - mSetSafeMode : bool
   - mSetFullMode : bool
   --
-  + Roomba(mUARTHandle : UART) : void
+  + Roomba(mCommunicationSettings : struct) : void
+  + ~Roomba() : void
   + Rotate(angle : int) : void
   + setMotor(motor : int, velocity : int) : void
   + startCleaning(cleaningMode : cleaningModes) : void
@@ -45,7 +58,6 @@ class Roomba {
   + setSongNum(songnum : int) : void
   + turnOn() : void
   + turnOff() : void
-  + ~Roomba() : void
 }
 
 enum LEDS {
@@ -76,17 +88,6 @@ baud_28800
 baud_38400
 baud_57600
 baud_115200
-}
-
-class UART {
-- mUARTsettings : struct
---
-+ UART(mUARTsettings : struct) : void
-+ changeBaud(baudrate : enum) : void
-+ sendBytes(buffer[] : int, numOfbytes : int) : void
-+ sendByte(byte : int) : void
-+ readBytes(buffer[] : int, numOfbytes : int) : void
-+ ~UART() : void
 }
 
 enum CleaningModes {
@@ -123,14 +124,65 @@ Capacity
 }
 
 
-class IO {
-- mUARTHandle : UART
+abstract class IO {
+- mCommunicationSettings : struct
 --
-+ IO(mUARTHandle : UART) : void
-+ SetPinHigh() : void
-+ SetPinLow() : void
-+ ~IO() : void
+~ IO(mCommunicationSettings : struct) : virtual void
+~ ~IO() : virtual void
+~ SetPinHigh() : virtual void
+~ SetPinLow() : virtual void
++ Create(mCommunicationSettings : struct) : void
 }
 
+class IOPC {
+--
++ IO(mCommunicationSettings : struct) : void
++ ~IO() : void
++ SetPinHigh() : void
++ SetPinLow() : void
+}
+
+class IOESP{
+--
++ IO(mCommunicationSettings : struct) : void
++ ~IO() : void
++ SetPinHigh() : void
++ SetPinLow() : void
+}
+
+
+abstract class UART{
+- mCommunicationSettings : struct
+--
+~ UART(mCommunicationSettings : struct)) : virtual void
+~ ~UART() : virtual void
+~ changeBaud(baudrate : enum) : virtual void
+~ sendBytes(buffer[] : uint8_t, numOfbytes : int) : virtual void
+~ sendByte(byte : uint8_t) : virtual void
+~ readBytes(buffer[] : uint8_t, numOfbytes : int) : virtual void
++ Create(mUARTsettings : struct) : void
+}
+
+class UARTPC {
+- mSerialPort : boost::asio::serial_port
+--
++ UART(mCommunicationSettings : struct)
++ ~UART() : void
++ changeBaud(baudrate : enum) : void
++ sendBytes(buffer[] : uint8_t, numOfbytes : uint8_t) : void
++ sendByte(byte : uint8_t) : void
++ readBytes(buffer[] : uint8_t, numOfbytes : uint8_t) : void
+}
+
+class UARTESP {
+- mSerialPort : int
+--
++ UART(mCommunicationSettings : struct)
++ ~UART() : void
++ changeBaud(baudrate : enum) : void
++ sendBytes(buffer[] : uint8_t, numOfbytes : int) : void
++ sendByte(byte : uint8_t) : void
++ readBytes(buffer[] : uint8_t, numOfbytes : int) : void
+}
 
 @enduml
