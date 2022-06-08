@@ -1,7 +1,8 @@
-#include <UART/UART.hpp>
+#include "UART/UART.hpp"
+#include "UART/PC/UARTPC.hpp"
 #include <stdint.h>
 #include <iostream>
-#include <boost/asio.hpp>
+#include "boost/asio.hpp"
 
 //Unfornately needed for setting and resetting the DTR pin under Windows
 #if defined(_WIN32) || defined(_WIN64)
@@ -11,7 +12,7 @@
 namespace UART {
 
 
-    UART::UART(const UARTSettings settings) {
+    UARTPC::UARTPC(const UARTSettings settings) {
         const uint32_t baudrateVal = mBaudEnumToAbsoluteValue(settings.baudrate);
         bool emptyDevicePath = (settings.devicePath == "");
         if (emptyDevicePath)
@@ -25,7 +26,7 @@ namespace UART {
         mSerialPort->set_option(boost::asio::serial_port_base::baud_rate(baudrateVal));
     }
 
-    UART::~UART() {
+    UARTPC::~UARTPC()  {
         boost::system::error_code ec;
         std::cout << "Destructor Called\n";
         mSerialPort->close(ec);
@@ -36,7 +37,7 @@ namespace UART {
             std::cout << "Serial port succesfully closed!" << '\n';
     }
 
-    void UART::changeBaud(const Baudrates baudrate) {
+    void UARTPC::changeBaud(const Baudrates baudrate) {
         boost::system::error_code ec;
         const uint32_t baudrateVal = mBaudEnumToAbsoluteValue(baudrate);
         mSerialPort->set_option(boost::asio::serial_port_base::baud_rate(baudrateVal));
@@ -47,14 +48,14 @@ namespace UART {
     }
 
 
-    void UART::sendByte(const uint8_t byte) {
+    void UARTPC::sendByte(const uint8_t byte) {
         uint8_t buff = byte;
         boost::system::error_code ec;
         mSerialPort->write_some(boost::asio::buffer(&buff, sizeof(buff)), ec);
     }
 
 
-    void UART::resetDTRPin() {
+    void UARTPC::resetDTRPin() {
         using namespace boost::asio;
 
         serial_port::native_handle_type nativeHandle = mSerialPort->native_handle();
@@ -67,7 +68,7 @@ namespace UART {
 #endif
     }
 
-    void UART::setDTRPin() {
+    void UARTPC::setDTRPin() {
         using namespace boost::asio;
 
         serial_port::native_handle_type nativeHandle = mSerialPort->native_handle();
@@ -79,6 +80,8 @@ namespace UART {
         ioctl(nativeHandle, TIOCMBIC, &Pin);
 #endif
     }
+
+
 
     /**
     * Converts Baudrates enum to an implicit uint32_t value.
@@ -94,4 +97,12 @@ namespace UART {
         return baud;
     }
 
+    UART* UART::Create(const UARTSettings Settings){
+        if(Settings.connectionMethod  == connectionMethod::USB) {
+            return new UARTPC(Settings);
+        }
+        else {
+            return NULL;
+        }
+    }
 }

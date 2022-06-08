@@ -1,7 +1,7 @@
 #pragma once
 
 template<typename arr, std::size_t size>
-void UART::readBytes(std::array<arr, size> &buffer, const uint8_t numOfBytes) {
+void UARTPC::readBytes(std::array<arr, size> &buffer, const uint8_t numOfBytes) {
     if (numOfBytes < 1)
         throw "Number of bytes to read is zero or negative";
 
@@ -13,7 +13,7 @@ void UART::readBytes(std::array<arr, size> &buffer, const uint8_t numOfBytes) {
 
 
 template<typename arr, std::size_t size>
-void UART::sendBytes(std::array<arr, size> &buffer, const uint8_t numOfBytes) {
+void UARTPC::sendBytes(std::array<arr, size> &buffer, const uint8_t numOfBytes) {
     if (numOfBytes < 1)
         throw "Number of bytes to send is zero or negative";
 

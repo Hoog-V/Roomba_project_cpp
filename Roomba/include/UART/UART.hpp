@@ -5,6 +5,8 @@
 #include <boost/asio.hpp>
 #include <stdint.h>
 #include <map>
+#include <boost/any.hpp>
+#include <exception>
 
 namespace UART {
 
@@ -24,46 +26,39 @@ namespace UART {
         baud_115200
     };
 
+    enum class connectionMethod;
+
     struct UARTSettings {
         UART::Baudrates baudrate = Baudrates::baud_115200;
         std::string devicePath;
+        UART::connectionMethod connectionMethod;
     };
 
     class UART {
     public:
+        static UART* Create(const UARTSettings Settings);
 
-        UART(const UARTSettings settings);
+        virtual void changeBaud(const Baudrates baudrate)= 0;
 
-        void changeBaud(const Baudrates baudrate);
+        virtual void sendByte(const uint8_t byte)= 0;
 
-        void sendByte(const uint8_t byte);
+        virtual void resetDTRPin()=0;
 
-        template<typename arr, std::size_t size>
-        void sendBytes(std::array<arr, size> &buffer, const uint8_t numOfBytes);
+        virtual void setDTRPin()=0;
 
-        template<typename arr, std::size_t size>
-        void readBytes(std::array<arr, size> &buffer, const uint8_t numOfBytes);
-
-        void resetDTRPin();
-
-        void setDTRPin();
-
-        ~UART();
-
-    private:
+    protected:
         const std::array<uint32_t, 13> mBaudMapping = {0, 300, 600, 1200, 2400, 4800, 9600, 14400, 19200, 28800, 38400,
                                                        57600, 115200};
 
-        typedef boost::shared_ptr<boost::asio::serial_port> mSerialPortPtr;
-        mSerialPortPtr mSerialPort;
-        boost::asio::io_service mIOService;
+
 
         uint32_t mBaudEnumToAbsoluteValue(Baudrates baudrate);
 
         UARTSettings mUartSettings;
     };
 
-#include <UART/UART-tmp-func.inl>
+
+//#include <UART/UART-tmp-func.inl>
 
 }
 
