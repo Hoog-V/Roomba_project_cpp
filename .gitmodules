@@ -148,3 +148,9 @@
 [submodule "external/Boost/libs/intrusive"]
 	path = external/Boost/libs/intrusive
 	url = https://github.com/boostorg/intrusive.git
+[submodule "tests/googletest"]
+	path = tests/googletest
+	url = https://github.com/google/googletest.git
+[submodule "external/Boost/libs/mpl"]
+	path = external/Boost/libs/mpl
+	url = https://github.com/boostorg/mpl.git
