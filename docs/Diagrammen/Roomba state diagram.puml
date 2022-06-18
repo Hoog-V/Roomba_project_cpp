@@ -1,0 +1,39 @@
+@startuml Roomba
+
+
+title Roomba\nState chart (FSM)\n
+
+[*] --> InitialisedSystem : E_START / RoombainitialiseSubSystems()
+InitialisedSystem : Motors
+InitialisedSystem : LEDS
+InitialisedSystem : UART
+
+InitialisedSystem --> Configure : E_CONTINUE [no init error(s)]
+InitialisedSystem --> [*] : E_CONTINUE [init error(s)] / \n     RoombaShutdownSubSystems()
+
+Configure : 
+Configure --> WaitForInput 
+
+WaitForInput --> RemoteControl    : E_REMOTECONTROL
+WaitForInput --> UserinputHandler : E_STARTCLEANING
+WaitForInput --> UserinputHandler : E_TURNONLED
+WaitForInput --> UserinputHandler : E_TURNOFFLED
+WaitForInput --> UserinputHandler : E_STOPCLEANING
+WaitForInput --> ShutdownRoomba   : E_SHUTDOWN
+
+RemoteControl : DriveForward()
+RemoteControl : DriveBackward()
+RemoteControl : DriveLeft() 
+RemoteControl : DriveRight()
+RemoteControl --> ShutdownRoomba   : E_SHUTDOWN
+
+UserinputHandler : Control Lights()
+UserinputHandler : Control Brush()
+UserinputHandler : Start Cleaning()
+UserinputHandler : Control Vacuum()
+
+UserinputHandler --> ShutdownRoomba : E_SHUTDOWN
+
+ShutdownRoomba -->  [*]
+
+@enduml

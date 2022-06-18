@@ -1,0 +1,453 @@
+\hypertarget{namespace_roomba}{}\doxysection{Roomba Namespace Reference}
+\label{namespace_roomba}\index{Roomba@{Roomba}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_roomba_1_1_roomba}{Roomba}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{namespace_roomba_acb7a202beeb36883e7ceddba1effd492}{cleaning}} \{ \mbox{\hyperlink{namespace_roomba_acb7a202beeb36883e7ceddba1effd492a6c9d6b8aea6f3d16847bdebe05878a2d}{Spot}}
+, \mbox{\hyperlink{namespace_roomba_acb7a202beeb36883e7ceddba1effd492a37d12e2cfbef6e6105297374d02f3998}{Clean}}
+, \mbox{\hyperlink{namespace_roomba_acb7a202beeb36883e7ceddba1effd492a6a061313d22e51e0f25b7cd4dc065233}{Max}}
+ \}
+\item 
+enum class \mbox{\hyperlink{namespace_roomba_a5209de87fc9bed4bd208eae71aab67c3}{control}} \{ \mbox{\hyperlink{namespace_roomba_a5209de87fc9bed4bd208eae71aab67c3ae08ddc53e5ae70c38395a66a719bafa6}{No\+\_\+init}}
+, \mbox{\hyperlink{namespace_roomba_a5209de87fc9bed4bd208eae71aab67c3af80bc338b6146b566004a046f8137c85}{Passive}}
+, \mbox{\hyperlink{namespace_roomba_a5209de87fc9bed4bd208eae71aab67c3ac6eea0560cd6f377e78dff2c85cc9122}{Safe}}
+, \mbox{\hyperlink{namespace_roomba_a5209de87fc9bed4bd208eae71aab67c3abbd47109890259c0127154db1af26c75}{Full}}
+ \}
+\item 
+enum \mbox{\hyperlink{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157}{baudrate}} \+: uint8\+\_\+t \{ \newline
+\mbox{\hyperlink{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157aee551a12cd964d67b93e9345cf79abe6}{b300}}
+, \mbox{\hyperlink{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157a479449bd2c455431080788b89294f9af}{b600}}
+, \mbox{\hyperlink{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157ae4ba49feec8c13d79a60b2df8d0b1cf6}{b1200}}
+, \mbox{\hyperlink{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157a04ab3719856f0f0ea5d3516220b870d6}{b2400}}
+, \newline
+\mbox{\hyperlink{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157afa99a2eebad056c76de23f690697943b}{b4800}}
+, \mbox{\hyperlink{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157a2bf6faab7956c6b0198b91722509204d}{b9600}}
+, \mbox{\hyperlink{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157a2b018867524d1978cfb43981b9a8834c}{b14400}}
+, \mbox{\hyperlink{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157aa2c46e0e80e6a04b63ed99d4c471e700}{b19200}}
+, \newline
+\mbox{\hyperlink{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157a82b927969e7bdfafa648c810105bb85e}{b28800}}
+, \mbox{\hyperlink{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157a53360a497b56642f2554b65a126d2b3f}{b38400}}
+, \mbox{\hyperlink{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157aff5c130feb1934ee3cbac43744bd6fb2}{b57600}}
+, \mbox{\hyperlink{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157aa42793fc546dc13947241c9f48d8b1f1}{b115200}}
+ \}
+\item 
+enum class \mbox{\hyperlink{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9}{sensors}} \+: uint8\+\_\+t \{ \newline
+\mbox{\hyperlink{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a0f3470bb1e5e50ad508ed02686fb7e48}{Bumps\+\_\+wheeldrop}}
+, \mbox{\hyperlink{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a94e8a499539d1a472f3b5dbbb85508c0}{Wall}}
+, \mbox{\hyperlink{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9aacdbf79991f3f5bbbf3923ddfecfb309}{Cliff\+\_\+\+Left}}
+, \mbox{\hyperlink{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a03f9c3d9ad51d5fdf173cb04581029e5}{Cliff\+\_\+\+Right}}
+, \newline
+\mbox{\hyperlink{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a3f5f6f25724f44e1486a8b4f5ba59496}{Virtual\+Wall}}
+, \mbox{\hyperlink{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a3849583e7458522e9c10d9c1e29b76b4}{Motor\+Overcurrent}}
+, \mbox{\hyperlink{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a5287845298b1ac299c1a81579916ae20}{Dirt\+Detector\+\_\+\+Left}}
+, \mbox{\hyperlink{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9aa17b98b1d9e833f8d77be36c70d656bc}{Dirt\+Detector\+\_\+\+Right}}
+, \newline
+\mbox{\hyperlink{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a606364c763bc356ff095571271fd2df8}{RCM}}
+, \mbox{\hyperlink{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a5b3ec15499a125805b5bbf8e4afcec8c}{Buttons}}
+, \mbox{\hyperlink{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a0aa6f4210bf373c95eda00232e93cd98}{Distance}}
+, \mbox{\hyperlink{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a45f4ce6c3306644b1efe333f4f8d6929}{Angle}}
+, \newline
+\mbox{\hyperlink{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a94b7604ba5089281c904b68779c4a238}{Charging\+State}}
+, \mbox{\hyperlink{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a4a92fbe41f6463598c39850b8335096c}{Voltage}}
+, \mbox{\hyperlink{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a222a267cc5778206b253be35ee3ddab5}{Current}}
+, \mbox{\hyperlink{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9aee7a8e262285ed49ea1b4e4ae11525bd}{Temperature}}
+, \newline
+\mbox{\hyperlink{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a517349a3cdc1acf50617693e3ba33988}{Charge}}
+, \mbox{\hyperlink{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a3b8f7696879f77dfc8c74aa8df8db24b}{Capacity}}
+ \}
+\item 
+enum \mbox{\hyperlink{namespace_roomba_ab8b7e4427d000b9e9eb73c03a2ecf599}{leds}} \+: uint8\+\_\+t \{ \mbox{\hyperlink{namespace_roomba_ab8b7e4427d000b9e9eb73c03a2ecf599a8e34bb5523ed0eb2786b4ab28b329683}{LED\+\_\+\+Debris}} =1
+, \mbox{\hyperlink{namespace_roomba_ab8b7e4427d000b9e9eb73c03a2ecf599a1ee373621a62e8a52918463fd56ac073}{LED\+\_\+\+Spot}} =2
+, \mbox{\hyperlink{namespace_roomba_ab8b7e4427d000b9e9eb73c03a2ecf599adffa3ad6295a6eab704050fa86fc03ee}{LED\+\_\+\+Dock}} =4
+, \mbox{\hyperlink{namespace_roomba_ab8b7e4427d000b9e9eb73c03a2ecf599a4138a19a783ec825dbd1c1a39ee3065e}{LED\+\_\+\+Check\+\_\+\+Robot}} =8
+ \}
+\item 
+enum \mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ad}{command}} \+: uint8\+\_\+t \{ \newline
+\mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada9f9b0b38673157c3f125d58a8bb603da}{Start}} =128
+, \mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0adaa244e03f1422979c5b30ac8804046653}{Baud}}
+, \mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0adaebd9ec9946c2e9cad9166132dd3024b4}{Control}}
+, \mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0adabae317a5112bb5bb9a0fa19021676f28}{Safe}}
+, \newline
+\mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada0f3dd17e9b71dc8d5601fea2900fdfae}{Full}}
+, \mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0adadc1b003bceb16d445fb31a2e40f256be}{Power}}
+, \mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada58c314c67ebef171368e4dabc4a8aba0}{Spot}}
+, \mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada3ffa183f1b604e80424f742102011739}{Clean}}
+, \newline
+\mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada934d89a760eb8f77a89058d6c314e579}{Max\+\_\+\+Clean}}
+, \mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0adaa692ea5675145bf31203bdef69c0cf51}{Drive}}
+, \mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada12a8e33086d7cc4f12569944cba68a86}{Motors}}
+, \mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada96fa1234f5806fa9d4690c948c031c80}{Leds}}
+, \newline
+\mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada5e74bd0d2ff2a13b41e5ef9949ba52e0}{Song}}
+, \mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada4ce5989cd157ef79ece4c3f1dbf6b804}{Play}}
+, \mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0adaea362a99e78a753418c391e4e175ea0a}{Query}}
+, \mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0adaf41351e1fbebd8a2c15c3aaa45015f52}{Dock}}
+, \newline
+\mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada8094ebdcc64f14f9d775a231b821b302}{Motor\+\_\+\+PWM}}
+, \mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada9793b6fc7387a2c49a6f7fa9046c5aed}{Drive\+\_\+\+Wheels}}
+, \mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada2ba4e7d82ce1cad88b192c5222c13d05}{Stream}} =148
+, \mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada27c11206dc038e97f1fbc0d4f49496f9}{Query\+\_\+\+List}}
+, \newline
+\mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0adaa3625cf3f6654ec0dfa811066fac61e5}{Do\+\_\+\+Stream}}
+, \mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada08cdfe713c0db7de775fe096a4d2e071}{Schedule\+\_\+\+Leds}} = 162
+, \mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada52d9df5e6ff38943c5d23f17b809a718}{Digit\+\_\+\+Leds\+\_\+\+Raw}}
+, \mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0adaa266c5f936ce11caff6ec389402c80f2}{Digit\+\_\+\+Leds\+\_\+\+Ascii}}
+, \newline
+\mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada2801a86fdc6b3ae6a48a3b47a5762a24}{Buttons}}
+, \mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0adae13146ee672b941e124f32d429c43832}{Schedule}} =167
+, \mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada4a3b2f9219e44db7de1eb691dc35c6b3}{Set\+\_\+\+Date\+\_\+\+Time}}
+, \mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada25526a868c9fde996821141e110f9b4b}{Stop}} =173
+ \}
+\item 
+enum class \mbox{\hyperlink{namespace_roomba_abafdf9a69b834e4c38d5972260a93487}{Led\+State}} \{ \mbox{\hyperlink{namespace_roomba_abafdf9a69b834e4c38d5972260a93487a521c36a31c2762741cf0f8890cbe05e3}{On}}
+, \mbox{\hyperlink{namespace_roomba_abafdf9a69b834e4c38d5972260a93487ad15305d7a4e34e02489c74a5ef542f36}{Off}}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157}\label{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157}} 
+\index{Roomba@{Roomba}!baudrate@{baudrate}}
+\index{baudrate@{baudrate}!Roomba@{Roomba}}
+\doxysubsubsection{\texorpdfstring{baudrate}{baudrate}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157}{Roomba\+::baudrate}} \+: uint8\+\_\+t}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{b300@{b300}!Roomba@{Roomba}}\index{Roomba@{Roomba}!b300@{b300}}}\mbox{\Hypertarget{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157aee551a12cd964d67b93e9345cf79abe6}\label{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157aee551a12cd964d67b93e9345cf79abe6}} 
+b300&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{b600@{b600}!Roomba@{Roomba}}\index{Roomba@{Roomba}!b600@{b600}}}\mbox{\Hypertarget{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157a479449bd2c455431080788b89294f9af}\label{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157a479449bd2c455431080788b89294f9af}} 
+b600&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{b1200@{b1200}!Roomba@{Roomba}}\index{Roomba@{Roomba}!b1200@{b1200}}}\mbox{\Hypertarget{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157ae4ba49feec8c13d79a60b2df8d0b1cf6}\label{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157ae4ba49feec8c13d79a60b2df8d0b1cf6}} 
+b1200&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{b2400@{b2400}!Roomba@{Roomba}}\index{Roomba@{Roomba}!b2400@{b2400}}}\mbox{\Hypertarget{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157a04ab3719856f0f0ea5d3516220b870d6}\label{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157a04ab3719856f0f0ea5d3516220b870d6}} 
+b2400&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{b4800@{b4800}!Roomba@{Roomba}}\index{Roomba@{Roomba}!b4800@{b4800}}}\mbox{\Hypertarget{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157afa99a2eebad056c76de23f690697943b}\label{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157afa99a2eebad056c76de23f690697943b}} 
+b4800&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{b9600@{b9600}!Roomba@{Roomba}}\index{Roomba@{Roomba}!b9600@{b9600}}}\mbox{\Hypertarget{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157a2bf6faab7956c6b0198b91722509204d}\label{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157a2bf6faab7956c6b0198b91722509204d}} 
+b9600&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{b14400@{b14400}!Roomba@{Roomba}}\index{Roomba@{Roomba}!b14400@{b14400}}}\mbox{\Hypertarget{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157a2b018867524d1978cfb43981b9a8834c}\label{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157a2b018867524d1978cfb43981b9a8834c}} 
+b14400&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{b19200@{b19200}!Roomba@{Roomba}}\index{Roomba@{Roomba}!b19200@{b19200}}}\mbox{\Hypertarget{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157aa2c46e0e80e6a04b63ed99d4c471e700}\label{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157aa2c46e0e80e6a04b63ed99d4c471e700}} 
+b19200&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{b28800@{b28800}!Roomba@{Roomba}}\index{Roomba@{Roomba}!b28800@{b28800}}}\mbox{\Hypertarget{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157a82b927969e7bdfafa648c810105bb85e}\label{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157a82b927969e7bdfafa648c810105bb85e}} 
+b28800&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{b38400@{b38400}!Roomba@{Roomba}}\index{Roomba@{Roomba}!b38400@{b38400}}}\mbox{\Hypertarget{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157a53360a497b56642f2554b65a126d2b3f}\label{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157a53360a497b56642f2554b65a126d2b3f}} 
+b38400&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{b57600@{b57600}!Roomba@{Roomba}}\index{Roomba@{Roomba}!b57600@{b57600}}}\mbox{\Hypertarget{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157aff5c130feb1934ee3cbac43744bd6fb2}\label{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157aff5c130feb1934ee3cbac43744bd6fb2}} 
+b57600&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{b115200@{b115200}!Roomba@{Roomba}}\index{Roomba@{Roomba}!b115200@{b115200}}}\mbox{\Hypertarget{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157aa42793fc546dc13947241c9f48d8b1f1}\label{namespace_roomba_a22bcbd8eac190f4fd6d5f69f9c2b2157aa42793fc546dc13947241c9f48d8b1f1}} 
+b115200&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespace_roomba_acb7a202beeb36883e7ceddba1effd492}\label{namespace_roomba_acb7a202beeb36883e7ceddba1effd492}} 
+\index{Roomba@{Roomba}!cleaning@{cleaning}}
+\index{cleaning@{cleaning}!Roomba@{Roomba}}
+\doxysubsubsection{\texorpdfstring{cleaning}{cleaning}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{namespace_roomba_acb7a202beeb36883e7ceddba1effd492}{Roomba\+::cleaning}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Spot@{Spot}!Roomba@{Roomba}}\index{Roomba@{Roomba}!Spot@{Spot}}}\mbox{\Hypertarget{namespace_roomba_acb7a202beeb36883e7ceddba1effd492a6c9d6b8aea6f3d16847bdebe05878a2d}\label{namespace_roomba_acb7a202beeb36883e7ceddba1effd492a6c9d6b8aea6f3d16847bdebe05878a2d}} 
+Spot&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Clean@{Clean}!Roomba@{Roomba}}\index{Roomba@{Roomba}!Clean@{Clean}}}\mbox{\Hypertarget{namespace_roomba_acb7a202beeb36883e7ceddba1effd492a37d12e2cfbef6e6105297374d02f3998}\label{namespace_roomba_acb7a202beeb36883e7ceddba1effd492a37d12e2cfbef6e6105297374d02f3998}} 
+Clean&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Max@{Max}!Roomba@{Roomba}}\index{Roomba@{Roomba}!Max@{Max}}}\mbox{\Hypertarget{namespace_roomba_acb7a202beeb36883e7ceddba1effd492a6a061313d22e51e0f25b7cd4dc065233}\label{namespace_roomba_acb7a202beeb36883e7ceddba1effd492a6a061313d22e51e0f25b7cd4dc065233}} 
+Max&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ad}\label{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ad}} 
+\index{Roomba@{Roomba}!command@{command}}
+\index{command@{command}!Roomba@{Roomba}}
+\doxysubsubsection{\texorpdfstring{command}{command}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ad}{Roomba\+::command}} \+: uint8\+\_\+t}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Start@{Start}!Roomba@{Roomba}}\index{Roomba@{Roomba}!Start@{Start}}}\mbox{\Hypertarget{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada9f9b0b38673157c3f125d58a8bb603da}\label{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada9f9b0b38673157c3f125d58a8bb603da}} 
+Start&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Baud@{Baud}!Roomba@{Roomba}}\index{Roomba@{Roomba}!Baud@{Baud}}}\mbox{\Hypertarget{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0adaa244e03f1422979c5b30ac8804046653}\label{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0adaa244e03f1422979c5b30ac8804046653}} 
+Baud&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Control@{Control}!Roomba@{Roomba}}\index{Roomba@{Roomba}!Control@{Control}}}\mbox{\Hypertarget{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0adaebd9ec9946c2e9cad9166132dd3024b4}\label{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0adaebd9ec9946c2e9cad9166132dd3024b4}} 
+Control&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Safe@{Safe}!Roomba@{Roomba}}\index{Roomba@{Roomba}!Safe@{Safe}}}\mbox{\Hypertarget{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0adabae317a5112bb5bb9a0fa19021676f28}\label{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0adabae317a5112bb5bb9a0fa19021676f28}} 
+Safe&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Full@{Full}!Roomba@{Roomba}}\index{Roomba@{Roomba}!Full@{Full}}}\mbox{\Hypertarget{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada0f3dd17e9b71dc8d5601fea2900fdfae}\label{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada0f3dd17e9b71dc8d5601fea2900fdfae}} 
+Full&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Power@{Power}!Roomba@{Roomba}}\index{Roomba@{Roomba}!Power@{Power}}}\mbox{\Hypertarget{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0adadc1b003bceb16d445fb31a2e40f256be}\label{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0adadc1b003bceb16d445fb31a2e40f256be}} 
+Power&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Spot@{Spot}!Roomba@{Roomba}}\index{Roomba@{Roomba}!Spot@{Spot}}}\mbox{\Hypertarget{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada58c314c67ebef171368e4dabc4a8aba0}\label{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada58c314c67ebef171368e4dabc4a8aba0}} 
+Spot&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Clean@{Clean}!Roomba@{Roomba}}\index{Roomba@{Roomba}!Clean@{Clean}}}\mbox{\Hypertarget{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada3ffa183f1b604e80424f742102011739}\label{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada3ffa183f1b604e80424f742102011739}} 
+Clean&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Max\_Clean@{Max\_Clean}!Roomba@{Roomba}}\index{Roomba@{Roomba}!Max\_Clean@{Max\_Clean}}}\mbox{\Hypertarget{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada934d89a760eb8f77a89058d6c314e579}\label{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada934d89a760eb8f77a89058d6c314e579}} 
+Max\+\_\+\+Clean&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Drive@{Drive}!Roomba@{Roomba}}\index{Roomba@{Roomba}!Drive@{Drive}}}\mbox{\Hypertarget{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0adaa692ea5675145bf31203bdef69c0cf51}\label{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0adaa692ea5675145bf31203bdef69c0cf51}} 
+Drive&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Motors@{Motors}!Roomba@{Roomba}}\index{Roomba@{Roomba}!Motors@{Motors}}}\mbox{\Hypertarget{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada12a8e33086d7cc4f12569944cba68a86}\label{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada12a8e33086d7cc4f12569944cba68a86}} 
+Motors&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Leds@{Leds}!Roomba@{Roomba}}\index{Roomba@{Roomba}!Leds@{Leds}}}\mbox{\Hypertarget{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada96fa1234f5806fa9d4690c948c031c80}\label{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada96fa1234f5806fa9d4690c948c031c80}} 
+Leds&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Song@{Song}!Roomba@{Roomba}}\index{Roomba@{Roomba}!Song@{Song}}}\mbox{\Hypertarget{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada5e74bd0d2ff2a13b41e5ef9949ba52e0}\label{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada5e74bd0d2ff2a13b41e5ef9949ba52e0}} 
+Song&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Play@{Play}!Roomba@{Roomba}}\index{Roomba@{Roomba}!Play@{Play}}}\mbox{\Hypertarget{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada4ce5989cd157ef79ece4c3f1dbf6b804}\label{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada4ce5989cd157ef79ece4c3f1dbf6b804}} 
+Play&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Query@{Query}!Roomba@{Roomba}}\index{Roomba@{Roomba}!Query@{Query}}}\mbox{\Hypertarget{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0adaea362a99e78a753418c391e4e175ea0a}\label{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0adaea362a99e78a753418c391e4e175ea0a}} 
+Query&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Dock@{Dock}!Roomba@{Roomba}}\index{Roomba@{Roomba}!Dock@{Dock}}}\mbox{\Hypertarget{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0adaf41351e1fbebd8a2c15c3aaa45015f52}\label{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0adaf41351e1fbebd8a2c15c3aaa45015f52}} 
+Dock&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Motor\_PWM@{Motor\_PWM}!Roomba@{Roomba}}\index{Roomba@{Roomba}!Motor\_PWM@{Motor\_PWM}}}\mbox{\Hypertarget{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada8094ebdcc64f14f9d775a231b821b302}\label{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada8094ebdcc64f14f9d775a231b821b302}} 
+Motor\+\_\+\+PWM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Drive\_Wheels@{Drive\_Wheels}!Roomba@{Roomba}}\index{Roomba@{Roomba}!Drive\_Wheels@{Drive\_Wheels}}}\mbox{\Hypertarget{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada9793b6fc7387a2c49a6f7fa9046c5aed}\label{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada9793b6fc7387a2c49a6f7fa9046c5aed}} 
+Drive\+\_\+\+Wheels&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Stream@{Stream}!Roomba@{Roomba}}\index{Roomba@{Roomba}!Stream@{Stream}}}\mbox{\Hypertarget{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada2ba4e7d82ce1cad88b192c5222c13d05}\label{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada2ba4e7d82ce1cad88b192c5222c13d05}} 
+Stream&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Query\_List@{Query\_List}!Roomba@{Roomba}}\index{Roomba@{Roomba}!Query\_List@{Query\_List}}}\mbox{\Hypertarget{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada27c11206dc038e97f1fbc0d4f49496f9}\label{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada27c11206dc038e97f1fbc0d4f49496f9}} 
+Query\+\_\+\+List&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Do\_Stream@{Do\_Stream}!Roomba@{Roomba}}\index{Roomba@{Roomba}!Do\_Stream@{Do\_Stream}}}\mbox{\Hypertarget{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0adaa3625cf3f6654ec0dfa811066fac61e5}\label{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0adaa3625cf3f6654ec0dfa811066fac61e5}} 
+Do\+\_\+\+Stream&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Schedule\_Leds@{Schedule\_Leds}!Roomba@{Roomba}}\index{Roomba@{Roomba}!Schedule\_Leds@{Schedule\_Leds}}}\mbox{\Hypertarget{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada08cdfe713c0db7de775fe096a4d2e071}\label{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada08cdfe713c0db7de775fe096a4d2e071}} 
+Schedule\+\_\+\+Leds&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Digit\_Leds\_Raw@{Digit\_Leds\_Raw}!Roomba@{Roomba}}\index{Roomba@{Roomba}!Digit\_Leds\_Raw@{Digit\_Leds\_Raw}}}\mbox{\Hypertarget{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada52d9df5e6ff38943c5d23f17b809a718}\label{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada52d9df5e6ff38943c5d23f17b809a718}} 
+Digit\+\_\+\+Leds\+\_\+\+Raw&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Digit\_Leds\_Ascii@{Digit\_Leds\_Ascii}!Roomba@{Roomba}}\index{Roomba@{Roomba}!Digit\_Leds\_Ascii@{Digit\_Leds\_Ascii}}}\mbox{\Hypertarget{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0adaa266c5f936ce11caff6ec389402c80f2}\label{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0adaa266c5f936ce11caff6ec389402c80f2}} 
+Digit\+\_\+\+Leds\+\_\+\+Ascii&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Buttons@{Buttons}!Roomba@{Roomba}}\index{Roomba@{Roomba}!Buttons@{Buttons}}}\mbox{\Hypertarget{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada2801a86fdc6b3ae6a48a3b47a5762a24}\label{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada2801a86fdc6b3ae6a48a3b47a5762a24}} 
+Buttons&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Schedule@{Schedule}!Roomba@{Roomba}}\index{Roomba@{Roomba}!Schedule@{Schedule}}}\mbox{\Hypertarget{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0adae13146ee672b941e124f32d429c43832}\label{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0adae13146ee672b941e124f32d429c43832}} 
+Schedule&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Set\_Date\_Time@{Set\_Date\_Time}!Roomba@{Roomba}}\index{Roomba@{Roomba}!Set\_Date\_Time@{Set\_Date\_Time}}}\mbox{\Hypertarget{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada4a3b2f9219e44db7de1eb691dc35c6b3}\label{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada4a3b2f9219e44db7de1eb691dc35c6b3}} 
+Set\+\_\+\+Date\+\_\+\+Time&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Stop@{Stop}!Roomba@{Roomba}}\index{Roomba@{Roomba}!Stop@{Stop}}}\mbox{\Hypertarget{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada25526a868c9fde996821141e110f9b4b}\label{namespace_roomba_a28115f0e32b012cd8bdb9f6c7d5dc0ada25526a868c9fde996821141e110f9b4b}} 
+Stop&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespace_roomba_a5209de87fc9bed4bd208eae71aab67c3}\label{namespace_roomba_a5209de87fc9bed4bd208eae71aab67c3}} 
+\index{Roomba@{Roomba}!control@{control}}
+\index{control@{control}!Roomba@{Roomba}}
+\doxysubsubsection{\texorpdfstring{control}{control}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{namespace_roomba_a5209de87fc9bed4bd208eae71aab67c3}{Roomba\+::control}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{No\_init@{No\_init}!Roomba@{Roomba}}\index{Roomba@{Roomba}!No\_init@{No\_init}}}\mbox{\Hypertarget{namespace_roomba_a5209de87fc9bed4bd208eae71aab67c3ae08ddc53e5ae70c38395a66a719bafa6}\label{namespace_roomba_a5209de87fc9bed4bd208eae71aab67c3ae08ddc53e5ae70c38395a66a719bafa6}} 
+No\+\_\+init&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Passive@{Passive}!Roomba@{Roomba}}\index{Roomba@{Roomba}!Passive@{Passive}}}\mbox{\Hypertarget{namespace_roomba_a5209de87fc9bed4bd208eae71aab67c3af80bc338b6146b566004a046f8137c85}\label{namespace_roomba_a5209de87fc9bed4bd208eae71aab67c3af80bc338b6146b566004a046f8137c85}} 
+Passive&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Safe@{Safe}!Roomba@{Roomba}}\index{Roomba@{Roomba}!Safe@{Safe}}}\mbox{\Hypertarget{namespace_roomba_a5209de87fc9bed4bd208eae71aab67c3ac6eea0560cd6f377e78dff2c85cc9122}\label{namespace_roomba_a5209de87fc9bed4bd208eae71aab67c3ac6eea0560cd6f377e78dff2c85cc9122}} 
+Safe&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Full@{Full}!Roomba@{Roomba}}\index{Roomba@{Roomba}!Full@{Full}}}\mbox{\Hypertarget{namespace_roomba_a5209de87fc9bed4bd208eae71aab67c3abbd47109890259c0127154db1af26c75}\label{namespace_roomba_a5209de87fc9bed4bd208eae71aab67c3abbd47109890259c0127154db1af26c75}} 
+Full&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespace_roomba_ab8b7e4427d000b9e9eb73c03a2ecf599}\label{namespace_roomba_ab8b7e4427d000b9e9eb73c03a2ecf599}} 
+\index{Roomba@{Roomba}!leds@{leds}}
+\index{leds@{leds}!Roomba@{Roomba}}
+\doxysubsubsection{\texorpdfstring{leds}{leds}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_roomba_ab8b7e4427d000b9e9eb73c03a2ecf599}{Roomba\+::leds}} \+: uint8\+\_\+t}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LED\_Debris@{LED\_Debris}!Roomba@{Roomba}}\index{Roomba@{Roomba}!LED\_Debris@{LED\_Debris}}}\mbox{\Hypertarget{namespace_roomba_ab8b7e4427d000b9e9eb73c03a2ecf599a8e34bb5523ed0eb2786b4ab28b329683}\label{namespace_roomba_ab8b7e4427d000b9e9eb73c03a2ecf599a8e34bb5523ed0eb2786b4ab28b329683}} 
+LED\+\_\+\+Debris&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LED\_Spot@{LED\_Spot}!Roomba@{Roomba}}\index{Roomba@{Roomba}!LED\_Spot@{LED\_Spot}}}\mbox{\Hypertarget{namespace_roomba_ab8b7e4427d000b9e9eb73c03a2ecf599a1ee373621a62e8a52918463fd56ac073}\label{namespace_roomba_ab8b7e4427d000b9e9eb73c03a2ecf599a1ee373621a62e8a52918463fd56ac073}} 
+LED\+\_\+\+Spot&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LED\_Dock@{LED\_Dock}!Roomba@{Roomba}}\index{Roomba@{Roomba}!LED\_Dock@{LED\_Dock}}}\mbox{\Hypertarget{namespace_roomba_ab8b7e4427d000b9e9eb73c03a2ecf599adffa3ad6295a6eab704050fa86fc03ee}\label{namespace_roomba_ab8b7e4427d000b9e9eb73c03a2ecf599adffa3ad6295a6eab704050fa86fc03ee}} 
+LED\+\_\+\+Dock&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LED\_Check\_Robot@{LED\_Check\_Robot}!Roomba@{Roomba}}\index{Roomba@{Roomba}!LED\_Check\_Robot@{LED\_Check\_Robot}}}\mbox{\Hypertarget{namespace_roomba_ab8b7e4427d000b9e9eb73c03a2ecf599a4138a19a783ec825dbd1c1a39ee3065e}\label{namespace_roomba_ab8b7e4427d000b9e9eb73c03a2ecf599a4138a19a783ec825dbd1c1a39ee3065e}} 
+LED\+\_\+\+Check\+\_\+\+Robot&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespace_roomba_abafdf9a69b834e4c38d5972260a93487}\label{namespace_roomba_abafdf9a69b834e4c38d5972260a93487}} 
+\index{Roomba@{Roomba}!LedState@{LedState}}
+\index{LedState@{LedState}!Roomba@{Roomba}}
+\doxysubsubsection{\texorpdfstring{LedState}{LedState}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{namespace_roomba_abafdf9a69b834e4c38d5972260a93487}{Roomba\+::\+Led\+State}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{On@{On}!Roomba@{Roomba}}\index{Roomba@{Roomba}!On@{On}}}\mbox{\Hypertarget{namespace_roomba_abafdf9a69b834e4c38d5972260a93487a521c36a31c2762741cf0f8890cbe05e3}\label{namespace_roomba_abafdf9a69b834e4c38d5972260a93487a521c36a31c2762741cf0f8890cbe05e3}} 
+On&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Off@{Off}!Roomba@{Roomba}}\index{Roomba@{Roomba}!Off@{Off}}}\mbox{\Hypertarget{namespace_roomba_abafdf9a69b834e4c38d5972260a93487ad15305d7a4e34e02489c74a5ef542f36}\label{namespace_roomba_abafdf9a69b834e4c38d5972260a93487ad15305d7a4e34e02489c74a5ef542f36}} 
+Off&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9}\label{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9}} 
+\index{Roomba@{Roomba}!sensors@{sensors}}
+\index{sensors@{sensors}!Roomba@{Roomba}}
+\doxysubsubsection{\texorpdfstring{sensors}{sensors}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9}{Roomba\+::sensors}} \+: uint8\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Bumps\_wheeldrop@{Bumps\_wheeldrop}!Roomba@{Roomba}}\index{Roomba@{Roomba}!Bumps\_wheeldrop@{Bumps\_wheeldrop}}}\mbox{\Hypertarget{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a0f3470bb1e5e50ad508ed02686fb7e48}\label{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a0f3470bb1e5e50ad508ed02686fb7e48}} 
+Bumps\+\_\+wheeldrop&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Wall@{Wall}!Roomba@{Roomba}}\index{Roomba@{Roomba}!Wall@{Wall}}}\mbox{\Hypertarget{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a94e8a499539d1a472f3b5dbbb85508c0}\label{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a94e8a499539d1a472f3b5dbbb85508c0}} 
+Wall&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Cliff\_Left@{Cliff\_Left}!Roomba@{Roomba}}\index{Roomba@{Roomba}!Cliff\_Left@{Cliff\_Left}}}\mbox{\Hypertarget{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9aacdbf79991f3f5bbbf3923ddfecfb309}\label{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9aacdbf79991f3f5bbbf3923ddfecfb309}} 
+Cliff\+\_\+\+Left&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Cliff\_Right@{Cliff\_Right}!Roomba@{Roomba}}\index{Roomba@{Roomba}!Cliff\_Right@{Cliff\_Right}}}\mbox{\Hypertarget{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a03f9c3d9ad51d5fdf173cb04581029e5}\label{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a03f9c3d9ad51d5fdf173cb04581029e5}} 
+Cliff\+\_\+\+Right&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VirtualWall@{VirtualWall}!Roomba@{Roomba}}\index{Roomba@{Roomba}!VirtualWall@{VirtualWall}}}\mbox{\Hypertarget{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a3f5f6f25724f44e1486a8b4f5ba59496}\label{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a3f5f6f25724f44e1486a8b4f5ba59496}} 
+Virtual\+Wall&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MotorOvercurrent@{MotorOvercurrent}!Roomba@{Roomba}}\index{Roomba@{Roomba}!MotorOvercurrent@{MotorOvercurrent}}}\mbox{\Hypertarget{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a3849583e7458522e9c10d9c1e29b76b4}\label{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a3849583e7458522e9c10d9c1e29b76b4}} 
+Motor\+Overcurrent&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DirtDetector\_Left@{DirtDetector\_Left}!Roomba@{Roomba}}\index{Roomba@{Roomba}!DirtDetector\_Left@{DirtDetector\_Left}}}\mbox{\Hypertarget{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a5287845298b1ac299c1a81579916ae20}\label{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a5287845298b1ac299c1a81579916ae20}} 
+Dirt\+Detector\+\_\+\+Left&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DirtDetector\_Right@{DirtDetector\_Right}!Roomba@{Roomba}}\index{Roomba@{Roomba}!DirtDetector\_Right@{DirtDetector\_Right}}}\mbox{\Hypertarget{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9aa17b98b1d9e833f8d77be36c70d656bc}\label{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9aa17b98b1d9e833f8d77be36c70d656bc}} 
+Dirt\+Detector\+\_\+\+Right&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RCM@{RCM}!Roomba@{Roomba}}\index{Roomba@{Roomba}!RCM@{RCM}}}\mbox{\Hypertarget{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a606364c763bc356ff095571271fd2df8}\label{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a606364c763bc356ff095571271fd2df8}} 
+RCM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Buttons@{Buttons}!Roomba@{Roomba}}\index{Roomba@{Roomba}!Buttons@{Buttons}}}\mbox{\Hypertarget{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a5b3ec15499a125805b5bbf8e4afcec8c}\label{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a5b3ec15499a125805b5bbf8e4afcec8c}} 
+Buttons&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Distance@{Distance}!Roomba@{Roomba}}\index{Roomba@{Roomba}!Distance@{Distance}}}\mbox{\Hypertarget{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a0aa6f4210bf373c95eda00232e93cd98}\label{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a0aa6f4210bf373c95eda00232e93cd98}} 
+Distance&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Angle@{Angle}!Roomba@{Roomba}}\index{Roomba@{Roomba}!Angle@{Angle}}}\mbox{\Hypertarget{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a45f4ce6c3306644b1efe333f4f8d6929}\label{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a45f4ce6c3306644b1efe333f4f8d6929}} 
+Angle&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ChargingState@{ChargingState}!Roomba@{Roomba}}\index{Roomba@{Roomba}!ChargingState@{ChargingState}}}\mbox{\Hypertarget{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a94b7604ba5089281c904b68779c4a238}\label{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a94b7604ba5089281c904b68779c4a238}} 
+Charging\+State&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Voltage@{Voltage}!Roomba@{Roomba}}\index{Roomba@{Roomba}!Voltage@{Voltage}}}\mbox{\Hypertarget{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a4a92fbe41f6463598c39850b8335096c}\label{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a4a92fbe41f6463598c39850b8335096c}} 
+Voltage&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Current@{Current}!Roomba@{Roomba}}\index{Roomba@{Roomba}!Current@{Current}}}\mbox{\Hypertarget{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a222a267cc5778206b253be35ee3ddab5}\label{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a222a267cc5778206b253be35ee3ddab5}} 
+Current&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Temperature@{Temperature}!Roomba@{Roomba}}\index{Roomba@{Roomba}!Temperature@{Temperature}}}\mbox{\Hypertarget{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9aee7a8e262285ed49ea1b4e4ae11525bd}\label{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9aee7a8e262285ed49ea1b4e4ae11525bd}} 
+Temperature&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Charge@{Charge}!Roomba@{Roomba}}\index{Roomba@{Roomba}!Charge@{Charge}}}\mbox{\Hypertarget{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a517349a3cdc1acf50617693e3ba33988}\label{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a517349a3cdc1acf50617693e3ba33988}} 
+Charge&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Capacity@{Capacity}!Roomba@{Roomba}}\index{Roomba@{Roomba}!Capacity@{Capacity}}}\mbox{\Hypertarget{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a3b8f7696879f77dfc8c74aa8df8db24b}\label{namespace_roomba_a1ba20ae81e47ebf35362517c7dbfeff9a3b8f7696879f77dfc8c74aa8df8db24b}} 
+Capacity&\\
+\hline
+
+\end{DoxyEnumFields}
