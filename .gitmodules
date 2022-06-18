@@ -1,9 +1,6 @@
 [submodule "external/Boost/libs/core"]
 	path = external/Boost/libs/core
 	url = https://github.com/boostorg/core.git
-[submodule "external/Boost/tools/cmake"]
-	path = external/Boost/tools/cmake
-	url = https://github.com/boostorg/cmake.git
 [submodule "external/Boost/libs/chrono"]
 	path = external/Boost/libs/chrono
 	url = https://github.com/boostorg/chrono.git
@@ -154,3 +151,6 @@
 [submodule "external/Boost/libs/mpl"]
 	path = external/Boost/libs/mpl
 	url = https://github.com/boostorg/mpl.git
+[submodule "external/Boost/tools/cmake"]
+	path = external/Boost/tools/cmake
+	url = https://github.com/boostorg/cmake.git
