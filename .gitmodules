@@ -1,7 +1,6 @@
 [submodule "tests/googletest"]
-path = tests/googletest
-url = https://github.com/google/googletest.git
-
+	path = tests/googletest
+	url = https://github.com/google/googletest.git
 [submodule "external/Boost/tools/cmake"]
 	path = external/Boost/tools/cmake
 	url = https://github.com/boostorg/cmake.git
