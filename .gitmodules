@@ -154,3 +154,6 @@
 [submodule "external/Boost/tools/cmake"]
 	path = external/Boost/tools/cmake
 	url = https://github.com/boostorg/cmake.git
+[submodule "external/Boost/libs/asio"]
+	path = external/Boost/libs/asio
+	url = https://github.com/boostorg/asio.git
