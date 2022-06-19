@@ -148,7 +148,7 @@ namespace Roomba {
         mUartHandle->sendBytes(commands.data(), std::size(commands));
     }
 
-    void Roomba::playSongNum(uint8_t songNum) {
+    void Roomba::playSongNum(const uint8_t songNum) {
         bool checkControlMode = mCurrControlMode == control::Passive || mCurrControlMode == control::No_init;
         if (checkControlMode)
             setControlMode(control::Safe);
@@ -163,7 +163,9 @@ namespace Roomba {
             mSetSafeMode();
         }
 
-        if(notesWithDuration.size() > 32) {
+        const bool tooManyNotes = (notesWithDuration.size() > 32);
+        const bool numOfNotesAndDurationNotEqual = (notesWithDuration.size() % 2);
+        if(tooManyNotes || numOfNotesAndDurationNotEqual) {
             throw std::exception();
         }
 

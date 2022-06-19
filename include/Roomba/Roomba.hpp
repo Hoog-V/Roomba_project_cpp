@@ -68,7 +68,7 @@ namespace Roomba {
 
         void setSongNum(const uint8_t songNum, const std::vector<uint8_t> notesWithDuration);
 
-        void playSongNum(uint8_t songNum);
+        void playSongNum(const uint8_t songNum);
 
         void turnOn();
 
