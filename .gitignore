@@ -43,3 +43,4 @@ out/
 # Eclipse files
 .eclipse/
 .gitmodules
+Gemfile.lock
