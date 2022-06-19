@@ -164,7 +164,7 @@ namespace Roomba {
             throw std::exception();
         }
 
-        const bool wrongControlMode = (mCurrControlMode != control::Safe && mCurrControlMode != control::Full);
+        const bool wrongControlMode = (mCurrControlMode == control::Passive || mCurrControlMode == control::No_init);
         if(wrongControlMode) {
             mSetSafeMode();
         }
