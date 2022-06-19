@@ -158,15 +158,15 @@ namespace Roomba {
     }
 
     void Roomba::setSongNum(const uint8_t songNum, const std::vector<uint8_t> notesWithDuration) {
-        const bool wrongControlMode = (mCurrControlMode != control::Safe && mCurrControlMode != control::Full);
-        if(wrongControlMode) {
-            mSetSafeMode();
-        }
-
         const bool tooManyNotes = (notesWithDuration.size() > 32);
         const bool numOfNotesAndDurationNotEqual = (notesWithDuration.size() % 2);
         if(tooManyNotes || numOfNotesAndDurationNotEqual) {
             throw std::exception();
+        }
+
+        const bool wrongControlMode = (mCurrControlMode != control::Safe && mCurrControlMode != control::Full);
+        if(wrongControlMode) {
+            mSetSafeMode();
         }
 
         const uint8_t numOfNotes = static_cast<uint8_t>(notesWithDuration.size())/2;
