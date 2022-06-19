@@ -66,10 +66,7 @@ namespace Roomba {
 
         void getSensorData(uint16_t sensor);
 
-        /*
-         * ...(Variable Length Argument) = NoteNumber N & NoteDuration N
-         */
-        void setSongNum(uint8_t songNum, uint8_t songLength, ...);
+        void setSongNum(const uint8_t songNum, const std::vector<uint8_t> notesWithDuration);
 
         void playSongNum(uint8_t songNum);
 
