@@ -15,33 +15,33 @@ Bij installatie alleen maar "volgende".
 
 Stap 3: Open nu git bash vanuit het start menu.
 
-![alt text](/docs/DocPages//docs/Docpages/README_ATTR/Afbeeldingen/Git/1.png)
+![alt text](/docs/MD//docs/MD/README_ATTR/Afbeeldingen/Git/1.png)
 
 
 Stap 4: Tik het commando: *ssh-keygen* in en klik alleen maar op ENTER.
 
-![alt text](/docs/Docpages/README_ATTR/Afbeeldingen/Git/2.png)
+![alt text](/docs/MD/README_ATTR/Afbeeldingen/Git/2.png)
 
 Stap 5: Tik vervolgens het commando: *cat ~/.ssh/id_rsa.pub* in.
 Kopieer het resultaat van het commando naar je klembord.
 
 **Dit doe je door de tekst te selecteren met muis en dan de rechtermuisknop in te drukken**
 
-![alt text](/docs/Docpages/README_ATTR/Afbeeldingen/Git/3.png)
+![alt text](/docs/MD/README_ATTR/Afbeeldingen/Git/3.png)
 
 Stap 6: Ga naar GitHub en klik rechtsboven op je profielfoto, selecteer settings. Ga naar SSH and GPG keys en selecteer New SSH Key.
 
 Stap 7: Vul een beschrijvende naam voor je PC in en kopieer de ssh-key uit je klembord in het vak eronder.
 
-![alt text](/docs/Docpages/README_ATTR/Afbeeldingen/Git/4.png)
+![alt text](/docs/MD/README_ATTR/Afbeeldingen/Git/4.png)
 
 Stap 8: Ga naar de Roomba Repo en klik op clone. Selecteer de optie ssh en kopieer de link.
 
-![alt text](/docs/Docpages/README_ATTR/Afbeeldingen/Installatie_vsstudio/4.png)
+![alt text](/docs/MD/README_ATTR/Afbeeldingen/Installatie_vsstudio/4.png)
 
 Stap 9: Pak de git bash er weer bij en tik in: *git clone <link> --recursive* . Je krijgt de vraag over de identiteit van de github server typ hier yes in en druk op ENTER. Druk hierna gelijk op ctrl+c. Tenzij je de repo toch wilt clonen.
 
-![alt text](/docs/Docpages/README_ATTR/Afbeeldingen/Git/6.png)
+![alt text](/docs/MD/README_ATTR/Afbeeldingen/Git/6.png)
 
 
 ### Visual Studio (windows) (makkelijkst!)
@@ -65,58 +65,58 @@ Onder uitklapmenu Linux and Embedded development with C++:
 - "Embedded and IoT tools"
 - "Legacy Embedded and IoT tools" <= Als hij er staat... Niet altijd het geval!
 
-![alt text](/docs/Docpages/README_ATTR/Afbeeldingen/Installatie_vsstudio/1.png)
+![alt text](/docs/MD/README_ATTR/Afbeeldingen/Installatie_vsstudio/1.png)
 
-![alt text](/docs/Docpages/README_ATTR/Afbeeldingen/Installatie_vsstudio/2.png)
+![alt text](/docs/MD/README_ATTR/Afbeeldingen/Installatie_vsstudio/2.png)
 
 Stap 3: Open Visual Studio en geef voorkeuren aan voor stijlgeving, thema's enz.
 
 Stap 4: Kies de optie "Clone repository".
 
-![alt text](/docs/Docpages/README_ATTR/Afbeeldingen/Installatie_vsstudio/3.png)
+![alt text](/docs/MD/README_ATTR/Afbeeldingen/Installatie_vsstudio/3.png)
 
 Stap 5: Vul hier de clone link (met optie ssh en moet eindigen op .git) in van deze repo.
 Het clonen van de repo duurt even. Dit komt door alle submodules die erin zitten. Dus wees geduldig!
 
-![alt text](/docs/Docpages/README_ATTR/Afbeeldingen/Installatie_vsstudio/4.png)
+![alt text](/docs/MD/README_ATTR/Afbeeldingen/Installatie_vsstudio/4.png)
 
-![alt text](/docs/Docpages/README_ATTR/Afbeeldingen/Installatie_vsstudio/3.5.png)
+![alt text](/docs/MD/README_ATTR/Afbeeldingen/Installatie_vsstudio/3.5.png)
 
-![alt text](/docs/Docpages/README_ATTR/Afbeeldingen/Clone/1.png)
+![alt text](/docs/MD/README_ATTR/Afbeeldingen/Clone/1.png)
 
 Stap 6: Dubbelklik na het clonen rechts in Solution explorer op de optie "Folder View (C:\....)"
 
-![alt text](/docs/Docpages/README_ATTR/Afbeeldingen/Clone/2.png)
+![alt text](/docs/MD/README_ATTR/Afbeeldingen/Clone/2.png)
 
 Stap 7: Visual studio komt nu met een vraag over CMake integration. Met de vraag of het aangezet moet worden. Klik op "Enable and set source directory".
 
-![alt text](/docs/Docpages/README_ATTR/Afbeeldingen/Clone/4.png)
+![alt text](/docs/MD/README_ATTR/Afbeeldingen/Clone/4.png)
 
 
 Stap 8: Navigeer dan in het windowtje wat op komt naar map Roomba en selecteer daar het bestand CMakeLists.txt en druk op openen.
 
-![alt text](/docs/Docpages/README_ATTR/Afbeeldingen/Clone/5.png)
+![alt text](/docs/MD/README_ATTR/Afbeeldingen/Clone/5.png)
 
-![alt text](/docs/Docpages/README_ATTR/Afbeeldingen/Clone/6.png)
+![alt text](/docs/MD/README_ATTR/Afbeeldingen/Clone/6.png)
 
 Stap 9: Selecteer in Solution explorer het mapje Roomba. Druk vervolgens op rechter muisknop en selecteer de optie Scope to This.
 
-![alt text](/docs/Docpages/README_ATTR/Afbeeldingen/Clone/7.png)
+![alt text](/docs/MD/README_ATTR/Afbeeldingen/Clone/7.png)
 
 Stap 10: Selecteer in de balk het menu Build en dan Build All (Ctrl+Shift+B).
 
-![alt text](/docs/Docpages/README_ATTR/Afbeeldingen/Clone/8.png)
+![alt text](/docs/MD/README_ATTR/Afbeeldingen/Clone/8.png)
 
 Stap 11: Om een Startup item te kiezen klik op het uitklapicoontje naar select startup item. Kies dan voor app.exe of ExampleTest.exe.
 
 - App.exe is de hoofdapplicatie de source code staat in het mapje apps.
 - ExampleTest is de unit-test de source code staat in het mapje tests/test
 
-![alt text](/docs/Docpages/README_ATTR/Afbeeldingen/Clone/9.png)
+![alt text](/docs/MD/README_ATTR/Afbeeldingen/Clone/9.png)
 
 Stap 12: Selecteer in de balk het menu Debug en dan run without debug of debug.
 
-![alt text](/docs/Docpages/README_ATTR/Afbeeldingen/Clone/10.png)
+![alt text](/docs/MD/README_ATTR/Afbeeldingen/Clone/10.png)
 
 **Gefeliciteerd alles is opgezet!**
 
