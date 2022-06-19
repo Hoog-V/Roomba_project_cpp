@@ -36,7 +36,7 @@ namespace UART {
 
     class UART {
     public:
-        static UART* Create(const UARTSettings Settings);
+        static std::shared_ptr<UART> Create(const UARTSettings Settings);
 
         virtual void changeBaud(const Baudrates baudrate)= 0;
 

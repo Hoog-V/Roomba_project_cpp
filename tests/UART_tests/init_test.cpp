@@ -14,7 +14,7 @@ TEST(UART_init, EmptyDevicePath) {
     TestSettings.connectionMethod = TestMethod;
 
     EXPECT_ANY_THROW({
-        UART::UART *UartHandle = UART::UART::Create(TestSettings);
+        std::shared_ptr<UART::UART> UartHandle = UART::UART::Create(TestSettings);
     });
 }
 
@@ -30,7 +30,7 @@ TEST(UART_init, EmptyBaudrate) {
 
     EXPECT_NO_THROW({
         std::cout << static_cast<uint32_t>(TestSettings.baudrate) << '\n';
-        UART::UART *UartHandle = UART::UART::Create(TestSettings);
+        std::shared_ptr<UART::UART> UartHandle = UART::UART::Create(TestSettings);
     });
 }
 
@@ -46,6 +46,6 @@ TEST(UART_init, ValidUartSettings) {
     TestSettings.connectionMethod = TestMethod;
 
     EXPECT_NO_THROW({
-        UART::UART *UartHandle = UART::UART::Create(TestSettings);
+        std::shared_ptr<UART::UART> UartHandle = UART::UART::Create(TestSettings);
     });
 }

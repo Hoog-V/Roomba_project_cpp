@@ -12,7 +12,7 @@ TEST(UART_ChangeBaud, InvalidBaudrate) {
     TestSettings.baudrate = TestBaud;
     TestSettings.connectionMethod = TestMethod;
 
-    UART::UART *UartHandle = UART::UART::Create(TestSettings);
+    std::shared_ptr<UART::UART> UartHandle = UART::UART::Create(TestSettings);
 
     UART::Baudrates InvalidBaud; //Create a pointer
     EXPECT_THROW({
@@ -30,7 +30,7 @@ TEST(UART_ChangeBaud, ValidBaudrate) {
     TestSettings.baudrate = TestBaud;
     TestSettings.connectionMethod = TestMethod;
 
-    UART::UART *UartHandle = UART::UART::Create(TestSettings);
+    std::shared_ptr<UART::UART> UartHandle = UART::UART::Create(TestSettings);
 
     EXPECT_NO_THROW({
         UartHandle->changeBaud(UART::Baudrates::baud_9600);

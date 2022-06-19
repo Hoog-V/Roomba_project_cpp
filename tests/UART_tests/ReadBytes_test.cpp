@@ -17,7 +17,7 @@ TEST(UART_ReadBytes, numOfBytesZero)
     TestSettings.devicePath = TestPath;
     TestSettings.connectionMethod = TestMethod;
 
-    UART::UART *UartHandle = UART::UART::Create(TestSettings);
+    std::shared_ptr<UART::UART> UartHandle = UART::UART::Create(TestSettings);
 
     std::array<uint8_t, 10> TinyBuffer;
     EXPECT_ANY_THROW({
