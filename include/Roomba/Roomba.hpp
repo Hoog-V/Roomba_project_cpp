@@ -42,9 +42,9 @@ namespace Roomba {
 
     class Roomba {
     public:
-        Roomba(UART::UART *UARTHandle) {
+        Roomba(std::shared_ptr<UART::UART> UARTHandle) {
             mUartHandle = UARTHandle;
-            mIOHandle =  new IO(mUartHandle);
+            mIOHandle =  std::make_unique<IO>(mUartHandle);
             mCurrControlMode = control::No_init;
         }
 
@@ -97,8 +97,8 @@ namespace Roomba {
         bool mSetSafeMode();
 
         bool mSetFullMode();
-        IO* mIOHandle;
-        UART::UART* mUartHandle;
+        std::unique_ptr<IO> mIOHandle;
+        std::shared_ptr<UART::UART> mUartHandle;
         control mCurrControlMode;
     };
 

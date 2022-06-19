@@ -110,10 +110,9 @@ namespace UART {
         return baud;
     }
 
-    UART* UART::Create(const UARTSettings Settings){
-
+    std::shared_ptr<UART> UART::Create(const UARTSettings Settings){
         if (Settings.connectionMethod == connectionMethod::USB) {
-            return new UARTPC(Settings);
+            return std::make_shared<UARTPC>(Settings);
         }
         throw std::exception();
     }
