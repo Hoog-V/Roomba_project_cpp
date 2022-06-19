@@ -15,7 +15,7 @@ Bij installatie alleen maar "volgende".
 
 Stap 3: Open nu git bash vanuit het start menu.
 
-![alt text](/docs/MD//docs/MD/README_ATTR/Afbeeldingen/Git/1.png)
+![alt text](/docs/MD/docs/MD/README_ATTR/Afbeeldingen/Git/1.png)
 
 
 Stap 4: Tik het commando: *ssh-keygen* in en klik alleen maar op ENTER.
