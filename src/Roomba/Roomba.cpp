@@ -3,6 +3,7 @@
 #include <array>
 #include <crossplatform/function.hpp>
 #include <IO/IO.hpp>
+#include <vector>
 
 namespace Roomba {
 /// Roomba Dockmode which makes the Roomba go to his docking station.
@@ -147,34 +148,34 @@ namespace Roomba {
         mUartHandle->sendBytes(commands.data(), std::size(commands));
     }
 
-    void Roomba::playSongNum(uint8_t songNum) {
+    void Roomba::playSongNum(const uint8_t songNum) {
         bool checkControlMode = mCurrControlMode == control::Passive || mCurrControlMode == control::No_init;
         if (checkControlMode)
             setControlMode(control::Safe);
 
         std::array<uint8_t, 2> commands{command::Play, songNum};
-        mUartHandle->sendBytes(commands.data(), std::size(commands));
+        mUartHandle->sendBytes(commands.data(), commands.size());
     }
 
-    void Roomba::setSongNum(uint8_t songNum, uint8_t songLength, ...) {
-        std::array<uint8_t, 32> commands{command::Song, songLength};
-        int lenList = (songLength * 2);
-        bool checkControlMode = mCurrControlMode == control::Passive || mCurrControlMode == control::No_init;
-
-        if (songLength > 16)
-            return;
-
-        if (checkControlMode)
-            setControlMode(control::Safe);
-
-        va_list vaList;
-        va_start(vaList, lenList);
-
-        for (int i = 2; i < songLength * 2; i++) {
-            commands[i] = va_arg(vaList, uint8_t);
+    void Roomba::setSongNum(const uint8_t songNum, const std::vector<uint8_t> notesWithDuration) {
+        const bool tooManyNotes = (notesWithDuration.size() > 32);
+        const bool numOfNotesAndDurationNotEqual = (notesWithDuration.size() % 2);
+        if(tooManyNotes || numOfNotesAndDurationNotEqual) {
+            throw std::exception();
         }
 
-        mUartHandle->sendBytes(commands.data(), std::size(commands));
+        const bool wrongControlMode = (mCurrControlMode == control::Passive || mCurrControlMode == control::No_init);
+        if(wrongControlMode) {
+            mSetSafeMode();
+        }
+
+        const uint8_t numOfNotes = static_cast<uint8_t>(notesWithDuration.size())/2;
+        std::vector<uint8_t> commands = {command::Song, songNum, numOfNotes};
+
+        for(uint8_t Note: notesWithDuration){
+            commands.push_back(Note);
+        }
+        mUartHandle->sendBytes(commands.data(), commands.size());
     }
 
     void Roomba::driveForward() {
