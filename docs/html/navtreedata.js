@@ -26,31 +26,27 @@ var NAVTREE =
 [
   [ "Roomba", "index.html", [
     [ "Roomba OTOTOI Documentation", "index.html", [
-      [ "General information", "index.html#autotoc_md22", null ]
+      [ "General information", "index.html#autotoc_md10", null ]
     ] ],
-    [ "Acceptatietesten Roomba library", "md__doc_pages__acceptatietesten__r_o_o_m_b_a__lib.html", [
-      [ "Acceptatietest 1: Robot van richting laten veranderen", "md__doc_pages__acceptatietesten__r_o_o_m_b_a__lib.html#autotoc_md1", null ],
-      [ "Acceptatietest 2: Het starten van een schoonmaakronde en zoek dock modus", "md__doc_pages__acceptatietesten__r_o_o_m_b_a__lib.html#autotoc_md2", null ],
-      [ "Acceptatietest 3:  Aan/uit zetten", "md__doc_pages__acceptatietesten__r_o_o_m_b_a__lib.html#autotoc_md3", null ],
-      [ "Acceptatietest 4:  Motoren manipuleren.", "md__doc_pages__acceptatietesten__r_o_o_m_b_a__lib.html#autotoc_md4", null ],
-      [ "Acceptatietest 5:  Leds manipuleren", "md__doc_pages__acceptatietesten__r_o_o_m_b_a__lib.html#autotoc_md5", null ],
-      [ "Acceptatietest 6:  Baudrate aanpassen", "md__doc_pages__acceptatietesten__r_o_o_m_b_a__lib.html#autotoc_md6", null ],
-      [ "Acceptatietest 7:  Noten afspelen", "md__doc_pages__acceptatietesten__r_o_o_m_b_a__lib.html#autotoc_md7", null ],
-      [ "Acceptatietest 8: Controleer code conventies", "md__doc_pages__acceptatietesten__r_o_o_m_b_a__lib.html#autotoc_md8", null ]
+    [ "MoScoW eisen", "2.html", [
+      [ "Eisen Roomba lib m.b.v. MOSCOW", "2.html#autotoc_md0", null ]
     ] ],
-    [ "Code_standaarden", "md__doc_pages__code_standaarden.html", null ],
-    [ "Eisen Roomba lib m.b.v. MOSCOW", "md__doc_pages__eisen__r_o_o_m_b_a_lib.html", null ],
-    [ "Functies", "md__doc_pages__functies__r_o_o_m_b_a_lib.html", null ],
-    [ "Ontwikkel omgeving opzetten", "md__doc_pages__omgeving_opzetten.html", null ],
-    [ "1 UART", "md__doc_pages__subsystems.html", null ],
-    [ "# Roomba C++ library", "md__home_victor_git__roomba_project_cpp__r_e_a_d_m_e.html", [
-      [ "Bookmarks", "md__home_victor_git__roomba_project_cpp__r_e_a_d_m_e.html#autotoc_md26", [
-        [ "Code standaarden en regels", "md__home_victor_git__roomba_project_cpp__r_e_a_d_m_e.html#autotoc_md28", null ],
-        [ "Programma van eisen en acceptatietesten", "md__home_victor_git__roomba_project_cpp__r_e_a_d_m_e.html#autotoc_md29", null ],
-        [ "UML STUFF", "md__home_victor_git__roomba_project_cpp__r_e_a_d_m_e.html#autotoc_md30", null ]
-      ] ],
-      [ "Regels over bijdragen aan de repo", "md__home_victor_git__roomba_project_cpp__r_e_a_d_m_e.html#autotoc_md31", null ],
-      [ "Testen", "md__home_victor_git__roomba_project_cpp__r_e_a_d_m_e.html#autotoc_md33", null ]
+    [ "Acceptatietesten", "3.html", [
+      [ "Acceptatietesten Roomba library", "3.html#autotoc_md1", [
+        [ "Acceptatietest 1: Robot van richting laten veranderen", "3.html#autotoc_md2", null ],
+        [ "Acceptatietest 2: Het starten van een schoonmaakronde en zoek dock modus", "3.html#autotoc_md3", null ],
+        [ "Acceptatietest 3:  Aan/uit zetten", "3.html#autotoc_md4", null ],
+        [ "Acceptatietest 4:  Motoren manipuleren.", "3.html#autotoc_md5", null ],
+        [ "Acceptatietest 5:  Leds manipuleren", "3.html#autotoc_md6", null ],
+        [ "Acceptatietest 6:  Baudrate aanpassen", "3.html#autotoc_md7", null ],
+        [ "Acceptatietest 7:  Noten afspelen", "3.html#autotoc_md8", null ],
+        [ "Acceptatietest 8: Controleer code conventies", "3.html#autotoc_md9", null ]
+      ] ]
+    ] ],
+    [ "Class Diagram", "4.html", null ],
+    [ "Bijdragen", "6.html", [
+      [ "Algemene regels", "6.html#a", null ],
+      [ "Code standaarden", "6.html#c", null ]
     ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
@@ -83,8 +79,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_change_baud__test_8cpp.html",
-"md__doc_pages__functies__r_o_o_m_b_a_lib.html"
+"2.html",
+"index.html#autotoc_md10"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
