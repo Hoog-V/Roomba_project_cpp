@@ -44,3 +44,5 @@ out/
 .eclipse/
 .gitmodules
 Gemfile.lock
+
+docs/DoxyGen/html
