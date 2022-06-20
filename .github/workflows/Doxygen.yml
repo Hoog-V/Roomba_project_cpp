@@ -49,7 +49,7 @@ jobs:
       
    - name: Doxygen
      working-directory: tmp/docs
-     run: Doxygen Doxyfile
+     run: doxygen Doxyfile
      
    - name: Commit and push
      working-directory: tmp
