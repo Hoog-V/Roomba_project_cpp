@@ -24,6 +24,9 @@ if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
   # main CMakeLists.
   include(CTest)
 
+endif()
+
+
 # Add external libs including boost
 add_subdirectory(external)
 
