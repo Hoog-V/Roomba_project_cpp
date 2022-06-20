@@ -23,7 +23,7 @@ jobs:
    - name: Merge
      working-directory: ${{github.workspace}}
      # Build your program with the given configuration
-     run: git pull && git checkout gh-pages && git merge main -m "Update code from main"
+     run: git pull && git checkout gh-pages && git merge --allow-unrelated-histories  main -m "Update code from main"
       
    - name: Doxygen
      working-directory: ${{github.workspace}}/docs
