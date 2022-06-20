@@ -17,7 +17,7 @@ env:
   MY_BRANCH: gh-pages
 
   # replace it with the path to master repo
-  MASTER_REPO: https://github.com/Hoog-V/Roomba_project_cpp.git
+  MASTER_REPO: origin
 
   # replace "master" with your master branch name
   MASTER_BRANCH: main
@@ -43,7 +43,7 @@ jobs:
         git config user.name "Automerge Bot"
         git config user.email "bot@example.com" 
         git config pull.rebase false
-        git pull ${{env.MASTER_REPO}} ${{env.MASTER_BRANCH}}
+        git pull ${{env.MASTER_REPO}} ${{env.MASTER_BRANCH}} -m "Merge from main branch"
         git push
 
       
