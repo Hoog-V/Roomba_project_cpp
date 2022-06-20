@@ -1,7 +1,7 @@
 var _u_a_r_t_base_8hpp =
 [
-    [ "UART::UARTSettings", "struct_u_a_r_t_1_1_u_a_r_t_settings.html", "struct_u_a_r_t_1_1_u_a_r_t_settings" ],
-    [ "UART::UART", "class_u_a_r_t_1_1_u_a_r_t.html", "class_u_a_r_t_1_1_u_a_r_t" ],
+    [ "UARTSettings", "struct_u_a_r_t_1_1_u_a_r_t_settings.html", "struct_u_a_r_t_1_1_u_a_r_t_settings" ],
+    [ "UART", "class_u_a_r_t_1_1_u_a_r_t.html", "class_u_a_r_t_1_1_u_a_r_t" ],
     [ "Baudrates", "_u_a_r_t_base_8hpp.html#a5f6ba0e04c3a031981c58788fb317736", [
       [ "baud_invalid", "_u_a_r_t_base_8hpp.html#a5f6ba0e04c3a031981c58788fb317736a2c48ddcc20ec061da8c9c8ae7628b893", null ],
       [ "baud_300", "_u_a_r_t_base_8hpp.html#a5f6ba0e04c3a031981c58788fb317736ab57c49e2cb917d510db4dcf7dba3462d", null ],

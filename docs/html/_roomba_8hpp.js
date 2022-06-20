@@ -1,6 +1,6 @@
 var _roomba_8hpp =
 [
-    [ "Roomba::Roomba", "class_roomba_1_1_roomba.html", "class_roomba_1_1_roomba" ],
+    [ "Roomba", "class_roomba_1_1_roomba.html", "class_roomba_1_1_roomba" ],
     [ "cleaning", "_roomba_8hpp.html#acb7a202beeb36883e7ceddba1effd492", [
       [ "Spot", "_roomba_8hpp.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada6c9d6b8aea6f3d16847bdebe05878a2d", null ],
       [ "Clean", "_roomba_8hpp.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada37d12e2cfbef6e6105297374d02f3998", null ],
