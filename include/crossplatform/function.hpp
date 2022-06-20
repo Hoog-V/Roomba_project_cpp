@@ -26,7 +26,6 @@ constexpr int16_t convert_to_signed_short(const std::array<T, size> &buf) {
 #endif
     }
     catch (std::out_of_range const &exc) {
-        std::cout << exc.what() << '\n';
         std::terminate();
     }
     return 0;
