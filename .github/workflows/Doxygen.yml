@@ -37,9 +37,9 @@ jobs:
      run: sudo apt-get -y install graphviz doxygen
    
    - name: Merge
-     working-directory: ${{github.workspace}}
      # Build your program with the given configuration
      run:  |
+        cd tmp
         git config user.name "Automerge Bot"
         git config user.email "bot@example.com" 
         git config pull.rebase false
