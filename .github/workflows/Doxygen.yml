@@ -1,3 +1,5 @@
+
+
 name: Generate Documentation
 
 on:
@@ -5,7 +7,20 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+env:
+  # replace "github_username" with your GitHub username
+  # replace "github.com/username/repo.git" with your GitHub repo path
+  # do NOT replace ${{secrets.GITHUB_TOKEN}}, GitHub will take care of it
+  MY_REPO: https://Hoog-V:${{secrets.GITHUB_TOKEN}}@github.com/Hoog-V/Roomba_project_cpp.git
 
+  # replace "long-lived_branch_name" with your branch name
+  MY_BRANCH: gh-pages
+
+  # replace it with the path to master repo
+  MASTER_REPO: https://github.com/Hoog-V/Roomba_project_cpp.git
+
+  # replace "master" with your master branch name
+  MASTER_BRANCH: main
 
 jobs:
   Create_Docs:
@@ -20,8 +35,15 @@ jobs:
    - name: Install needed packages
      run: sudo apt-get -y install graphviz doxygen
    
-   - name: Automatic Merge
-     uses: lots0logs/gh-action-auto-merge@1.0.0
+   - name: Merge
+     working-directory: ${{github.workspace}}
+     # Build your program with the given configuration
+     run:  |
+        git config user.name "Automerge Bot"
+        git config user.email "bot@example.com" 
+        git pull 
+        git checkout gh-pages
+        git merge --allow-unrelated-histories  main -m "Update code from main"
       
    - name: Doxygen
      working-directory: ${{github.workspace}}/docs
