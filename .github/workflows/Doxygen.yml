@@ -20,10 +20,8 @@ jobs:
    - name: Install needed packages
      run: sudo apt-get -y install graphviz doxygen
    
-   - name: Merge
-     working-directory: ${{github.workspace}}
-     # Build your program with the given configuration
-     run: git pull && git checkout gh-pages && git merge --allow-unrelated-histories  main -m "Update code from main"
+   - name: Automatic Merge
+     uses: lots0logs/gh-action-auto-merge@1.0.0
       
    - name: Doxygen
      working-directory: ${{github.workspace}}/docs
