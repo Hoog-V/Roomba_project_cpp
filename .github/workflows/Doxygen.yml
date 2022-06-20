@@ -25,7 +25,7 @@ jobs:
    - name: Merge
      working-directory: ${{github.workspace}}
      # Build your program with the given configuration
-     run: git merge origin/main -m "Update code from main"
+     run: git merge main -m "Update code from main"
       
    - name: Doxygen
      working-directory: ${{github.workspace}}/docs
