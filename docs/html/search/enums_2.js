@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['leds_224',['leds',['../namespace_roomba.html#ab8b7e4427d000b9e9eb73c03a2ecf599',1,'Roomba']]],
-  ['ledstate_225',['ledState',['../namespace_roomba.html#ab3b31b849baa01f5e7977d4e49b7ee14',1,'Roomba']]]
+  ['direction_227',['direction',['../namespace_roomba.html#a129c7fef99465f8e89987561b13649d1',1,'Roomba']]]
 ];

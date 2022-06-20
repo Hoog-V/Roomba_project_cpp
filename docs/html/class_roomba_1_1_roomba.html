@@ -98,7 +98,7 @@ Collaboration diagram for Roomba::Roomba:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_roomba_1_1_roomba__coll__graph.png" border="0" usemap="#_roomba_1_1_roomba_coll__map" alt="Collaboration graph"/></div>
 <map name="_roomba_1_1_roomba_coll__map" id="_roomba_1_1_roomba_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,156,361"/>
+<area shape="rect" title=" " alt="" coords="5,5,156,303"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -133,17 +133,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7e2490a0fadd44ddda58e7acfe7e027d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad55f4ec718dc3dea7464bdff1824653b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_roomba_1_1_roomba.html#ad55f4ec718dc3dea7464bdff1824653b">turnOff</a> ()</td></tr>
 <tr class="separator:ad55f4ec718dc3dea7464bdff1824653b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa793cf5ff3ec456ab6c167fa939067f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_roomba_1_1_roomba.html#aa793cf5ff3ec456ab6c167fa939067f3">driveCommand</a> (int16_t velocity, int16_t radius)</td></tr>
-<tr class="memdesc:aa793cf5ff3ec456ab6c167fa939067f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">velocity value may be between 500 and -500 radius value may be between 2000 and -2000  <a href="class_roomba_1_1_roomba.html#aa793cf5ff3ec456ab6c167fa939067f3">More...</a><br /></td></tr>
-<tr class="separator:aa793cf5ff3ec456ab6c167fa939067f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a934b9c04bce2f279ab2a2a9b4c1b98f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_roomba_1_1_roomba.html#a934b9c04bce2f279ab2a2a9b4c1b98f2">driveForward</a> ()</td></tr>
-<tr class="separator:a934b9c04bce2f279ab2a2a9b4c1b98f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91623f1a3ef0ba1ec24c1262604c9d56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_roomba_1_1_roomba.html#a91623f1a3ef0ba1ec24c1262604c9d56">driveBackward</a> ()</td></tr>
-<tr class="separator:a91623f1a3ef0ba1ec24c1262604c9d56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30512a3f5d89e15bca7e26d2188a1549"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_roomba_1_1_roomba.html#a30512a3f5d89e15bca7e26d2188a1549">driveLeft</a> ()</td></tr>
-<tr class="separator:a30512a3f5d89e15bca7e26d2188a1549"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c70a9dfe247cc7fd6125d15cf61924e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_roomba_1_1_roomba.html#a2c70a9dfe247cc7fd6125d15cf61924e">driveRight</a> ()</td></tr>
-<tr class="separator:a2c70a9dfe247cc7fd6125d15cf61924e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af98c07b0c4d211d6db21694d6cd20249"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_roomba_1_1_roomba.html#af98c07b0c4d211d6db21694d6cd20249">setDirection</a> (<a class="el" href="namespace_roomba.html#a129c7fef99465f8e89987561b13649d1">direction</a> Direction)</td></tr>
+<tr class="separator:af98c07b0c4d211d6db21694d6cd20249"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef986a2eee3c2eb93b67f8f2d322e9fe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_roomba_1_1_roomba.html#aef986a2eee3c2eb93b67f8f2d322e9fe">~Roomba</a> ()</td></tr>
 <tr class="separator:aef986a2eee3c2eb93b67f8f2d322e9fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -200,104 +191,6 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a91623f1a3ef0ba1ec24c1262604c9d56"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a91623f1a3ef0ba1ec24c1262604c9d56">&#9670;&nbsp;</a></span>driveBackward()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Roomba::Roomba::driveBackward </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aa793cf5ff3ec456ab6c167fa939067f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa793cf5ff3ec456ab6c167fa939067f3">&#9670;&nbsp;</a></span>driveCommand()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Roomba::Roomba::driveCommand </td>
-          <td>(</td>
-          <td class="paramtype">int16_t&#160;</td>
-          <td class="paramname"><em>velocity</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int16_t&#160;</td>
-          <td class="paramname"><em>radius</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>velocity value may be between 500 and -500 radius value may be between 2000 and -2000 </p>
-
-</div>
-</div>
-<a id="a934b9c04bce2f279ab2a2a9b4c1b98f2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a934b9c04bce2f279ab2a2a9b4c1b98f2">&#9670;&nbsp;</a></span>driveForward()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Roomba::Roomba::driveForward </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a30512a3f5d89e15bca7e26d2188a1549"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a30512a3f5d89e15bca7e26d2188a1549">&#9670;&nbsp;</a></span>driveLeft()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Roomba::Roomba::driveLeft </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a2c70a9dfe247cc7fd6125d15cf61924e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2c70a9dfe247cc7fd6125d15cf61924e">&#9670;&nbsp;</a></span>driveRight()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Roomba::Roomba::driveRight </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="aab325cb00efdbbe5757d820d42e09c15"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aab325cb00efdbbe5757d820d42e09c15">&#9670;&nbsp;</a></span>getSensorData()</h2>
 
@@ -381,6 +274,24 @@ Public Member Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespace_roomba.html#a5209de87fc9bed4bd208eae71aab67c3">control</a>&#160;</td>
           <td class="paramname"><em>ControlMode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af98c07b0c4d211d6db21694d6cd20249"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af98c07b0c4d211d6db21694d6cd20249">&#9670;&nbsp;</a></span>setDirection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Roomba::Roomba::setDirection </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_roomba.html#a129c7fef99465f8e89987561b13649d1">direction</a>&#160;</td>
+          <td class="paramname"><em>Direction</em></td><td>)</td>
           <td></td>
         </tr>
       </table>

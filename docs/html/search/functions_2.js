@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['getsensordata_183',['getSensorData',['../class_roomba_1_1_roomba.html#aab325cb00efdbbe5757d820d42e09c15',1,'Roomba::Roomba']]]
+  ['io_186',['IO',['../class_i_o.html#aaaa308cb73c1492c2e660662c7972b65',1,'IO']]]
 ];

@@ -47,6 +47,12 @@ var _roomba_8hpp =
       [ "Safe", "_roomba_8hpp.html#a28115f0e32b012cd8bdb9f6c7d5dc0adac6eea0560cd6f377e78dff2c85cc9122", null ],
       [ "Full", "_roomba_8hpp.html#a28115f0e32b012cd8bdb9f6c7d5dc0adabbd47109890259c0127154db1af26c75", null ]
     ] ],
+    [ "direction", "_roomba_8hpp.html#a129c7fef99465f8e89987561b13649d1", [
+      [ "Forward", "_roomba_8hpp.html#a129c7fef99465f8e89987561b13649d1a67d2f6740a8eaebf4d5c6f79be8da481", null ],
+      [ "Left", "_roomba_8hpp.html#a129c7fef99465f8e89987561b13649d1a945d5e233cf7d6240f6b783b36a374ff", null ],
+      [ "Right", "_roomba_8hpp.html#a129c7fef99465f8e89987561b13649d1a92b09c7c48c520c3c55e497875da437c", null ],
+      [ "Backward", "_roomba_8hpp.html#a129c7fef99465f8e89987561b13649d1ab3263eb38f8903efc271cc7a760da510", null ]
+    ] ],
     [ "leds", "_roomba_8hpp.html#ab8b7e4427d000b9e9eb73c03a2ecf599", [
       [ "LED_Debris", "_roomba_8hpp.html#ab8b7e4427d000b9e9eb73c03a2ecf599a8e34bb5523ed0eb2786b4ab28b329683", null ],
       [ "LED_Spot", "_roomba_8hpp.html#ab8b7e4427d000b9e9eb73c03a2ecf599a1ee373621a62e8a52918463fd56ac073", null ],
