@@ -4,7 +4,7 @@
 # Optionally glob, but only for CMake 3.12 or later:
 #file(GLOB HEADER_LIST CONFIGURE_DEPENDS "${PROJECT_SOURCE_DIR}}/include/Roomba/*.hpp")
 set(HEADER_LIST "${PROJECT_SOURCE_DIR}/include/Roomba/Roomba.hpp")
-file(GLOB source_list CONFIGURE_DEPENDS "%{PROJECT_SOURCE_DIR}/src/Roomba/*.cpp")
+file(GLOB source_list CONFIGURE_DEPENDS "${PROJECT_SOURCE_DIR}/src/Roomba/*.cpp")
 
 # Make an automatic library - will be static or dynamic based on user setting
 add_library(Roomba_lib ${source_list} ${HEADER_LIST})
