@@ -1,5 +1,7 @@
 #pragma once
 
+#include <array>
+
 #if defined(__linux__) || defined(__APPLE__) || defined(_WIN32) || defined(_WIN64)
 
 #include <chrono>
@@ -24,7 +26,6 @@ constexpr int16_t convert_to_signed_short(const std::array<T, size> &buf) {
 #endif
     }
     catch (std::out_of_range const &exc) {
-        std::cout << exc.what() << '\n';
         std::terminate();
     }
     return 0;

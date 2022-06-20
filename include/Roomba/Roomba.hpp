@@ -1,5 +1,6 @@
 #pragma once
 
+#include <crossplatform/function.hpp>
 #include <UART/UART.hpp>
 #include <map>
 #include <stdarg.h>
@@ -7,6 +8,10 @@
 
 namespace Roomba {
 
+
+    enum class direction {
+        Forward, Left, Right, Backward
+    };
 
     enum class cleaning {
         Spot, Clean, Max
@@ -42,9 +47,8 @@ namespace Roomba {
 
     class Roomba {
     public:
-        Roomba(std::shared_ptr<UART::UART> UARTHandle) {
-            mUartHandle = UARTHandle;
-            mIOHandle =  std::make_unique<IO>(mUartHandle);
+        Roomba(std::shared_ptr<UART::UART> UARTHandle) : mUartHandle(UARTHandle) {
+            mIOHandle = std::make_unique<IO>(mUartHandle);
             mCurrControlMode = control::No_init;
         }
 
@@ -74,15 +78,7 @@ namespace Roomba {
 
         void turnOff();
 
-        void driveCommand(int16_t velocity, int16_t radius);
-
-        void driveForward();
-
-        void driveBackward();
-
-        void driveLeft();
-
-        void driveRight();
+        void setDirection(direction Direction);
 
         ~Roomba() {
             mUartHandle->sendByte(command::Stop);
@@ -94,9 +90,16 @@ namespace Roomba {
         bool mSetSafeMode();
 
         bool mSetFullMode();
+
+        void driveCommand(int16_t velocity, int16_t radius);
+
         std::unique_ptr<IO> mIOHandle;
         std::shared_ptr<UART::UART> mUartHandle;
         control mCurrControlMode;
+
+        const int16_t velForward = 500, velBackward = -500, velStop = 0;
+        const int16_t rotNone = 32768, rotLeft = -2000, rotRight = 2000;
+        
     };
 
 }
