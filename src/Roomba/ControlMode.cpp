@@ -1,4 +1,5 @@
 #include "Roomba/Roomba.hpp"
+#include <crossplatform/function.hpp>
 
 namespace Roomba{
         bool Roomba::mSetPassiveMode() {
