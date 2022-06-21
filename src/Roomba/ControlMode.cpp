@@ -5,15 +5,15 @@ namespace Roomba{
         bool Roomba::mSetPassiveMode() {
         switch (mCurrControlMode) {
             case control::No_init: {
-                mUartHandle->sendByte(command::Start);
+                this->mUartHandle->sendByte(command::Start);
                 SLEEP(25);
                 break;
             }
             case control::Safe:
             case control::Full: {
-                mUartHandle->sendByte(command::Spot);
+                this->mUartHandle->sendByte(command::Spot);
                 SLEEP(220);
-                mUartHandle->sendByte(command::Spot);
+                this->mUartHandle->sendByte(command::Spot);
                 SLEEP(25);
                 break;
             }
@@ -31,7 +31,7 @@ namespace Roomba{
         }else if (mCurrControlMode == control::Safe){
             return (false);
         }
-        mUartHandle->sendByte(command::Safe);
+        this->mUartHandle->sendByte(command::Safe);
         SLEEP(25);
         return (true);
     }
@@ -42,7 +42,7 @@ namespace Roomba{
         }else if (mCurrControlMode == control::Full){
             return (false);
         }
-        mUartHandle->sendByte(command::Full);
+        this->mUartHandle->sendByte(command::Full);
         SLEEP(25);
         return (true);
     }
