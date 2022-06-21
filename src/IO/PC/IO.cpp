@@ -1,10 +1,23 @@
 #include <IO/IO.hpp>
 #include <UART/UART.hpp>
 
-void IO::setPinHigh() {
-    this->mUartHandle->resetDTRPin();
-}
+namespace IO {
+    IOPC::IOPC(const IOSettings settings) {
+        mIOSettings = settings;
+    }
 
-void IO::setPinLow() {
-    this->mUartHandle->setDTRPin();
+    void IOPC::setPinHigh() {
+        mIOSettings.mUartHandle->resetDTRPin();
+    }
+
+    void IOPC::setPinLow() {
+        mIOSettings.mUartHandle->setDTRPin();
+    }
+
+    std::shared_ptr<IO> IO::Create(const IOSettings settings) {
+        if (settings.mConnectionMethod == UART::connectionMethod::USB) {
+            return std::make_shared<IOPC>(settings);
+        }
+        throw std::exception();
+    }
 }
