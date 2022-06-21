@@ -42,9 +42,9 @@ namespace UART {
 
         virtual void sendByte(const uint8_t byte)= 0;
 
-        virtual void sendBytes(uint8_t* buffer, const uint32_t numOfBytes) =0;
+        virtual void sendBytes(std::vector<uint8_t> &buffer) =0;
 
-        virtual void readBytes(uint8_t* buffer, const uint32_t numOfBytes) = 0;
+        virtual void readBytes(std::vector<uint8_t> &buffer) = 0;
 
         virtual void resetDTRPin(){}
 
