@@ -100,7 +100,7 @@ namespace Roomba {
         control mCurrControlMode;
 
         const int16_t velForward = 500, velBackward = -500, velStop = 0;
-        const int16_t rotNone = 32768, rotLeft = -2000, rotRight = 2000;
+        const int16_t rotNone = 32767, rotLeft = -2000, rotRight = 2000;
         
     };
 
