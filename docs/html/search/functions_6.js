@@ -1,7 +1,7 @@
 var searchData=
 [
   ['sendbyte_194',['sendByte',['../class_u_a_r_t_1_1_u_a_r_t_p_c.html#a68dde6296a52a3af5bb96e4c2c2ec29b',1,'UART::UARTPC::sendByte()'],['../class_u_a_r_t_1_1_u_a_r_t.html#a343800120c4d5584e41f3bcef5c902ac',1,'UART::UART::sendByte()']]],
-  ['sendbytes_195',['sendBytes',['../class_u_a_r_t_1_1_u_a_r_t_p_c.html#a795f9088ffa76f5616ada86fc2eba9e9',1,'UART::UARTPC::sendBytes()'],['../class_u_a_r_t_1_1_u_a_r_t.html#aaca68fba2c46fb62c79616d5da7f9578',1,'UART::UART::sendBytes()']]],
+  ['sendbytes_195',['sendBytes',['../class_u_a_r_t_1_1_u_a_r_t_p_c.html#a8a94b812e86d6823fe76885af662bf33',1,'UART::UARTPC::sendBytes()'],['../class_u_a_r_t_1_1_u_a_r_t.html#ab28171d0bd64699a2122c161b4370958',1,'UART::UART::sendBytes()']]],
   ['setbaudrate_196',['setBaudRate',['../class_roomba_1_1_roomba.html#ad70dac95a58f6858da181de6d8046495',1,'Roomba::Roomba']]],
   ['setcontrolmode_197',['setControlMode',['../class_roomba_1_1_roomba.html#a6ec162fd9691aa6d688025a38c35bfd9',1,'Roomba::Roomba']]],
   ['setdirection_198',['setDirection',['../class_roomba_1_1_roomba.html#af98c07b0c4d211d6db21694d6cd20249',1,'Roomba::Roomba']]],

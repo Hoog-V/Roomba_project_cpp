@@ -4,7 +4,7 @@ var searchData=
   ['schedule_104',['Schedule',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0adae13146ee672b941e124f32d429c43832',1,'Roomba']]],
   ['schedule_5fleds_105',['Schedule_Leds',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada08cdfe713c0db7de775fe096a4d2e071',1,'Roomba']]],
   ['sendbyte_106',['sendByte',['../class_u_a_r_t_1_1_u_a_r_t_p_c.html#a68dde6296a52a3af5bb96e4c2c2ec29b',1,'UART::UARTPC::sendByte()'],['../class_u_a_r_t_1_1_u_a_r_t.html#a343800120c4d5584e41f3bcef5c902ac',1,'UART::UART::sendByte()']]],
-  ['sendbytes_107',['sendBytes',['../class_u_a_r_t_1_1_u_a_r_t_p_c.html#a795f9088ffa76f5616ada86fc2eba9e9',1,'UART::UARTPC::sendBytes()'],['../class_u_a_r_t_1_1_u_a_r_t.html#aaca68fba2c46fb62c79616d5da7f9578',1,'UART::UART::sendBytes()']]],
+  ['sendbytes_107',['sendBytes',['../class_u_a_r_t_1_1_u_a_r_t_p_c.html#a8a94b812e86d6823fe76885af662bf33',1,'UART::UARTPC::sendBytes()'],['../class_u_a_r_t_1_1_u_a_r_t.html#ab28171d0bd64699a2122c161b4370958',1,'UART::UART::sendBytes()']]],
   ['sendbytes_5ftest_2ecpp_108',['SendBytes_test.cpp',['../_send_bytes__test_8cpp.html',1,'']]],
   ['sensors_109',['sensors',['../namespace_roomba.html#a1ba20ae81e47ebf35362517c7dbfeff9',1,'Roomba']]],
   ['set_5fdate_5ftime_110',['Set_Date_Time',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada4a3b2f9219e44db7de1eb691dc35c6b3',1,'Roomba']]],

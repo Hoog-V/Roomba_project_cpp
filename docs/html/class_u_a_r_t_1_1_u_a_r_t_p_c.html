@@ -121,10 +121,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af6626aa3fa04e946ae19b76a39e9e04e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68dde6296a52a3af5bb96e4c2c2ec29b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_a_r_t_1_1_u_a_r_t_p_c.html#a68dde6296a52a3af5bb96e4c2c2ec29b">sendByte</a> (const uint8_t byte)</td></tr>
 <tr class="separator:a68dde6296a52a3af5bb96e4c2c2ec29b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a795f9088ffa76f5616ada86fc2eba9e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_a_r_t_1_1_u_a_r_t_p_c.html#a795f9088ffa76f5616ada86fc2eba9e9">sendBytes</a> (uint8_t *buffer, const uint32_t numOfBytes)</td></tr>
-<tr class="separator:a795f9088ffa76f5616ada86fc2eba9e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3921f4fa6a6eac6addcc6e4f34bc2add"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_a_r_t_1_1_u_a_r_t_p_c.html#a3921f4fa6a6eac6addcc6e4f34bc2add">readBytes</a> (uint8_t *buffer, const uint32_t numOfBytes)</td></tr>
-<tr class="separator:a3921f4fa6a6eac6addcc6e4f34bc2add"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a94b812e86d6823fe76885af662bf33"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_a_r_t_1_1_u_a_r_t_p_c.html#a8a94b812e86d6823fe76885af662bf33">sendBytes</a> (std::vector&lt; uint8_t &gt; &amp;buffer)</td></tr>
+<tr class="separator:a8a94b812e86d6823fe76885af662bf33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f2e6944f1fbdd70dcd51051cee4d73a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_a_r_t_1_1_u_a_r_t_p_c.html#a7f2e6944f1fbdd70dcd51051cee4d73a">readBytes</a> (std::vector&lt; uint8_t &gt; &amp;buffer)</td></tr>
+<tr class="separator:a7f2e6944f1fbdd70dcd51051cee4d73a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a495b98b592d1e315972cf006f8f6e564"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_a_r_t_1_1_u_a_r_t_p_c.html#a495b98b592d1e315972cf006f8f6e564">resetDTRPin</a> ()</td></tr>
 <tr class="separator:a495b98b592d1e315972cf006f8f6e564"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a99a2a784fa357e457d6545a6b17166"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_a_r_t_1_1_u_a_r_t_p_c.html#a5a99a2a784fa357e457d6545a6b17166">setDTRPin</a> ()</td></tr>
@@ -212,8 +212,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a3921f4fa6a6eac6addcc6e4f34bc2add"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3921f4fa6a6eac6addcc6e4f34bc2add">&#9670;&nbsp;</a></span>readBytes()</h2>
+<a id="a7f2e6944f1fbdd70dcd51051cee4d73a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f2e6944f1fbdd70dcd51051cee4d73a">&#9670;&nbsp;</a></span>readBytes()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -224,19 +224,9 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void UART::UARTPC::readBytes </td>
           <td>(</td>
-          <td class="paramtype">uint8_t *&#160;</td>
-          <td class="paramname"><em>buffer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">std::vector&lt; uint8_t &gt; &amp;&#160;</td>
+          <td class="paramname"><em>buffer</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">const uint32_t&#160;</td>
-          <td class="paramname"><em>numOfBytes</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -246,7 +236,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_u_a_r_t_1_1_u_a_r_t.html#a55991ee1f0cb6724062770d29a1a3b5f">UART::UART</a>.</p>
+<p>Implements <a class="el" href="class_u_a_r_t_1_1_u_a_r_t.html#a6323d2b672a92b0c59d0c3a0c0b22969">UART::UART</a>.</p>
 
 </div>
 </div>
@@ -305,8 +295,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a795f9088ffa76f5616ada86fc2eba9e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a795f9088ffa76f5616ada86fc2eba9e9">&#9670;&nbsp;</a></span>sendBytes()</h2>
+<a id="a8a94b812e86d6823fe76885af662bf33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a94b812e86d6823fe76885af662bf33">&#9670;&nbsp;</a></span>sendBytes()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -317,19 +307,9 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void UART::UARTPC::sendBytes </td>
           <td>(</td>
-          <td class="paramtype">uint8_t *&#160;</td>
-          <td class="paramname"><em>buffer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">std::vector&lt; uint8_t &gt; &amp;&#160;</td>
+          <td class="paramname"><em>buffer</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">const uint32_t&#160;</td>
-          <td class="paramname"><em>numOfBytes</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -339,7 +319,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_u_a_r_t_1_1_u_a_r_t.html#aaca68fba2c46fb62c79616d5da7f9578">UART::UART</a>.</p>
+<p>Implements <a class="el" href="class_u_a_r_t_1_1_u_a_r_t.html#ab28171d0bd64699a2122c161b4370958">UART::UART</a>.</p>
 
 </div>
 </div>
