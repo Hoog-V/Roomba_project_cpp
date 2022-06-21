@@ -48,7 +48,7 @@ namespace Roomba {
     class Roomba {
     public:
         Roomba(std::shared_ptr<UART::UART> UARTHandle) : mUartHandle(UARTHandle) {
-            mIOHandle = std::make_unique<IO>(mUartHandle);
+            mIOHandle = std::make_unique<IO::IO>(mUartHandle);
             mCurrControlMode = control::No_init;
         }
 
@@ -93,7 +93,7 @@ namespace Roomba {
 
         void driveCommand(int16_t velocity, int16_t radius);
 
-        std::unique_ptr<IO> mIOHandle;
+        std::unique_ptr<IO::IO> mIOHandle;
         std::shared_ptr<UART::UART> mUartHandle;
         control mCurrControlMode;
 

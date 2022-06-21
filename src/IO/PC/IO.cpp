@@ -1,10 +1,16 @@
 #include <IO/IO.hpp>
 #include <UART/UART.hpp>
 
-void IO::setPinHigh() {
-    this->mUartHandle->resetDTRPin();
-}
+namespace IO {
+    IOPC::IOPC(const std::shared_ptr<UART::UARTPC> uartHandle) {
+        mUartHandle = uartHandle;
+    }
 
-void IO::setPinLow() {
-    this->mUartHandle->setDTRPin();
+    void IOPC::setPinHigh() {
+        this->mUartHandle->resetDTRPin();
+    }
+
+    void IOPC::setPinLow() {
+        this->mUartHandle->setDTRPin();
+    }
 }
