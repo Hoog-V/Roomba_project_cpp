@@ -19,8 +19,8 @@ TEST(UART_ReadBytes, numOfBytesZero)
 
     std::shared_ptr<UART::UART> UartHandle = UART::UART::Create(TestSettings);
 
-    std::array<uint8_t, 10> TinyBuffer;
+    std::vector<uint8_t> TinyBuffer;
     EXPECT_ANY_THROW({
-        UartHandle->readBytes(TinyBuffer.data(), 0);
+        UartHandle->readBytes(TinyBuffer);
     });
 }

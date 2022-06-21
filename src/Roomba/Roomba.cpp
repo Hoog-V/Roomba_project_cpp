@@ -47,8 +47,8 @@ namespace Roomba {
         if (BaudCMD == 0 || BaudCMD > 12)
             throw std::invalid_argument("Invalid baudRate or pointer passed in to parameter baudRate");
 
-        std::array<uint8_t, 2> commands{command::Baud, BaudCMD};
-        mUartHandle->sendBytes(commands.data(), commands.size());
+        std::vector<uint8_t> commands{command::Baud, BaudCMD};
+        mUartHandle->sendBytes(commands);
         SLEEP(100);
         mUartHandle->changeBaud(baudRate);
     }
@@ -58,8 +58,8 @@ namespace Roomba {
         if (checkControlMode)
             setControlMode(control::Safe);
         uint8_t ledBits = state == ledState::Off ? 0 : led;
-        std::array<uint8_t, 4> commands{command::Leds, ledBits, 0, 128};
-        mUartHandle->sendBytes(commands.data(), std::size(commands));
+        std::vector<uint8_t> commands{command::Leds, ledBits, 0, 128};
+        mUartHandle->sendBytes(commands);
     }
 
     void Roomba::setPowerLed(uint8_t color, uint8_t intensity) {
@@ -67,8 +67,8 @@ namespace Roomba {
         if (checkControlMode)
             setControlMode(control::Safe);
 
-        std::array<uint8_t, 4> commands{command::Leds, 4, color, intensity};
-        mUartHandle->sendBytes(commands.data(), std::size(commands));
+        std::vector<uint8_t> commands{command::Leds, 4, color, intensity};
+        mUartHandle->sendBytes(commands);
     }
 
     void Roomba::playSongNum(const uint8_t songNum) {
@@ -76,8 +76,8 @@ namespace Roomba {
         if (checkControlMode)
             setControlMode(control::Safe);
 
-        std::array<uint8_t, 2> commands{command::Play, songNum};
-        mUartHandle->sendBytes(commands.data(), commands.size());
+        std::vector<uint8_t> commands{command::Play, songNum};
+        mUartHandle->sendBytes(commands);
     }
 
     void Roomba::setSongNum(const uint8_t songNum, const std::vector<uint8_t> notesWithDuration) {
@@ -98,7 +98,7 @@ namespace Roomba {
         for(uint8_t Note: notesWithDuration){
             commands.push_back(Note);
         }
-        mUartHandle->sendBytes(commands.data(), commands.size());
+        mUartHandle->sendBytes(commands);
     }
 
 
