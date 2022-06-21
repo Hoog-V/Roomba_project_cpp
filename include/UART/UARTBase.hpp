@@ -32,6 +32,7 @@ namespace UART {
         UART::Baudrates baudrate = Baudrates::baud_115200;
         std::string devicePath;
         UART::connectionMethod connectionMethod;
+        //std::shared_ptr<UART> mUartHandle;
     };
 
     class UART {
@@ -60,7 +61,7 @@ namespace UART {
 
         UARTSettings mUartSettings;
     };
-
+    
 }
 
 

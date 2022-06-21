@@ -29,6 +29,6 @@ void Roomba::driveCommand(int16_t velocity, int16_t radius) {
                                     static_cast<uint8_t>(velocity >> 8),
                                     static_cast<uint8_t>(radius & 0xFF),
                                     static_cast<uint8_t>(radius >> 8)};
-    mUartHandle->sendBytes(commands.data(), std::size(commands));
+    this->mUartHandle->sendBytes(commands.data(), std::size(commands));
 }
 }

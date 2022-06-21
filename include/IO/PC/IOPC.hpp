@@ -5,7 +5,7 @@
 namespace IO {
     class IOPC : public IO {
     public:
-        IOPC(const std::shared_ptr<UART::UARTPC> uartHandle);
+        IOPC(const IOSettings settings);
 
         void setPinHigh();
 

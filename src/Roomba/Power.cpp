@@ -6,7 +6,7 @@ namespace Roomba{
         if (mCurrControlMode == control::No_init){
             setControlMode(control::Passive);
         }
-        mUartHandle->sendByte(command::Power);
+        this->mUartHandle->sendByte(command::Power);
         mCurrControlMode = control::Passive;
     }
 
