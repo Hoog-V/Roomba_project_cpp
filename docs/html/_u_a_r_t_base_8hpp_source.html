@@ -122,44 +122,45 @@ $(document).ready(function(){initNavTree('_u_a_r_t_base_8hpp_source.html',''); i
 <div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="struct_u_a_r_t_1_1_u_a_r_t_settings.html#a56b8d30fce5db3a3233ee133697e963f">   32</a></span>&#160;        <a class="code" href="namespace_u_a_r_t.html#a5f6ba0e04c3a031981c58788fb317736">UART::Baudrates</a> <a class="code" href="struct_u_a_r_t_1_1_u_a_r_t_settings.html#a56b8d30fce5db3a3233ee133697e963f">baudrate</a> = <a class="code" href="namespace_u_a_r_t.html#a5f6ba0e04c3a031981c58788fb317736afef777e91f2981a2d84d143de68afc56">Baudrates::baud_115200</a>;</div>
 <div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="struct_u_a_r_t_1_1_u_a_r_t_settings.html#aa0fc99114485e0f086fc048105ee19ff">   33</a></span>&#160;        std::string <a class="code" href="struct_u_a_r_t_1_1_u_a_r_t_settings.html#aa0fc99114485e0f086fc048105ee19ff">devicePath</a>;</div>
 <div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="struct_u_a_r_t_1_1_u_a_r_t_settings.html#a9b6f2cabfaabfb71b986d45d9e584365">   34</a></span>&#160;        <a class="code" href="namespace_u_a_r_t.html#a33b5eb9324fe7256dbb9865a770c97d7">UART::connectionMethod</a> <a class="code" href="struct_u_a_r_t_1_1_u_a_r_t_settings.html#a9b6f2cabfaabfb71b986d45d9e584365">connectionMethod</a>;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    };</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_u_a_r_t_1_1_u_a_r_t.html">   37</a></span>&#160;    <span class="keyword">class </span><a class="code" href="namespace_u_a_r_t.html">UART</a> {</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keyword">static</span> std::shared_ptr&lt;UART&gt; Create(<span class="keyword">const</span> <a class="code" href="struct_u_a_r_t_1_1_u_a_r_t_settings.html">UARTSettings</a> Settings);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> changeBaud(<span class="keyword">const</span> <a class="code" href="namespace_u_a_r_t.html#a5f6ba0e04c3a031981c58788fb317736">Baudrates</a> baudrate)= 0;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> sendByte(<span class="keyword">const</span> uint8_t <span class="keywordtype">byte</span>)= 0;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> sendBytes(std::vector&lt;uint8_t&gt; &amp;buffer) =0;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> readBytes(std::vector&lt;uint8_t&gt; &amp;buffer) = 0;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_u_a_r_t_1_1_u_a_r_t.html#a6a59262a0446d0bb2d136afbc062a477">   49</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_u_a_r_t_1_1_u_a_r_t.html#a6a59262a0446d0bb2d136afbc062a477">resetDTRPin</a>(){}</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_u_a_r_t_1_1_u_a_r_t.html#a08cd12b965fb9e4f561713086f4a6827">   51</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_u_a_r_t_1_1_u_a_r_t.html#a08cd12b965fb9e4f561713086f4a6827">setDTRPin</a>(){}</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_u_a_r_t_1_1_u_a_r_t.html#af5c7aeb165a57923b1b94434b138b952">   54</a></span>&#160;        <span class="keyword">const</span> std::array&lt;uint32_t, 13&gt; mBaudMapping = {0, 300, 600, 1200, 2400, 4800, 9600, 14400, 19200, 28800, 38400,</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                                                       57600, 115200};</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="comment">//std::shared_ptr&lt;UART&gt; mUartHandle;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    };</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_u_a_r_t_1_1_u_a_r_t.html">   38</a></span>&#160;    <span class="keyword">class </span><a class="code" href="namespace_u_a_r_t.html">UART</a> {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keyword">static</span> std::shared_ptr&lt;UART&gt; Create(<span class="keyword">const</span> <a class="code" href="struct_u_a_r_t_1_1_u_a_r_t_settings.html">UARTSettings</a> Settings);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> changeBaud(<span class="keyword">const</span> <a class="code" href="namespace_u_a_r_t.html#a5f6ba0e04c3a031981c58788fb317736">Baudrates</a> baudrate)= 0;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> sendByte(<span class="keyword">const</span> uint8_t <span class="keywordtype">byte</span>)= 0;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> sendBytes(std::vector&lt;uint8_t&gt; &amp;buffer) =0;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> readBytes(std::vector&lt;uint8_t&gt; &amp;buffer) = 0;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="class_u_a_r_t_1_1_u_a_r_t.html#a6a59262a0446d0bb2d136afbc062a477">   50</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_u_a_r_t_1_1_u_a_r_t.html#a6a59262a0446d0bb2d136afbc062a477">resetDTRPin</a>(){}</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="class_u_a_r_t_1_1_u_a_r_t.html#a08cd12b965fb9e4f561713086f4a6827">   52</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_u_a_r_t_1_1_u_a_r_t.html#a08cd12b965fb9e4f561713086f4a6827">setDTRPin</a>(){}</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_u_a_r_t_1_1_u_a_r_t.html#af5c7aeb165a57923b1b94434b138b952">   55</a></span>&#160;        <span class="keyword">const</span> std::array&lt;uint32_t, 13&gt; mBaudMapping = {0, 300, 600, 1200, 2400, 4800, 9600, 14400, 19200, 28800, 38400,</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                                                       57600, 115200};</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        uint32_t mBaudEnumToAbsoluteValue(<a class="code" href="namespace_u_a_r_t.html#a5f6ba0e04c3a031981c58788fb317736">Baudrates</a> baudrate);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_u_a_r_t_1_1_u_a_r_t.html#a66ba254afbf91a69bed683f8e62c8281">   61</a></span>&#160;        <a class="code" href="struct_u_a_r_t_1_1_u_a_r_t_settings.html">UARTSettings</a> <a class="code" href="class_u_a_r_t_1_1_u_a_r_t.html#a66ba254afbf91a69bed683f8e62c8281">mUartSettings</a>;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    };</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        uint32_t mBaudEnumToAbsoluteValue(<a class="code" href="namespace_u_a_r_t.html#a5f6ba0e04c3a031981c58788fb317736">Baudrates</a> baudrate);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="class_u_a_r_t_1_1_u_a_r_t.html#a66ba254afbf91a69bed683f8e62c8281">   62</a></span>&#160;        <a class="code" href="struct_u_a_r_t_1_1_u_a_r_t_settings.html">UARTSettings</a> <a class="code" href="class_u_a_r_t_1_1_u_a_r_t.html#a66ba254afbf91a69bed683f8e62c8281">mUartSettings</a>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    };</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="astruct_u_a_r_t_1_1_u_a_r_t_settings_html_a9b6f2cabfaabfb71b986d45d9e584365"><div class="ttname"><a href="struct_u_a_r_t_1_1_u_a_r_t_settings.html#a9b6f2cabfaabfb71b986d45d9e584365">UART::UARTSettings::connectionMethod</a></div><div class="ttdeci">UART::connectionMethod connectionMethod</div><div class="ttdef"><b>Definition:</b> UARTBase.hpp:34</div></div>
 <div class="ttc" id="astruct_u_a_r_t_1_1_u_a_r_t_settings_html_a56b8d30fce5db3a3233ee133697e963f"><div class="ttname"><a href="struct_u_a_r_t_1_1_u_a_r_t_settings.html#a56b8d30fce5db3a3233ee133697e963f">UART::UARTSettings::baudrate</a></div><div class="ttdeci">UART::Baudrates baudrate</div><div class="ttdef"><b>Definition:</b> UARTBase.hpp:32</div></div>
 <div class="ttc" id="astruct_u_a_r_t_1_1_u_a_r_t_settings_html_aa0fc99114485e0f086fc048105ee19ff"><div class="ttname"><a href="struct_u_a_r_t_1_1_u_a_r_t_settings.html#aa0fc99114485e0f086fc048105ee19ff">UART::UARTSettings::devicePath</a></div><div class="ttdeci">std::string devicePath</div><div class="ttdef"><b>Definition:</b> UARTBase.hpp:33</div></div>
-<div class="ttc" id="aclass_u_a_r_t_1_1_u_a_r_t_html_a66ba254afbf91a69bed683f8e62c8281"><div class="ttname"><a href="class_u_a_r_t_1_1_u_a_r_t.html#a66ba254afbf91a69bed683f8e62c8281">UART::UART::mUartSettings</a></div><div class="ttdeci">UARTSettings mUartSettings</div><div class="ttdef"><b>Definition:</b> UARTBase.hpp:61</div></div>
+<div class="ttc" id="aclass_u_a_r_t_1_1_u_a_r_t_html_a66ba254afbf91a69bed683f8e62c8281"><div class="ttname"><a href="class_u_a_r_t_1_1_u_a_r_t.html#a66ba254afbf91a69bed683f8e62c8281">UART::UART::mUartSettings</a></div><div class="ttdeci">UARTSettings mUartSettings</div><div class="ttdef"><b>Definition:</b> UARTBase.hpp:62</div></div>
 <div class="ttc" id="anamespace_u_a_r_t_html"><div class="ttname"><a href="namespace_u_a_r_t.html">UART</a></div><div class="ttdef"><b>Definition:</b> UARTPC.hpp:10</div></div>
 <div class="ttc" id="anamespace_u_a_r_t_html_a5f6ba0e04c3a031981c58788fb317736a8b86d8ffad4458e743212fce3c72c462"><div class="ttname"><a href="namespace_u_a_r_t.html#a5f6ba0e04c3a031981c58788fb317736a8b86d8ffad4458e743212fce3c72c462">UART::Baudrates::baud_57600</a></div><div class="ttdeci">@ baud_57600</div></div>
 <div class="ttc" id="anamespace_u_a_r_t_html_a5f6ba0e04c3a031981c58788fb317736a50f4f0e3f524d6843e9b228f2ec57bd7"><div class="ttname"><a href="namespace_u_a_r_t.html#a5f6ba0e04c3a031981c58788fb317736a50f4f0e3f524d6843e9b228f2ec57bd7">UART::Baudrates::baud_1200</a></div><div class="ttdeci">@ baud_1200</div></div>
@@ -177,8 +178,8 @@ $(document).ready(function(){initNavTree('_u_a_r_t_base_8hpp_source.html',''); i
 <div class="ttc" id="anamespace_u_a_r_t_html_a5f6ba0e04c3a031981c58788fb317736a6c3f150588b8a6b8d7415c431c220c01"><div class="ttname"><a href="namespace_u_a_r_t.html#a5f6ba0e04c3a031981c58788fb317736a6c3f150588b8a6b8d7415c431c220c01">UART::Baudrates::baud_14400</a></div><div class="ttdeci">@ baud_14400</div></div>
 <div class="ttc" id="astruct_u_a_r_t_1_1_u_a_r_t_settings_html"><div class="ttname"><a href="struct_u_a_r_t_1_1_u_a_r_t_settings.html">UART::UARTSettings</a></div><div class="ttdef"><b>Definition:</b> UARTBase.hpp:31</div></div>
 <div class="ttc" id="anamespace_u_a_r_t_html_a5f6ba0e04c3a031981c58788fb317736a2c48ddcc20ec061da8c9c8ae7628b893"><div class="ttname"><a href="namespace_u_a_r_t.html#a5f6ba0e04c3a031981c58788fb317736a2c48ddcc20ec061da8c9c8ae7628b893">UART::Baudrates::baud_invalid</a></div><div class="ttdeci">@ baud_invalid</div></div>
-<div class="ttc" id="aclass_u_a_r_t_1_1_u_a_r_t_html_a08cd12b965fb9e4f561713086f4a6827"><div class="ttname"><a href="class_u_a_r_t_1_1_u_a_r_t.html#a08cd12b965fb9e4f561713086f4a6827">UART::UART::setDTRPin</a></div><div class="ttdeci">virtual void setDTRPin()</div><div class="ttdef"><b>Definition:</b> UARTBase.hpp:51</div></div>
-<div class="ttc" id="aclass_u_a_r_t_1_1_u_a_r_t_html_a6a59262a0446d0bb2d136afbc062a477"><div class="ttname"><a href="class_u_a_r_t_1_1_u_a_r_t.html#a6a59262a0446d0bb2d136afbc062a477">UART::UART::resetDTRPin</a></div><div class="ttdeci">virtual void resetDTRPin()</div><div class="ttdef"><b>Definition:</b> UARTBase.hpp:49</div></div>
+<div class="ttc" id="aclass_u_a_r_t_1_1_u_a_r_t_html_a08cd12b965fb9e4f561713086f4a6827"><div class="ttname"><a href="class_u_a_r_t_1_1_u_a_r_t.html#a08cd12b965fb9e4f561713086f4a6827">UART::UART::setDTRPin</a></div><div class="ttdeci">virtual void setDTRPin()</div><div class="ttdef"><b>Definition:</b> UARTBase.hpp:52</div></div>
+<div class="ttc" id="aclass_u_a_r_t_1_1_u_a_r_t_html_a6a59262a0446d0bb2d136afbc062a477"><div class="ttname"><a href="class_u_a_r_t_1_1_u_a_r_t.html#a6a59262a0446d0bb2d136afbc062a477">UART::UART::resetDTRPin</a></div><div class="ttdeci">virtual void resetDTRPin()</div><div class="ttdef"><b>Definition:</b> UARTBase.hpp:50</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
