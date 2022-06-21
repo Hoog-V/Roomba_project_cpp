@@ -17,9 +17,8 @@ TEST(UART_SendBytes, numOfBytesZero) {
 
     std::shared_ptr<UART::UART> UartHandle = UART::UART::Create(TestSettings);
 
-    std::array<uint8_t, 10> TestCommands;
-    TestCommands.fill(0);
+    std::vector<uint8_t> TestCommands;
     EXPECT_ANY_THROW({
-        UartHandle->sendBytes(TestCommands.data(), 0);
+        UartHandle->sendBytes(TestCommands);
     });
 }
