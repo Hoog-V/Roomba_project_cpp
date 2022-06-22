@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['exampletests_2ecpp_174',['ExampleTests.cpp',['../_example_tests_8cpp.html',1,'']]]
+  ['changebaud_5ftest_2ecpp_175',['ChangeBaud_test.cpp',['../_change_baud__test_8cpp.html',1,'']]],
+  ['controlmode_2ecpp_176',['ControlMode.cpp',['../_control_mode_8cpp.html',1,'']]]
 ];

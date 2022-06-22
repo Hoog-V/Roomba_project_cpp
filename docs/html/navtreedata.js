@@ -41,7 +41,8 @@ var NAVTREE =
         [ "Acceptatietest 8: Controleer code conventies", "3.html#autotoc_md9", null ]
       ] ]
     ] ],
-    [ "Class Diagram", "4.html", null ],
+    [ "Use Case Diagram", "4.html", null ],
+    [ "Class Diagram", "5.html", null ],
     [ "Bijdragen", "6.html", [
       [ "Algemene regels", "6.html#a", null ],
       [ "Code standaarden", "6.html#c", null ]

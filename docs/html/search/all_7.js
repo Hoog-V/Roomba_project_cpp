@@ -1,14 +1,20 @@
 var searchData=
 [
-  ['devicepath_44',['devicePath',['../struct_u_a_r_t_1_1_u_a_r_t_settings.html#aa0fc99114485e0f086fc048105ee19ff',1,'UART::UARTSettings']]],
-  ['digit_5fleds_5fascii_45',['Digit_Leds_Ascii',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0adaa266c5f936ce11caff6ec389402c80f2',1,'Roomba']]],
-  ['digit_5fleds_5fraw_46',['Digit_Leds_Raw',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada52d9df5e6ff38943c5d23f17b809a718',1,'Roomba']]],
-  ['direction_47',['direction',['../namespace_roomba.html#a129c7fef99465f8e89987561b13649d1',1,'Roomba']]],
-  ['dirtdetector_5fleft_48',['DirtDetector_Left',['../namespace_roomba.html#a1ba20ae81e47ebf35362517c7dbfeff9a5287845298b1ac299c1a81579916ae20',1,'Roomba']]],
-  ['dirtdetector_5fright_49',['DirtDetector_Right',['../namespace_roomba.html#a1ba20ae81e47ebf35362517c7dbfeff9aa17b98b1d9e833f8d77be36c70d656bc',1,'Roomba']]],
-  ['distance_50',['Distance',['../namespace_roomba.html#a1ba20ae81e47ebf35362517c7dbfeff9a0aa6f4210bf373c95eda00232e93cd98',1,'Roomba']]],
-  ['do_5fstream_51',['Do_Stream',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0adaa3625cf3f6654ec0dfa811066fac61e5',1,'Roomba']]],
-  ['dock_52',['Dock',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0adaf41351e1fbebd8a2c15c3aaa45015f52',1,'Roomba']]],
-  ['drive_53',['Drive',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0adaa692ea5675145bf31203bdef69c0cf51',1,'Roomba']]],
-  ['drive_5fwheels_54',['Drive_Wheels',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada9793b6fc7387a2c49a6f7fa9046c5aed',1,'Roomba']]]
+  ['class_20diagram_28',['Class Diagram',['../5.html',1,'']]],
+  ['capacity_29',['Capacity',['../namespace_roomba.html#a1ba20ae81e47ebf35362517c7dbfeff9a3b8f7696879f77dfc8c74aa8df8db24b',1,'Roomba']]],
+  ['changebaud_30',['changeBaud',['../class_u_a_r_t_1_1_u_a_r_t_p_c.html#af6626aa3fa04e946ae19b76a39e9e04e',1,'UART::UARTPC::changeBaud()'],['../class_u_a_r_t_1_1_u_a_r_t.html#a3ccf566c9776883832b5594e1e010898',1,'UART::UART::changeBaud()']]],
+  ['changebaud_5ftest_2ecpp_31',['ChangeBaud_test.cpp',['../_change_baud__test_8cpp.html',1,'']]],
+  ['charge_32',['Charge',['../namespace_roomba.html#a1ba20ae81e47ebf35362517c7dbfeff9a517349a3cdc1acf50617693e3ba33988',1,'Roomba']]],
+  ['chargingstate_33',['ChargingState',['../namespace_roomba.html#a1ba20ae81e47ebf35362517c7dbfeff9a94b7604ba5089281c904b68779c4a238',1,'Roomba']]],
+  ['clean_34',['Clean',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada3ffa183f1b604e80424f742102011739',1,'Roomba::Clean()'],['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada37d12e2cfbef6e6105297374d02f3998',1,'Roomba::Clean()']]],
+  ['cleaning_35',['cleaning',['../namespace_roomba.html#acb7a202beeb36883e7ceddba1effd492',1,'Roomba']]],
+  ['cliff_5fleft_36',['Cliff_Left',['../namespace_roomba.html#a1ba20ae81e47ebf35362517c7dbfeff9aacdbf79991f3f5bbbf3923ddfecfb309',1,'Roomba']]],
+  ['cliff_5fright_37',['Cliff_Right',['../namespace_roomba.html#a1ba20ae81e47ebf35362517c7dbfeff9a03f9c3d9ad51d5fdf173cb04581029e5',1,'Roomba']]],
+  ['command_38',['command',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ad',1,'Roomba']]],
+  ['connectionmethod_39',['connectionMethod',['../struct_u_a_r_t_1_1_u_a_r_t_settings.html#a9b6f2cabfaabfb71b986d45d9e584365',1,'UART::UARTSettings::connectionMethod()'],['../namespace_u_a_r_t.html#a33b5eb9324fe7256dbb9865a770c97d7',1,'UART::connectionMethod()']]],
+  ['control_40',['Control',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0adaebd9ec9946c2e9cad9166132dd3024b4',1,'Roomba::Control()'],['../namespace_roomba.html#a5209de87fc9bed4bd208eae71aab67c3',1,'Roomba::control()']]],
+  ['controlmode_2ecpp_41',['ControlMode.cpp',['../_control_mode_8cpp.html',1,'']]],
+  ['convert_5fto_5fsigned_5fshort_42',['convert_to_signed_short',['../function_8hpp.html#a5cf01a9176ad9f96520adecce113cc38',1,'function.hpp']]],
+  ['create_43',['Create',['../class_i_o_1_1_i_o.html#a365b7bb46b5adfbb6b5eb1c552f8ee8a',1,'IO::IO::Create()'],['../class_u_a_r_t_1_1_u_a_r_t.html#a04d50ab9bff30e89f7aeade2aa22860a',1,'UART::UART::Create()']]],
+  ['current_44',['Current',['../namespace_roomba.html#a1ba20ae81e47ebf35362517c7dbfeff9a222a267cc5778206b253be35ee3ddab5',1,'Roomba']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['4_5fclass_20diagram_2emd_169',['4_Class diagram.md',['../4___class_01diagram_8md.html',1,'']]]
+  ['4_5fuse_5fcase_5fdiagram_2emd_171',['4_Use_case_diagram.md',['../4___use__case__diagram_8md.html',1,'']]]
 ];

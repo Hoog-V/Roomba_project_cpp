@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['6_5fbijdragen_2emd_3',['6_Bijdragen.md',['../6___bijdragen_8md.html',1,'']]]
+  ['5_5fclass_20diagram_2emd_3',['5_Class diagram.md',['../5___class_01diagram_8md.html',1,'']]]
 ];
