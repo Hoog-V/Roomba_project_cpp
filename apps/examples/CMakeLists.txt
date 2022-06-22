@@ -1,0 +1,6 @@
+add_executable(SimpleController SimpleController.cpp)
+target_compile_features(SimpleController PRIVATE cxx_std_20)
+target_link_libraries(SimpleController PRIVATE boost_chrono)
+target_link_libraries(SimpleController PRIVATE boost_asio)
+target_link_libraries(SimpleController PRIVATE UART_lib)
+target_link_libraries(SimpleController PRIVATE Roomba_lib)
