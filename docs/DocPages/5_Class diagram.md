@@ -1,4 +1,4 @@
-@page 4 Class Diagram
+@page 5 Class Diagram
 @tableofcontents
 
 @startuml
