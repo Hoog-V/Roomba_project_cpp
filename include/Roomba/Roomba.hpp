@@ -21,11 +21,13 @@ namespace Roomba {
         No_init, Passive, Safe, Full
     };
 
-    enum class sensors : uint8_t {
-        Bumps_wheeldrop, Wall, Cliff_Left, Cliff_Right, VirtualWall,
-        MotorOvercurrent, DirtDetector_Left, DirtDetector_Right, RCM,
-        Buttons, Distance, Angle, ChargingState, Voltage, Current, Temperature,
-        Charge, Capacity
+    enum sensors : uint8_t {
+        Bumps_wheeldrop = 7, Wall = 8, Cliff_Left = 9, Cliff_Front_Left = 10,
+        Cliff_Front_Right = 11, Cliff_Right = 12, VirtualWall = 13,
+        MotorOvercurrent = 14, RCM = 17,
+        sButtons = 18, Distance = 19, Angle = 20, ChargingState = 21,
+        Voltage = 22, Current = 23, Temperature = 24,
+        Charge = 25, Capacity = 26
     };
 
     enum leds : uint8_t {
@@ -37,7 +39,7 @@ namespace Roomba {
         Max_Clean, Drive, Motors, Leds, Song, Play, Query, Dock,
         Motor_PWM, Drive_Wheels, Stream = 148, Query_List, Do_Stream,
         Schedule_Leds = 162, Digit_Leds_Raw, Digit_Leds_Ascii,
-        Buttons, Schedule = 167, Set_Date_Time, Stop = 173
+        Buttons, Schedule = 167, Set_Date_Time, Stop = 173, Sensor = 142, SensorList = 149
     };
 
 
@@ -70,7 +72,9 @@ namespace Roomba {
 
         void setBaudRate(UART::Baudrates baudRate);
 
-        void getSensorData(uint16_t sensor);
+        std::vector<uint8_t> getSensorData(sensors sensor);
+
+        std::vector<uint8_t> getSensorDataList(std::vector<sensors> sensor);
 
         void setSongNum(const uint8_t songNum, const std::vector<uint8_t> notesWithDuration);
 
