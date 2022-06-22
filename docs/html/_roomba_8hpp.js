@@ -36,10 +36,11 @@ var _roomba_8hpp =
       [ "Digit_Leds_Raw", "_roomba_8hpp.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada52d9df5e6ff38943c5d23f17b809a718", null ],
       [ "Digit_Leds_Ascii", "_roomba_8hpp.html#a28115f0e32b012cd8bdb9f6c7d5dc0adaa266c5f936ce11caff6ec389402c80f2", null ],
       [ "Buttons", "_roomba_8hpp.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada2801a86fdc6b3ae6a48a3b47a5762a24", null ],
-      [ "Buttons", "_roomba_8hpp.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada5b3ec15499a125805b5bbf8e4afcec8c", null ],
       [ "Schedule", "_roomba_8hpp.html#a28115f0e32b012cd8bdb9f6c7d5dc0adae13146ee672b941e124f32d429c43832", null ],
       [ "Set_Date_Time", "_roomba_8hpp.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada4a3b2f9219e44db7de1eb691dc35c6b3", null ],
-      [ "Stop", "_roomba_8hpp.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada25526a868c9fde996821141e110f9b4b", null ]
+      [ "Stop", "_roomba_8hpp.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada25526a868c9fde996821141e110f9b4b", null ],
+      [ "Sensor", "_roomba_8hpp.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada96b12a5131d75aeaf310e8c95a6a6517", null ],
+      [ "SensorList", "_roomba_8hpp.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada7115babd8405aaf11a78cf41c67403c9", null ]
     ] ],
     [ "control", "_roomba_8hpp.html#a5209de87fc9bed4bd208eae71aab67c3", [
       [ "No_init", "_roomba_8hpp.html#a5209de87fc9bed4bd208eae71aab67c3ae08ddc53e5ae70c38395a66a719bafa6", null ],
@@ -64,23 +65,23 @@ var _roomba_8hpp =
       [ "Off", "_roomba_8hpp.html#ab3b31b849baa01f5e7977d4e49b7ee14ad15305d7a4e34e02489c74a5ef542f36", null ]
     ] ],
     [ "sensors", "_roomba_8hpp.html#a1ba20ae81e47ebf35362517c7dbfeff9", [
-      [ "Bumps_wheeldrop", "_roomba_8hpp.html#a1ba20ae81e47ebf35362517c7dbfeff9a0f3470bb1e5e50ad508ed02686fb7e48", null ],
-      [ "Wall", "_roomba_8hpp.html#a1ba20ae81e47ebf35362517c7dbfeff9a94e8a499539d1a472f3b5dbbb85508c0", null ],
-      [ "Cliff_Left", "_roomba_8hpp.html#a1ba20ae81e47ebf35362517c7dbfeff9aacdbf79991f3f5bbbf3923ddfecfb309", null ],
-      [ "Cliff_Right", "_roomba_8hpp.html#a1ba20ae81e47ebf35362517c7dbfeff9a03f9c3d9ad51d5fdf173cb04581029e5", null ],
-      [ "VirtualWall", "_roomba_8hpp.html#a1ba20ae81e47ebf35362517c7dbfeff9a3f5f6f25724f44e1486a8b4f5ba59496", null ],
-      [ "MotorOvercurrent", "_roomba_8hpp.html#a1ba20ae81e47ebf35362517c7dbfeff9a3849583e7458522e9c10d9c1e29b76b4", null ],
-      [ "DirtDetector_Left", "_roomba_8hpp.html#a1ba20ae81e47ebf35362517c7dbfeff9a5287845298b1ac299c1a81579916ae20", null ],
-      [ "DirtDetector_Right", "_roomba_8hpp.html#a1ba20ae81e47ebf35362517c7dbfeff9aa17b98b1d9e833f8d77be36c70d656bc", null ],
-      [ "RCM", "_roomba_8hpp.html#a1ba20ae81e47ebf35362517c7dbfeff9a606364c763bc356ff095571271fd2df8", null ],
-      [ "Buttons", "_roomba_8hpp.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada5b3ec15499a125805b5bbf8e4afcec8c", null ],
-      [ "Distance", "_roomba_8hpp.html#a1ba20ae81e47ebf35362517c7dbfeff9a0aa6f4210bf373c95eda00232e93cd98", null ],
-      [ "Angle", "_roomba_8hpp.html#a1ba20ae81e47ebf35362517c7dbfeff9a45f4ce6c3306644b1efe333f4f8d6929", null ],
-      [ "ChargingState", "_roomba_8hpp.html#a1ba20ae81e47ebf35362517c7dbfeff9a94b7604ba5089281c904b68779c4a238", null ],
-      [ "Voltage", "_roomba_8hpp.html#a1ba20ae81e47ebf35362517c7dbfeff9a4a92fbe41f6463598c39850b8335096c", null ],
-      [ "Current", "_roomba_8hpp.html#a1ba20ae81e47ebf35362517c7dbfeff9a222a267cc5778206b253be35ee3ddab5", null ],
-      [ "Temperature", "_roomba_8hpp.html#a1ba20ae81e47ebf35362517c7dbfeff9aee7a8e262285ed49ea1b4e4ae11525bd", null ],
-      [ "Charge", "_roomba_8hpp.html#a1ba20ae81e47ebf35362517c7dbfeff9a517349a3cdc1acf50617693e3ba33988", null ],
-      [ "Capacity", "_roomba_8hpp.html#a1ba20ae81e47ebf35362517c7dbfeff9a3b8f7696879f77dfc8c74aa8df8db24b", null ]
+      [ "Bumps_wheeldrop", "_roomba_8hpp.html#a1ba20ae81e47ebf35362517c7dbfeff9a53ba5c41b613e98f869fc7caf71bb351", null ],
+      [ "Wall", "_roomba_8hpp.html#a1ba20ae81e47ebf35362517c7dbfeff9ac062613ce607fdad835a565b6dc3b087", null ],
+      [ "Cliff_Left", "_roomba_8hpp.html#a1ba20ae81e47ebf35362517c7dbfeff9a9ad8e04c5c462bb6eb1f7d14b0a47a71", null ],
+      [ "Cliff_Front_Left", "_roomba_8hpp.html#a1ba20ae81e47ebf35362517c7dbfeff9aa2123baadab281b8584c93c5e79df0a2", null ],
+      [ "Cliff_Front_Right", "_roomba_8hpp.html#a1ba20ae81e47ebf35362517c7dbfeff9aedaeb34c1784947a0c3779074986fbcb", null ],
+      [ "Cliff_Right", "_roomba_8hpp.html#a1ba20ae81e47ebf35362517c7dbfeff9aa5ce8edc3e5fdbab3a60c33ca9f79134", null ],
+      [ "VirtualWall", "_roomba_8hpp.html#a1ba20ae81e47ebf35362517c7dbfeff9a2750912ecbab0ada4403add96e8e21fd", null ],
+      [ "MotorOvercurrent", "_roomba_8hpp.html#a1ba20ae81e47ebf35362517c7dbfeff9aceb79afacafbadc734de23cd25684c58", null ],
+      [ "RCM", "_roomba_8hpp.html#a1ba20ae81e47ebf35362517c7dbfeff9a104be4af82c6ff18b3dee289047c6a22", null ],
+      [ "sButtons", "_roomba_8hpp.html#a1ba20ae81e47ebf35362517c7dbfeff9a143d85ff138b961442a96ae44ea52d03", null ],
+      [ "Distance", "_roomba_8hpp.html#a1ba20ae81e47ebf35362517c7dbfeff9a4b7143b81a677359732a812e2087ed0b", null ],
+      [ "Angle", "_roomba_8hpp.html#a1ba20ae81e47ebf35362517c7dbfeff9af69a9c98438fd0f5a92e202b9378bca6", null ],
+      [ "ChargingState", "_roomba_8hpp.html#a1ba20ae81e47ebf35362517c7dbfeff9a24b7f2746b9269aa9c6ea94e78277661", null ],
+      [ "Voltage", "_roomba_8hpp.html#a1ba20ae81e47ebf35362517c7dbfeff9a9da4da06e4dd19a04e0900621efe9254", null ],
+      [ "Current", "_roomba_8hpp.html#a1ba20ae81e47ebf35362517c7dbfeff9aa74e848a2cd273e303794e915f91a65f", null ],
+      [ "Temperature", "_roomba_8hpp.html#a1ba20ae81e47ebf35362517c7dbfeff9a0cdc5028ca21989f56061eea2331c304", null ],
+      [ "Charge", "_roomba_8hpp.html#a1ba20ae81e47ebf35362517c7dbfeff9a07a1e1c41a63aef4a81b6527030e2257", null ],
+      [ "Capacity", "_roomba_8hpp.html#a1ba20ae81e47ebf35362517c7dbfeff9ac5bf404786f30e724f78fa0c6313e5d5", null ]
     ] ]
 ];

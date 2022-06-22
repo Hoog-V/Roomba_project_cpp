@@ -18,6 +18,6 @@ var searchData=
   ['baud_5finvalid_23',['baud_invalid',['../namespace_u_a_r_t.html#a5f6ba0e04c3a031981c58788fb317736a2c48ddcc20ec061da8c9c8ae7628b893',1,'UART']]],
   ['baudrate_24',['baudrate',['../struct_u_a_r_t_1_1_u_a_r_t_settings.html#a56b8d30fce5db3a3233ee133697e963f',1,'UART::UARTSettings']]],
   ['baudrates_25',['Baudrates',['../namespace_u_a_r_t.html#a5f6ba0e04c3a031981c58788fb317736',1,'UART']]],
-  ['bumps_5fwheeldrop_26',['Bumps_wheeldrop',['../namespace_roomba.html#a1ba20ae81e47ebf35362517c7dbfeff9a0f3470bb1e5e50ad508ed02686fb7e48',1,'Roomba']]],
-  ['buttons_27',['Buttons',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada2801a86fdc6b3ae6a48a3b47a5762a24',1,'Roomba::Buttons()'],['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada5b3ec15499a125805b5bbf8e4afcec8c',1,'Roomba::Buttons()']]]
+  ['bumps_5fwheeldrop_26',['Bumps_wheeldrop',['../namespace_roomba.html#a1ba20ae81e47ebf35362517c7dbfeff9a53ba5c41b613e98f869fc7caf71bb351',1,'Roomba']]],
+  ['buttons_27',['Buttons',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada2801a86fdc6b3ae6a48a3b47a5762a24',1,'Roomba']]]
 ];
