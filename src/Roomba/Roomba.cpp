@@ -101,15 +101,31 @@ namespace Roomba {
         mUartHandle->sendBytes(commands);
     }
 
-    uint8_t Roomba::getSensorData(sensors sensor) {
+    
+
+    sensorData Roomba::getSensorData(sensors sensor) {
         std::vector<uint8_t> sensorCommand = { command::Sensor, sensor };
-        std::vector<uint8_t> sensorData = { 0 };
+        std::vector<uint8_t> sensorDataRead = { 0 };
+        sensorData sensorDataOut;
 
         mUartHandle->sendBytes(sensorCommand);
         SLEEP(1000);
-        mUartHandle->readBytes(sensorData);
+        mUartHandle->readBytes(sensorDataRead);
 
-        return sensorData[0];
+        if((sensor == 24) || (sensor == 45)) {
+            sensorDataOut.s8 = (int8_t)sensorDataRead[0];
+        }
+        if((sensor >= 7 && sensor <= 18) || (sensor >= 34 && sensor <= 38) || (sensor == 21) || (sensor == 52) || (sensor == 53) || (sensor == 58)) {
+                sensorDataOut.u8 = (uint8_t)sensorDataRead[0];
+        }
+        if((sensor == 19) || (sensor == 20) || (sensor == 23) || (sensor >= 29 && sensor <= 42) || (sensor >= 54 && sensor <= 57)) {
+            sensorDataOut.s16 = (int16_t)((sensorDataRead[0] << 8) | sensorDataRead[1]);
+        }
+        if((sensor == 22) || (sensor >= 25 && sensor <= 31) || (sensor == 43) || (sensor == 44) || (sensor >= 46 && sensor <= 51)) {
+            sensorDataOut.u16 = (uint16_t)((sensorDataRead[0] << 8) | sensorDataRead[1]);
+        }
+
+        return sensorDataOut;
     }
 
     std::vector<uint8_t> Roomba::getSensorDataList(std::vector<sensors> sensor) {

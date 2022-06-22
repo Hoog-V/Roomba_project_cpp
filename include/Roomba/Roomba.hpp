@@ -30,6 +30,13 @@ namespace Roomba {
         Charge = 25, Capacity = 26
     };
 
+    union sensorData {
+        uint16_t u16;
+        int16_t s16;
+        uint8_t u8;
+        int8_t s8;
+    };
+
     enum leds : uint8_t {
         LED_Debris = 1, LED_Spot = 2, LED_Dock = 4, LED_Check_Robot = 8
     };
@@ -72,7 +79,7 @@ namespace Roomba {
 
         void setBaudRate(UART::Baudrates baudRate);
 
-        uint8_t getSensorData(sensors sensor);
+        sensorData getSensorData(sensors sensor);
 
         std::vector<uint8_t> getSensorDataList(std::vector<sensors> sensor);
 
