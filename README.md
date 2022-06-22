@@ -4,16 +4,6 @@
 Welkom in de Roomba library repo. Deze library is bedoeld als een interface om de Roomba makkelijk te kunnen bedienen
 vanaf computer, esp of andere target. 
 
-De library maakt gebruik van CMake om de build files te genereren, hierdoor is er meer vrijheid om te kiezen waarop 
-(welk besturingssysteem) en waarin (Welke teksteditor/ide) te programmeren. Voor een snelgids om de ontwikkelomgeving
-op te zetten onder [Windows](/docs/DocPages/Omgeving_opzetten.md). 
-
-De meest gebruikte ide's zijn:
-- VSCode
-- CLion
-- Visual Studio
-Maar gebruik vooral wat jezelf fijn vindt >:)
-
 
 ## Bookmarks
 
@@ -30,14 +20,36 @@ Maar gebruik vooral wat jezelf fijn vindt >:)
 - [Class diagram](https://hoog-v.github.io/Roomba_project_cpp/html/4.html)
 
 
+
+## Functies van de library
+- Instellen van cleaningmodes Roomba
+- Veranderen rijrichting Roomba
+- Aan- en uitzetten van de Roomba
+- Aanpassen van leds op de Roomba
+- Afspelen van noten op de Roomba
+- Opslaan van noten in de songslots van de Roomba
+- Uitlezen van de sensoren
+- Het aan- of uitzetten van de stofzuiger motoren
+- Het aanpassen van de controlmode van de Roomba
+
 ## Regels over bijdragen aan de repo
 
 ---
+De library maakt gebruik van CMake om de build files te genereren, hierdoor is er meer vrijheid om te kiezen waarop
+(welk besturingssysteem) en waarin (Welke teksteditor/ide) te programmeren. Voor een snelgids om de ontwikkelomgeving
+op te zetten onder [Windows](/docs/DocPages/Omgeving_opzetten.md).
+
+De meest gebruikte ide's zijn:
+- VSCode
+- CLion
+- Visual Studio
+Maar gebruik vooral wat jezelf fijn vindt >:)
 
 Voor de regels over het bijdragen aan de repo zie het kopje:
 [Bijdragen](https://hoog-v.github.io/Roomba_project_cpp/html/6.html) in de github pages wiki van deze repo.
 
 Daar staan de code- en git regels in.
+
 
 ## Testen
 
