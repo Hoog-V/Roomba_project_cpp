@@ -103,13 +103,13 @@ namespace Roomba {
 
     uint8_t Roomba::getSensorData(sensors sensor) {
         std::vector<uint8_t> sensorCommand = { command::Sensor, sensor };
-        uint8_t sensorData = 0;
+        std::vector<uint8_t> sensorData = { 0 };
 
         mUartHandle->sendBytes(sensorCommand);
         SLEEP(1000);
         mUartHandle->readBytes(sensorData);
 
-        return sensorData;
+        return sensorData[0];
     }
 
     std::vector<uint8_t> Roomba::getSensorDataList(std::vector<sensors> sensor) {
