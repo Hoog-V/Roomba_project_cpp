@@ -11,6 +11,13 @@ int main(int argc, char **argv) {
 	std::shared_ptr<UART::UART> p1 = UART::UART::Create(p);
     std::unique_ptr<Roomba::Roomba> rmb = std::make_unique<Roomba::Roomba>(p1);
 
-    
+    while(1) {
+        rmb->setDirection(Roomba::Forward);
+        SLEEP(100);
+        if(rmb->getSensorData(Roomba::Wall)){
+            rmb->setDirection(Roomba::Left);
+            SLEEP(1000);
+        }
+    }
 	return (0);
 }
