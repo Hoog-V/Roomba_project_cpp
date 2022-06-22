@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['testbaud_244',['TestBaud',['../_u_a_r_t_defines_8hpp.html#aa5c9554a2e809da728e572c14d6e9268',1,'UARTDefines.hpp']]],
-  ['testmethod_245',['TestMethod',['../_u_a_r_t_defines_8hpp.html#ab0b88546c7db4641ed45c285431b97c7',1,'UARTDefines.hpp']]],
-  ['testpath_246',['TestPath',['../_u_a_r_t_defines_8hpp.html#a63af5a324dcb1d9bcca207ba2beaa213',1,'UARTDefines.hpp']]]
+  ['s16_250',['s16',['../union_roomba_1_1sensor_data.html#a2ae6e6318a341a3756e6e41f69cbadf9',1,'Roomba::sensorData']]],
+  ['s8_251',['s8',['../union_roomba_1_1sensor_data.html#a0afa56aa0cfc87ac8fd11c63ed804aa0',1,'Roomba::sensorData']]]
 ];
