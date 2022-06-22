@@ -101,7 +101,7 @@ namespace Roomba {
         mUartHandle->sendBytes(commands);
     }
 
-    std::vector<uint8_t> Roomba::getSensorData(sensors sensor) {
+    uint8_t Roomba::getSensorData(sensors sensor) {
         std::vector<uint8_t> sensorCommand = { command::Sensor, sensor };
         std::vector<uint8_t> sensorData = { 0 };
 
@@ -127,4 +127,3 @@ namespace Roomba {
     }
 
 }
-h
