@@ -1,0 +1,6 @@
+add_executable(SimpleWallDetector SimpleWallDetector.cpp)
+target_compile_features(SimpleWallDetector PRIVATE cxx_std_20)
+target_link_libraries(SimpleWallDetector PRIVATE boost_chrono)
+target_link_libraries(SimpleWallDetector PRIVATE boost_asio)
+target_link_libraries(SimpleWallDetector PRIVATE UART_lib)
+target_link_libraries(SimpleWallDetector PRIVATE Roomba_lib)

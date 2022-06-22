@@ -9,7 +9,7 @@
 namespace Roomba {
 
 
-    enum class direction {
+    enum direction {
         Forward, Left, Right, Backward
     };
 
@@ -72,7 +72,7 @@ namespace Roomba {
 
         void setBaudRate(UART::Baudrates baudRate);
 
-        std::vector<uint8_t> getSensorData(sensors sensor);
+        uint8_t getSensorData(sensors sensor);
 
         std::vector<uint8_t> getSensorDataList(std::vector<sensors> sensor);
 
