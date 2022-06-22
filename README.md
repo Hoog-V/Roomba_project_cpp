@@ -16,8 +16,8 @@ vanaf computer, esp of andere target.
 - [Acceptatietesten](https://hoog-v.github.io/Roomba_project_cpp/html/3.html)
 
 ### UML STUFF
-- [Use case diagram]()
-- [Class diagram](https://hoog-v.github.io/Roomba_project_cpp/html/4.html)
+- [Use case diagram](https://hoog-v.github.io/Roomba_project_cpp/html/4.html)
+- [Class diagram](https://hoog-v.github.io/Roomba_project_cpp/html/5.html)
 
 
 
