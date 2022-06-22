@@ -39,7 +39,7 @@ namespace Roomba {
         Max_Clean, Drive, Motors, Leds, Song, Play, Query, Dock,
         Motor_PWM, Drive_Wheels, Stream = 148, Query_List, Do_Stream,
         Schedule_Leds = 162, Digit_Leds_Raw, Digit_Leds_Ascii,
-        Buttons, Schedule = 167, Set_Date_Time, Stop = 173, Sensor = 142
+        Buttons, Schedule = 167, Set_Date_Time, Stop = 173, Sensor = 142, SensorList = 149
     };
 
 
@@ -73,6 +73,8 @@ namespace Roomba {
         void setBaudRate(UART::Baudrates baudRate);
 
         std::vector<uint8_t> getSensorData(sensors sensor);
+
+        std::vector<uint8_t> getSensorDataList(std::vector<sensors> sensor);
 
         void setSongNum(const uint8_t songNum, const std::vector<uint8_t> notesWithDuration);
 

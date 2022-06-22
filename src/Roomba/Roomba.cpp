@@ -112,9 +112,18 @@ namespace Roomba {
         return sensorData;
     }
 
-    std::vector<uint8_t> Roomba::getSensorDataList(std::vector<sensors> sensor){
+    std::vector<uint8_t> Roomba::getSensorDataList(std::vector<sensors> sensor) {
+        std::vector<uint8_t> sensorCommand = { command::SensorList };
+        std::vector<uint8_t> sensorData = { 0 };
 
+        sensorCommand.push_back(sensor.size());
+        sensorCommand.insert(sensorCommand.end(), sensor.begin(), sensor.end());
+
+        mUartHandle->sendBytes(sensorCommand);
+        SLEEP(1000);
+        mUartHandle->readBytes(sensorData);
+
+        return sensorData;
     }
-
 
 }
