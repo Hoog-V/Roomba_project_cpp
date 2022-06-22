@@ -6,7 +6,7 @@ vanaf computer, esp of andere target.
 
 De library maakt gebruik van CMake om de build files te genereren, hierdoor is er meer vrijheid om te kiezen waarop 
 (welk besturingssysteem) en waarin (Welke teksteditor/ide) te programmeren. Voor een snelgids om de ontwikkelomgeving
-op te zetten onder [Windows](/Documentatie/MD/Omgeving_opzetten.md). 
+op te zetten onder [Windows](/docs/DocPages/Omgeving_opzetten.md). 
 
 De meest gebruikte ide's zijn:
 - VSCode
@@ -19,31 +19,26 @@ Maar gebruik vooral wat jezelf fijn vindt >:)
 
 ---
 ### Code standaarden en regels
-- [Code standaarden](/Documentatie/MD/Code_standaarden.md)
+- [Code standaarden](https://hoog-v.github.io/Roomba_project_cpp/html/6.html)
 
 ### Programma van eisen en acceptatietesten
-- [Eisen van de library](/Documentatie/MD/Eisen%20ROOMBA%20lib.md)
-- [Functies van de library](/Documentatie/MD/Functies%20ROOMBA%20lib.md)
-- [Acceptatietesten](/Documentatie/MD/Acceptatietesten%20ROOMBA%20Lib.md)
+- [Eisen van de library](https://hoog-v.github.io/Roomba_project_cpp/html/2.html#autotoc_md0)
+- [Acceptatietesten](https://hoog-v.github.io/Roomba_project_cpp/html/3.html)
 
 ### UML STUFF
 - [Use case diagram]()
-- [Class diagram](/Documentatie/Diagrammen/Roomba%20class%20diagram.drawio.pdf)
+- [Class diagram](https://hoog-v.github.io/Roomba_project_cpp/html/4.html)
 
 
 ## Regels over bijdragen aan de repo
 
 ---
 
-- Werk altijd in een aparte branch als je veranderingen wilt maken of een nieuwe feature wilt toevoegen.
-  Op deze manier worden fouten bij het mergen van bestanden voorkomen en is het makkelijker om bij pull requests
-  een code review te doen.
-- Volg de [Code standaarden](/Documentatie/MD/Code_standaarden.md)
-- Maak een test alvorens het maken van een nieuwe feature.
-  Dan weet je zeker dat je niet vergeet de functie te testen.
-- Maak pull requests aan als je klaar bent met het schrijven van een feature of refactoren.
-  Op deze manier kunnen mensen nog eventjes de code controleren voordat het in de main komt.
-- Als je een git message maakt. begin dan met -enh -add -wip (of een andere die logisch is)  
+Voor de regels over het bijdragen aan de repo zie het kopje:
+[Bijdragen](https://hoog-v.github.io/Roomba_project_cpp/html/6.html) in de github pages wiki van deze repo.
+
+Daar staan de code- en git regels in.
+
 ## Testen
 
 ---
