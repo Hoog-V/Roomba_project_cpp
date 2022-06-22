@@ -14,7 +14,7 @@ int main(int argc, char **argv) {
     while(1) {
         rmb->setDirection(Roomba::Forward);
         SLEEP(100);
-        if(rmb->getSensorData(Roomba::Wall)){
+        if(rmb->getSensorData(Roomba::Wall).u8){
             rmb->setDirection(Roomba::Left);
             SLEEP(1000);
         }
