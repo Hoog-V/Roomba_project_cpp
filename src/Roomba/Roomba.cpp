@@ -116,7 +116,7 @@ namespace Roomba {
             sensorDataOut.s8 = (int8_t)sensorDataRead[0];
         }
         if((sensor >= 7 && sensor <= 18) || (sensor >= 34 && sensor <= 38) || (sensor == 21) || (sensor == 52) || (sensor == 53) || (sensor == 58)) {
-                sensorDataOut.u8 = (uint8_t)sensorDataRead[0];
+            sensorDataOut.u8 = (uint8_t)sensorDataRead[0];
         }
         if((sensor == 19) || (sensor == 20) || (sensor == 23) || (sensor >= 29 && sensor <= 42) || (sensor >= 54 && sensor <= 57)) {
             sensorDataOut.s16 = (int16_t)((sensorDataRead[0] << 8) | sensorDataRead[1]);
