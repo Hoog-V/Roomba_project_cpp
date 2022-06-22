@@ -2,7 +2,7 @@ var class_roomba_1_1_roomba =
 [
     [ "Roomba", "class_roomba_1_1_roomba.html#ae1f2041bdd371d2782d351a2197f5e92", null ],
     [ "~Roomba", "class_roomba_1_1_roomba.html#aef986a2eee3c2eb93b67f8f2d322e9fe", null ],
-    [ "getSensorData", "class_roomba_1_1_roomba.html#ae937e08fc5e92f013631e80a01b0a453", null ],
+    [ "getSensorData", "class_roomba_1_1_roomba.html#a676c56d11de4692ce9e5fc3cf9e41ab4", null ],
     [ "getSensorDataList", "class_roomba_1_1_roomba.html#a3f2955f402c1980d73d156bda51d31d8", null ],
     [ "playSongNum", "class_roomba_1_1_roomba.html#a2779a0e22f0f56f3cd513be4eacdd2de", null ],
     [ "rotate", "class_roomba_1_1_roomba.html#a6b97206082c3bcb5e85929fdee6bf700", null ],

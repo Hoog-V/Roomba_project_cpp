@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['getsensordata_60',['getSensorData',['../class_roomba_1_1_roomba.html#ae937e08fc5e92f013631e80a01b0a453',1,'Roomba::Roomba']]],
+  ['getsensordata_60',['getSensorData',['../class_roomba_1_1_roomba.html#a676c56d11de4692ce9e5fc3cf9e41ab4',1,'Roomba::Roomba']]],
   ['getsensordatalist_61',['getSensorDataList',['../class_roomba_1_1_roomba.html#a3f2955f402c1980d73d156bda51d31d8',1,'Roomba::Roomba']]]
 ];

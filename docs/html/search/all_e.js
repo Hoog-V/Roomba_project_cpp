@@ -1,7 +1,7 @@
 var searchData=
 [
   ['moscow_20eisen_77',['MoScoW eisen',['../2.html',1,'']]],
-  ['main_78',['main',['../app_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'app.cpp']]],
+  ['main_78',['main',['../app_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;app.cpp'],['../_simple_wall_detector_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;SimpleWallDetector.cpp']]],
   ['mainpage_2emd_79',['Mainpage.md',['../_mainpage_8md.html',1,'']]],
   ['max_80',['Max',['../namespace_roomba.html#acb7a202beeb36883e7ceddba1effd492a6a061313d22e51e0f25b7cd4dc065233',1,'Roomba']]],
   ['max_5fclean_81',['Max_Clean',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada934d89a760eb8f77a89058d6c314e579',1,'Roomba']]],

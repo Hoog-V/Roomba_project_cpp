@@ -22,10 +22,11 @@ var searchData=
   ['setpinlow_131',['setPinLow',['../class_i_o_1_1_i_o.html#a9513bf1420d9779ee7aab789d1f16f4d',1,'IO::IO::setPinLow()'],['../class_i_o_1_1_i_o_p_c.html#af45a574a2fe5ae00d8c8f80aae4b76d7',1,'IO::IOPC::setPinLow()']]],
   ['setpowerled_132',['setPowerLed',['../class_roomba_1_1_roomba.html#a8bece26a704430aa62477315ddde81ed',1,'Roomba::Roomba']]],
   ['setsongnum_133',['setSongNum',['../class_roomba_1_1_roomba.html#abe59a1bc4f6de939f1999912ed528744',1,'Roomba::Roomba']]],
-  ['song_134',['Song',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada5e74bd0d2ff2a13b41e5ef9949ba52e0',1,'Roomba']]],
-  ['spot_135',['Spot',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada58c314c67ebef171368e4dabc4a8aba0',1,'Roomba::Spot()'],['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada6c9d6b8aea6f3d16847bdebe05878a2d',1,'Roomba::Spot()']]],
-  ['start_136',['Start',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada9f9b0b38673157c3f125d58a8bb603da',1,'Roomba']]],
-  ['startcleaning_137',['startCleaning',['../class_roomba_1_1_roomba.html#a497f2331e6f8bd2d7a909dc031e3accf',1,'Roomba::Roomba']]],
-  ['stop_138',['Stop',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada25526a868c9fde996821141e110f9b4b',1,'Roomba']]],
-  ['stream_139',['Stream',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada2ba4e7d82ce1cad88b192c5222c13d05',1,'Roomba']]]
+  ['simplewalldetector_2ecpp_134',['SimpleWallDetector.cpp',['../_simple_wall_detector_8cpp.html',1,'']]],
+  ['song_135',['Song',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada5e74bd0d2ff2a13b41e5ef9949ba52e0',1,'Roomba']]],
+  ['spot_136',['Spot',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada58c314c67ebef171368e4dabc4a8aba0',1,'Roomba::Spot()'],['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada6c9d6b8aea6f3d16847bdebe05878a2d',1,'Roomba::Spot()']]],
+  ['start_137',['Start',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada9f9b0b38673157c3f125d58a8bb603da',1,'Roomba']]],
+  ['startcleaning_138',['startCleaning',['../class_roomba_1_1_roomba.html#a497f2331e6f8bd2d7a909dc031e3accf',1,'Roomba::Roomba']]],
+  ['stop_139',['Stop',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada25526a868c9fde996821141e110f9b4b',1,'Roomba']]],
+  ['stream_140',['Stream',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada2ba4e7d82ce1cad88b192c5222c13d05',1,'Roomba']]]
 ];
