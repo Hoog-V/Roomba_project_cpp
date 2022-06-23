@@ -79,7 +79,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "2.html",
-"pages.html"
+"union_roomba_1_1sensor_data.html#a979221df4a355e27c97b80b174c66594"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -1,10 +1,18 @@
 var searchData=
 [
-  ['led_5fcheck_5frobot_70',['LED_Check_Robot',['../namespace_roomba.html#ab8b7e4427d000b9e9eb73c03a2ecf599a4138a19a783ec825dbd1c1a39ee3065e',1,'Roomba']]],
-  ['led_5fdebris_71',['LED_Debris',['../namespace_roomba.html#ab8b7e4427d000b9e9eb73c03a2ecf599a8e34bb5523ed0eb2786b4ab28b329683',1,'Roomba']]],
-  ['led_5fdock_72',['LED_Dock',['../namespace_roomba.html#ab8b7e4427d000b9e9eb73c03a2ecf599adffa3ad6295a6eab704050fa86fc03ee',1,'Roomba']]],
-  ['led_5fspot_73',['LED_Spot',['../namespace_roomba.html#ab8b7e4427d000b9e9eb73c03a2ecf599a1ee373621a62e8a52918463fd56ac073',1,'Roomba']]],
-  ['leds_74',['leds',['../namespace_roomba.html#ab8b7e4427d000b9e9eb73c03a2ecf599',1,'Roomba::leds()'],['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada96fa1234f5806fa9d4690c948c031c80',1,'Roomba::Leds()']]],
-  ['ledstate_75',['ledState',['../namespace_roomba.html#ab3b31b849baa01f5e7977d4e49b7ee14',1,'Roomba']]],
-  ['left_76',['Left',['../namespace_roomba.html#a129c7fef99465f8e89987561b13649d1a1bd547a1853b1db494bd076771fc84a1',1,'Roomba']]]
+  ['moscow_20eisen_74',['MoScoW eisen',['../2.html',1,'']]],
+  ['main_75',['main',['../app_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;app.cpp'],['../_simple_wall_detector_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;SimpleWallDetector.cpp']]],
+  ['mainpage_2emd_76',['Mainpage.md',['../_mainpage_8md.html',1,'']]],
+  ['max_77',['Max',['../namespace_roomba.html#acb7a202beeb36883e7ceddba1effd492a6a061313d22e51e0f25b7cd4dc065233',1,'Roomba']]],
+  ['max_5fclean_78',['Max_Clean',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada934d89a760eb8f77a89058d6c314e579',1,'Roomba']]],
+  ['mbaudenumtoabsolutevalue_79',['mBaudEnumToAbsoluteValue',['../class_u_a_r_t_1_1_u_a_r_t.html#a95c92f22315cfd4fba2e57c183af0c9d',1,'UART::UART']]],
+  ['mbaudmapping_80',['mBaudMapping',['../class_u_a_r_t_1_1_u_a_r_t.html#af5c7aeb165a57923b1b94434b138b952',1,'UART::UART']]],
+  ['mconnectionmethod_81',['mConnectionMethod',['../struct_i_o_1_1_i_o_settings.html#a04ced6d77ed707f151133d79c40d45b3',1,'IO::IOSettings']]],
+  ['miosettings_82',['mIOSettings',['../class_i_o_1_1_i_o.html#ad157685b2d1e8b59c2c2fd99eed918d6',1,'IO::IO']]],
+  ['motor_2ecpp_83',['Motor.cpp',['../_motor_8cpp.html',1,'']]],
+  ['motor_5fpwm_84',['Motor_PWM',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada8094ebdcc64f14f9d775a231b821b302',1,'Roomba']]],
+  ['motorovercurrent_85',['MotorOvercurrent',['../namespace_roomba.html#a1ba20ae81e47ebf35362517c7dbfeff9aceb79afacafbadc734de23cd25684c58',1,'Roomba']]],
+  ['motors_86',['Motors',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada12a8e33086d7cc4f12569944cba68a86',1,'Roomba']]],
+  ['muarthandle_87',['mUartHandle',['../struct_i_o_1_1_i_o_settings.html#a3ec21a15d0b9b6af03cea732c01e77af',1,'IO::IOSettings']]],
+  ['muartsettings_88',['mUartSettings',['../class_u_a_r_t_1_1_u_a_r_t.html#a66ba254afbf91a69bed683f8e62c8281',1,'UART::UART']]]
 ];

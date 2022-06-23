@@ -1,7 +1,7 @@
 var class_u_a_r_t_1_1_u_a_r_t =
 [
     [ "changeBaud", "class_u_a_r_t_1_1_u_a_r_t.html#a3ccf566c9776883832b5594e1e010898", null ],
-    [ "mBaudEnumToAbsoluteValue", "class_u_a_r_t_1_1_u_a_r_t.html#a7c2d17972b9094477e74c5e7bd3362df", null ],
+    [ "mBaudEnumToAbsoluteValue", "class_u_a_r_t_1_1_u_a_r_t.html#a95c92f22315cfd4fba2e57c183af0c9d", null ],
     [ "readBytes", "class_u_a_r_t_1_1_u_a_r_t.html#abc92c7bf60baa99e38bb2236c571848f", null ],
     [ "resetDTRPin", "class_u_a_r_t_1_1_u_a_r_t.html#a6a59262a0446d0bb2d136afbc062a477", null ],
     [ "sendByte", "class_u_a_r_t_1_1_u_a_r_t.html#a343800120c4d5584e41f3bcef5c902ac", null ],
