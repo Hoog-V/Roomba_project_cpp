@@ -64,13 +64,17 @@ namespace UART {
     }
 
     void UARTPC::readBytes(std::vector<uint8_t> &buffer){
-        if (buffer.size() < 1) {
-            throw "Number of bytes to read is zero or negative";
-        }
         boost::system::error_code ec;
-        boost::asio::mutable_buffer mBuffer = boost::asio::mutable_buffer(buffer.data(), buffer.size());
+        boost::asio::mutable_buffer readBuffer;
 
-        this->mSerialPort->read_some(mBuffer, ec);
+        this->mSerialPort->read_some(readBuffer, ec);
+
+        ///@note Needed for the conversion from boost::asio::mutable_buffer to std::vector
+        uint8_t* toVectorBuffer = boost::asio::buffer_cast<uint8_t*>(readBuffer);
+
+        for(unsigned int i = 0; i < readBuffer.size(); i++) {
+            buffer.push_back(toVectorBuffer[i]);
+        }
     }
 
 
