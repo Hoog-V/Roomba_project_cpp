@@ -2,7 +2,7 @@
 #include "crossplatform/function.hpp"
 
 namespace Roomba{
-    constexpr void Roomba::turnOff() {
+    void Roomba::turnOff() {
         if (mCurrControlMode == control::No_init){
             setControlMode(control::Passive);
         }
@@ -10,7 +10,7 @@ namespace Roomba{
         mCurrControlMode = control::Passive;
     }
 
-    constexpr void Roomba::turnOn() {
+    void Roomba::turnOn() {
         mIOHandle->setPinHigh();
         SLEEP(1000);
         mIOHandle->setPinLow();

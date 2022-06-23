@@ -61,8 +61,6 @@ namespace Roomba {
             mCurrControlMode = control::No_init;
         }
 
-        void rotate(int16_t angle);
-
         void setMotor(uint8_t motor, uint8_t velocity);
 
         void startCleaning(cleaning cleaningMode);
@@ -81,20 +79,13 @@ namespace Roomba {
 
         std::vector<sensorData> getSensorDataList(std::vector<sensors> sensor);
 
-        sensorData sensorDataType(sensors sensor, std::vector<uint8_t> sensorDataRaw);
+        void setSongNum(uint8_t songNum, const std::vector<uint8_t> &notesWithDuration);
 
-        bool sensorIsSignedInt8_t(sensors sensor);
-        bool sensorIsUnsignedInt8_t(sensors sensor);
-        bool sensorIsSignedInt16_t(sensors sensor);
-        bool sensorIsUnsignedInt16_t(sensors sensor);
+        void playSongNum(uint8_t songNum);
 
-        constexpr void setSongNum(uint8_t songNum, const std::vector<uint8_t> &notesWithDuration);
+        void turnOn();
 
-        constexpr void playSongNum(uint8_t songNum);
-
-        constexpr void turnOn();
-
-        constexpr void turnOff();
+        void turnOff();
 
         void setDirection(direction Direction);
 
@@ -110,6 +101,16 @@ namespace Roomba {
         bool mSetFullMode();
 
         void driveCommand(int16_t velocity, int16_t radius);
+
+        static constexpr bool sensorIsSignedInt8_t(sensors sensor);
+
+        static constexpr bool sensorIsUnsignedInt8_t(sensors sensor);
+
+        static constexpr bool sensorIsSignedInt16_t(sensors sensor);
+
+        static constexpr bool sensorIsUnsignedInt16_t(sensors sensor);
+
+        static sensorData sensorDataType(sensors sensor, std::vector<uint8_t> sensorDataRaw);
 
         std::shared_ptr<IO::IO> mIOHandle;
         std::shared_ptr<UART::UART> mUartHandle;
