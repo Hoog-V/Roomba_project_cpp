@@ -23,7 +23,7 @@ namespace UART{
 
         void sendBytes(std::vector<uint8_t> &buffer);
 
-        void readBytes(std::vector<uint8_t> &buffer);
+        void readBytes(std::vector<uint8_t> &buffer, size_t numOfBytes);
 
         void resetDTRPin();
 
