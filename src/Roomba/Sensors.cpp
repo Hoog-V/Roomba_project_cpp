@@ -4,7 +4,6 @@ namespace Roomba {
     sensorData Roomba::getSensorData(sensors sensor) {
         std::vector<uint8_t> sensorCommand = { command::Sensor, sensor };
         std::vector<uint8_t> sensorDataRaw = { 0, 0 };
-        sensorData sensorDataOut;
 
         mUartHandle->sendBytes(sensorCommand);
         SLEEP(1000);

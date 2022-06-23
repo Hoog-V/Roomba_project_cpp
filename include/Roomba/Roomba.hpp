@@ -81,7 +81,7 @@ namespace Roomba {
 
         sensorData getSensorData(sensors sensor);
 
-        std::vector<sensorData> Roomba::getSensorDataList(std::vector<sensors> sensor);
+        std::vector<sensorData> getSensorDataList(std::vector<sensors> sensor);
 
         sensorData sensorDataType(sensors sensor, std::vector<uint8_t> sensorDataRaw);
 
