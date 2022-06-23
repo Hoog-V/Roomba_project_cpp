@@ -1,7 +1,6 @@
 #include <gtest/gtest.h>
-#include <UART/UART.hpp>
-#include <UARTDefines.hpp>
-#include <array>
+#include "UART/UART.hpp"
+#include "UARTDefines.hpp"
 
 
 /**
