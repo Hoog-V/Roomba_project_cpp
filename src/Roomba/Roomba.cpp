@@ -112,6 +112,7 @@ namespace Roomba {
         SLEEP(1000);
         mUartHandle->readBytes(sensorDataRead);
 
+        ///@note the numbers seen here are form the datasheet https://cdn-shop.adafruit.com/datasheets/create_2_Open_Interface_Spec.pdf seen at page 22 to 31, all these numbers are the PacketID's
         if((sensor == 24) || (sensor == 45)) {
             sensorDataOut.s8 = (int8_t)sensorDataRead[0];
         }
