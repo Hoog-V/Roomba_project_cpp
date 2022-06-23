@@ -65,16 +65,11 @@ namespace UART {
 
     void UARTPC::readBytes(std::vector<uint8_t> &buffer){
         boost::system::error_code ec;
-        boost::asio::mutable_buffer readBuffer;
+        boost::asio::mutable_buffer mBuffer = boost::asio::mutable_buffer(buffer.data(), buffer.size());
 
-        this->mSerialPort->read_some(readBuffer, ec);
+        this->mSerialPort->read_some(mBuffer, ec);
 
-        ///@note Needed for the conversion from boost::asio::mutable_buffer to std::vector
-        uint8_t* toVectorBuffer = boost::asio::buffer_cast<uint8_t*>(readBuffer);
-
-        for(unsigned int i = 0; i < readBuffer.size(); i++) {
-            buffer.push_back(toVectorBuffer[i]);
-        }
+        buffer.insert(buffer.end(), mBuffer.data(), mBuffer.size());
     }
 
 
