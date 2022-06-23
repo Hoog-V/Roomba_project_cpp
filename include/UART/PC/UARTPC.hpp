@@ -15,7 +15,7 @@ namespace UART{
 
     class UARTPC : public UART {
     public:
-        UARTPC(const UARTSettings settings);
+        UARTPC(const UARTSettings &settings);
 
         void changeBaud(const Baudrates baudrate);
 

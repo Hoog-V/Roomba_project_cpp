@@ -1,9 +1,8 @@
 #include "UART/UART.hpp"
-#include <stdint.h>
 #include <iostream>
 #include "boost/asio.hpp"
 
-//Unfornately needed for setting and resetting the DTR pin under Windows
+//Unfortunately needed for setting and resetting the DTR pin under Windows
 #if defined(_WIN32) || defined(_WIN64)
 #include <Windows.h>
 #endif
@@ -11,9 +10,9 @@
 namespace UART {
 
 
-    UARTPC::UARTPC(const UARTSettings settings) {
+    UARTPC::UARTPC(const UARTSettings &settings) {
         const uint32_t baudrateVal = mBaudEnumToAbsoluteValue(settings.baudrate);
-        bool emptyDevicePath = (settings.devicePath == "");
+        bool emptyDevicePath = settings.devicePath.empty();
         if (emptyDevicePath)
             throw "Empty devicePath!";
 
@@ -30,10 +29,9 @@ namespace UART {
         std::cout << "Destructor Called\n";
         this->mSerialPort->close(ec);
         this->mIOService.stop();
-        if (ec)
+        if (ec) {
             std::cerr << "Closing serialport failed!" << '\n';
-        else
-            std::cout << "Serial port succesfully closed!" << '\n';
+        }
     }
 
     void UARTPC::changeBaud(const Baudrates baudrate) {
@@ -41,9 +39,7 @@ namespace UART {
         const uint32_t baudrateVal = this->mBaudEnumToAbsoluteValue(baudrate);
         this->mSerialPort->set_option(boost::asio::serial_port_base::baud_rate(baudrateVal));
         if (ec)
-            std::cerr << "Changing baudrate failed!" << '\n';
-        else
-            std::cout << "Succesfully changed baudrate!" << '\n';
+            throw "Changing baudrate failed!";
     }
 
 
@@ -54,7 +50,7 @@ namespace UART {
     }
 
     void UARTPC::sendBytes(std::vector<uint8_t> &buffer){
-        if (buffer.size() < 1) {
+        if (buffer.empty()) {
             throw "Number of bytes to read is zero or negative";
         }
         boost::system::error_code ec;
@@ -102,22 +98,20 @@ namespace UART {
     }
 
 
-
     /**
     * Converts Baudrates enum to an implicit uint32_t value.
     * If invalid baudrate or pointer is passed in to arguments it will throw an exception
     */
-    uint32_t UART::mBaudEnumToAbsoluteValue(Baudrates baudrate) {
-        int baudEnumIndex = static_cast<uint32_t>(baudrate);
-        std::cout << baudEnumIndex << '\n';
-        if (baudEnumIndex == 0)
+    constexpr uint32_t UART::mBaudEnumToAbsoluteValue(Baudrates baudrate) {
+        uint8_t baudEnumIndex = static_cast<uint8_t>(baudrate);
+        if (baudEnumIndex == 0) {
             throw std::invalid_argument("baudrate is invalid or an empty pointer!");
-
+        }
         uint32_t baud = mBaudMapping.at(baudEnumIndex);
         return baud;
     }
 
-    std::shared_ptr<UART> UART::Create(const UARTSettings Settings){
+    std::shared_ptr<UART> UART::Create(const UARTSettings &Settings){
         if (Settings.connectionMethod == connectionMethod::USB) {
             return std::make_shared<UARTPC>(Settings);
         }
