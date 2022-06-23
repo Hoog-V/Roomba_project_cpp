@@ -2,8 +2,8 @@
 # show up in IDEs unless they are listed in add_library.
 
 # Optionally glob, but only for CMake 3.12 or later:
-#file(GLOB HEADER_LIST CONFIGURE_DEPENDS "${PROJECT_SOURCE_DIR}}/include/UART/*.hpp")
-set(HEADER_LIST "${PROJECT_SOURCE_DIR}/include/IO/IO.hpp")
+file(GLOB HEADER_LIST CONFIGURE_DEPENDS "${PROJECT_SOURCE_DIR}}/include/IO/*.hpp")
+#set(HEADER_LIST "${PROJECT_SOURCE_DIR}/include/IO/IO.hpp")
 
 include(CheckIncludeFile)
 CHECK_INCLUDE_FILE(/opt/vc/include/bcm_host.h RPI)
