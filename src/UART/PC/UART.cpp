@@ -63,12 +63,13 @@ namespace UART {
         this->mSerialPort->write_some(mBuffer, ec);
     }
 
-    void UARTPC::readBytes(std::vector<uint8_t> &buffer){
-        if (buffer.size() < 1) {
+    void UARTPC::readBytes(std::vector<uint8_t> &buffer, size_t numOfBytes){
+        if (numOfBytes < 1) {
             throw "Number of bytes to read is zero or negative";
         }
+        buffer.reserve(numOfBytes);
         boost::system::error_code ec;
-        boost::asio::mutable_buffer mBuffer = boost::asio::mutable_buffer(buffer.data(), buffer.size());
+        boost::asio::mutable_buffer mBuffer = boost::asio::mutable_buffer(buffer.data(), numOfBytes);
 
         this->mSerialPort->read_some(mBuffer, ec);
     }

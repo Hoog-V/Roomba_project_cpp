@@ -21,6 +21,6 @@ TEST(UART_ReadBytes, numOfBytesZero)
 
     std::vector<uint8_t> TinyBuffer;
     EXPECT_ANY_THROW({
-        UartHandle->readBytes(TinyBuffer);
+        UartHandle->readBytes(TinyBuffer, 0);
     });
 }
