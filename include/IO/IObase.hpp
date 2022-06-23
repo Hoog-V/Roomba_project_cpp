@@ -12,7 +12,7 @@ namespace IO {
 
     class IO {
     public:
-        static std::shared_ptr<IO> Create(const IOSettings settings);
+        static std::shared_ptr<IO> Create(const IOSettings &settings);
     
         virtual void setPinHigh() = 0;
 
