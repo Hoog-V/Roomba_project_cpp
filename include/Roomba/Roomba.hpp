@@ -2,8 +2,6 @@
 
 #include <crossplatform/function.hpp>
 #include <UART/UART.hpp>
-#include <map>
-#include <stdarg.h>
 #include <IO/IO.hpp>
 
 namespace Roomba {
@@ -56,7 +54,7 @@ namespace Roomba {
 
     class Roomba {
     public:
-        Roomba(std::shared_ptr<UART::UART> UARTHandle) : mUartHandle(UARTHandle) {
+        explicit Roomba(std::shared_ptr<UART::UART>& UARTHandle) : mUartHandle(UARTHandle) {
             IO::IOSettings p1;
             p1.mUartHandle = mUartHandle;
             mIOHandle = IO::IO::Create(p1);
@@ -90,13 +88,13 @@ namespace Roomba {
         bool sensorIsSignedInt16_t(sensors sensor);
         bool sensorIsUnsignedInt16_t(sensors sensor);
 
-        void setSongNum(const uint8_t songNum, const std::vector<uint8_t> &notesWithDuration);
+        constexpr void setSongNum(uint8_t songNum, const std::vector<uint8_t> &notesWithDuration);
 
-        void playSongNum(const uint8_t songNum);
+        constexpr void playSongNum(uint8_t songNum);
 
-        void turnOn();
+        constexpr void turnOn();
 
-        void turnOff();
+        constexpr void turnOff();
 
         void setDirection(direction Direction);
 

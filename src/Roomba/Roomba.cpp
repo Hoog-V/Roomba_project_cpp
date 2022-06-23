@@ -1,7 +1,6 @@
-#include <UART/UART.hpp>
-#include <Roomba/Roomba.hpp>
-#include <array>
 #include <vector>
+#include "UART/UART.hpp"
+#include "Roomba/Roomba.hpp"
 
 namespace Roomba {
 /// Roomba Dock mode which makes the Roomba go to his docking station.
@@ -70,7 +69,7 @@ namespace Roomba {
         mUartHandle->sendBytes(commands);
     }
 
-    void Roomba::playSongNum(const uint8_t songNum) {
+    constexpr void Roomba::playSongNum(uint8_t songNum) {
         bool checkControlMode = mCurrControlMode == control::Passive || mCurrControlMode == control::No_init;
         if (checkControlMode)
             setControlMode(control::Safe);
@@ -79,7 +78,7 @@ namespace Roomba {
         mUartHandle->sendBytes(commands);
     }
 
-    void Roomba::setSongNum(const uint8_t songNum, const std::vector<uint8_t>& notesWithDuration) {
+    constexpr void Roomba::setSongNum(uint8_t songNum, const std::vector<uint8_t>& notesWithDuration) {
         const bool tooManyNotes = (notesWithDuration.size() > 32);
         const bool numOfNotesAndDurationNotEqual = (notesWithDuration.size() % 2);
         if(tooManyNotes || numOfNotesAndDurationNotEqual) {
