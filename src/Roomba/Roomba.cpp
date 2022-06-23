@@ -1,22 +1,21 @@
 #include <UART/UART.hpp>
 #include <Roomba/Roomba.hpp>
 #include <array>
-#include <IO/IO.hpp>
 #include <vector>
 
 namespace Roomba {
-/// Roomba Dockmode which makes the Roomba go to his docking station.
+/// Roomba Dock mode which makes the Roomba go to his docking station.
 ///
 /// This is the detailed description, more stuff here. 
-    void Roomba::setDockMode() {
-        /// @param A this discribes parameter A
-        /// @param B this discribes parameter B
-        /// @returns nothing important
-        /// @see anotherfunction() anotherfunction2()
-        /// @note a little side note
-        /// @attention a little more important than a note
-        /// @warning a warning is super important!
+/// @param A this describes parameter A
+/// @param B this describes parameter B
+/// @returns nothing important
+/// @see anotherfunction() anotherfunction2()
+/// @note a little side note
+/// @attention a little more important than a note
+/// @warning a warning is super important!
 
+    void Roomba::setDockMode() {
         if (mCurrControlMode == control::No_init)
             setControlMode(control::Passive);
         mUartHandle->sendByte(command::Dock);
@@ -43,7 +42,7 @@ namespace Roomba {
 
     void Roomba::setBaudRate(UART::Baudrates baudRate) {
         const uint8_t BaudCMD = static_cast<uint8_t>(baudRate) - 1; // -1 because commands are shifted by one to allow
-                                                                    // invalid baudrate checking.
+                                                                    // invalid baud rate checking.
         if (BaudCMD == 0 || BaudCMD > 12)
             throw std::invalid_argument("Invalid baudRate or pointer passed in to parameter baudRate");
 
@@ -80,7 +79,7 @@ namespace Roomba {
         mUartHandle->sendBytes(commands);
     }
 
-    void Roomba::setSongNum(const uint8_t songNum, const std::vector<uint8_t> notesWithDuration) {
+    void Roomba::setSongNum(const uint8_t songNum, const std::vector<uint8_t>& notesWithDuration) {
         const bool tooManyNotes = (notesWithDuration.size() > 32);
         const bool numOfNotesAndDurationNotEqual = (notesWithDuration.size() % 2);
         if(tooManyNotes || numOfNotesAndDurationNotEqual) {

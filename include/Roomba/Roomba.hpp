@@ -90,7 +90,7 @@ namespace Roomba {
         bool sensorIsSignedInt16_t(sensors sensor);
         bool sensorIsUnsignedInt16_t(sensors sensor);
 
-        void setSongNum(const uint8_t songNum, const std::vector<uint8_t> notesWithDuration);
+        void setSongNum(const uint8_t songNum, const std::vector<uint8_t> &notesWithDuration);
 
         void playSongNum(const uint8_t songNum);
 
@@ -119,7 +119,7 @@ namespace Roomba {
 
         const int16_t velForward = 500, velBackward = -500, velStop = 0;
         const int16_t rotNone = 32767, rotLeft = -2000, rotRight = 2000;
-        
+
     };
 
 }
