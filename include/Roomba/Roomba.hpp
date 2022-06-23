@@ -1,10 +1,8 @@
 #pragma once
 
-#include <crossplatform/function.hpp>
-#include <UART/UART.hpp>
-#include <map>
-#include <stdarg.h>
-#include <IO/IO.hpp>
+#include "crossplatform/sleep.hpp"
+#include "UART/UART.hpp"
+#include "IO/IO.hpp"
 
 namespace Roomba {
 
@@ -56,14 +54,12 @@ namespace Roomba {
 
     class Roomba {
     public:
-        Roomba(std::shared_ptr<UART::UART> UARTHandle) : mUartHandle(UARTHandle) {
+        explicit Roomba(std::shared_ptr<UART::UART>& UARTHandle) : mUartHandle(UARTHandle) {
             IO::IOSettings p1;
             p1.mUartHandle = mUartHandle;
             mIOHandle = IO::IO::Create(p1);
             mCurrControlMode = control::No_init;
         }
-
-        void rotate(int16_t angle);
 
         void setMotor(uint8_t motor, uint8_t velocity);
 
@@ -83,16 +79,9 @@ namespace Roomba {
 
         std::vector<sensorData> getSensorDataList(std::vector<sensors> sensor);
 
-        sensorData sensorDataType(sensors sensor, std::vector<uint8_t> sensorDataRaw);
+        void setSongNum(uint8_t songNum, const std::vector<uint8_t> &notesWithDuration);
 
-        bool sensorIsSignedInt8_t(sensors sensor);
-        bool sensorIsUnsignedInt8_t(sensors sensor);
-        bool sensorIsSignedInt16_t(sensors sensor);
-        bool sensorIsUnsignedInt16_t(sensors sensor);
-
-        void setSongNum(const uint8_t songNum, const std::vector<uint8_t> notesWithDuration);
-
-        void playSongNum(const uint8_t songNum);
+        void playSongNum(uint8_t songNum);
 
         void turnOn();
 
@@ -113,13 +102,23 @@ namespace Roomba {
 
         void driveCommand(int16_t velocity, int16_t radius);
 
+        static constexpr bool sensorIsSignedInt8_t(sensors sensor);
+
+        static constexpr bool sensorIsUnsignedInt8_t(sensors sensor);
+
+        static constexpr bool sensorIsSignedInt16_t(sensors sensor);
+
+        static constexpr bool sensorIsUnsignedInt16_t(sensors sensor);
+
+        static sensorData sensorDataType(sensors sensor, std::vector<uint8_t> sensorDataRaw);
+
         std::shared_ptr<IO::IO> mIOHandle;
         std::shared_ptr<UART::UART> mUartHandle;
         control mCurrControlMode;
 
         const int16_t velForward = 500, velBackward = -500, velStop = 0;
         const int16_t rotNone = 32767, rotLeft = -2000, rotRight = 2000;
-        
+
     };
 
 }

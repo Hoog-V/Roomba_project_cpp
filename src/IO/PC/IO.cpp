@@ -1,8 +1,8 @@
-#include <IO/IO.hpp>
-#include <UART/UART.hpp>
+#include "IO/IO.hpp"
+#include "UART/UART.hpp"
 
 namespace IO {
-    IOPC::IOPC(const IOSettings settings) {
+    IOPC::IOPC(const IOSettings &settings) {
         mIOSettings = settings;
     }
 
@@ -14,7 +14,7 @@ namespace IO {
         mIOSettings.mUartHandle->setDTRPin();
     }
 
-    std::shared_ptr<IO> IO::Create(const IOSettings settings) {
+    std::shared_ptr<IO> IO::Create(const IOSettings &settings) {
         if (settings.mConnectionMethod == UART::connectionMethod::USB) {
             return std::make_shared<IOPC>(settings);
         }

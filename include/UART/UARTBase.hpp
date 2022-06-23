@@ -3,8 +3,7 @@
 #include <filesystem>
 #include <iostream>
 #include <boost/asio.hpp>
-#include <stdint.h>
-#include <map>
+#include <array>
 #include <exception>
 
 
@@ -37,7 +36,7 @@ namespace UART {
 
     class UART {
     public:
-        static std::shared_ptr<UART> Create(const UARTSettings Settings);
+        static std::shared_ptr<UART> Create(const UARTSettings &Settings);
 
         virtual void changeBaud(const Baudrates baudrate)= 0;
 
@@ -57,7 +56,7 @@ namespace UART {
 
 
 
-        uint32_t mBaudEnumToAbsoluteValue(Baudrates baudrate);
+        constexpr uint32_t mBaudEnumToAbsoluteValue(Baudrates baudrate);
 
         UARTSettings mUartSettings;
     };

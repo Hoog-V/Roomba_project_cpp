@@ -51,19 +51,19 @@ namespace Roomba {
     }
 
     ///@note the numbers seen here are form the datasheet https://cdn-shop.adafruit.com/datasheets/create_2_Open_Interface_Spec.pdf seen at page 22 to 31, all these numbers are the PacketID's
-    bool Roomba::sensorIsSignedInt8_t(sensors sensor) {
+    constexpr bool Roomba::sensorIsSignedInt8_t(sensors sensor) {
         return ((sensor == 24) || (sensor == 45));
     }
 
-    bool Roomba::sensorIsUnsignedInt8_t(sensors sensor) {
+    constexpr bool Roomba::sensorIsUnsignedInt8_t(sensors sensor) {
         return ((sensor >= 7 && sensor <= 18) || (sensor >= 34 && sensor <= 38) || (sensor == 21) || (sensor == 52) || (sensor == 53) || (sensor == 58));
     }
 
-    bool Roomba::sensorIsSignedInt16_t(sensors sensor) {
+    constexpr bool Roomba::sensorIsSignedInt16_t(sensors sensor) {
         return ((sensor == 19) || (sensor == 20) || (sensor == 23) || (sensor >= 29 && sensor <= 42) || (sensor >= 54 && sensor <= 57));
     }
 
-    bool Roomba::sensorIsUnsignedInt16_t(sensors sensor) {
+    constexpr bool Roomba::sensorIsUnsignedInt16_t(sensors sensor) {
         return ((sensor == 22) || (sensor >= 25 && sensor <= 31) || (sensor == 43) || (sensor == 44) || (sensor >= 46 && sensor <= 51));
     }
 
