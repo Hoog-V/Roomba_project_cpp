@@ -3,24 +3,24 @@
 namespace Roomba {
     sensorData Roomba::getSensorData(sensors sensor) {
         std::vector<uint8_t> sensorCommand = { command::Sensor, sensor };
-        std::vector<uint8_t> sensorDataRead = { 0 };
+        std::vector<uint8_t> sensorDataRaw = { 0 };
         sensorData sensorDataOut;
 
         mUartHandle->sendBytes(sensorCommand);
         SLEEP(1000);
-        mUartHandle->readBytes(sensorDataRead);
+        mUartHandle->readBytes(sensorDataRaw);
 
         if(sensorIsSingedInt8_t(sensor)) {
-            sensorDataOut.s8 = (int8_t)sensorDataRead[0];
+            sensorDataOut.s8 = (int8_t)sensorDataRaw[0];
         }
         if(sensorIsUnsignedInt8_t(sensor)) {
-            sensorDataOut.u8 = (uint8_t)sensorDataRead[0];
+            sensorDataOut.u8 = (uint8_t)sensorDataRaw[0];
         }
         if(sensorIsSingedInt16_t(sensor)) {
-            sensorDataOut.s16 = (int16_t)((sensorDataRead[0] << 8) | sensorDataRead[1]);
+            sensorDataOut.s16 = (int16_t)((sensorDataRaw[0] << 8) | sensorDataRaw[1]);
         }
         if(sensorIsUnsingedInt16_t(sensor)) {
-            sensorDataOut.u16 = (uint16_t)((sensorDataRead[0] << 8) | sensorDataRead[1]);
+            sensorDataOut.u16 = (uint16_t)((sensorDataRaw[0] << 8) | sensorDataRaw[1]);
         }
 
         return sensorDataOut;
