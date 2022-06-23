@@ -83,6 +83,11 @@ namespace Roomba {
 
         std::vector<uint8_t> getSensorDataList(std::vector<sensors> sensor);
 
+        bool sensorIsSingedInt8_t(sensors sensor);
+        bool sensorIsUnsignedInt8_t(sensors sensor);
+        bool sensorIsSingedInt16_t(sensors sensor);
+        bool sensorIsUnsingedInt16_t(sensors sensor);
+
         void setSongNum(const uint8_t songNum, const std::vector<uint8_t> notesWithDuration);
 
         void playSongNum(const uint8_t songNum);
