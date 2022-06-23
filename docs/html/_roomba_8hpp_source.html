@@ -173,41 +173,46 @@ $(document).ready(function(){initNavTree('_roomba_8hpp_source.html',''); initRes
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        std::vector&lt;uint8_t&gt; getSensorDataList(std::vector&lt;sensors&gt; sensor);</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordtype">void</span> setSongNum(<span class="keyword">const</span> uint8_t songNum, <span class="keyword">const</span> std::vector&lt;uint8_t&gt; notesWithDuration);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordtype">void</span> playSongNum(<span class="keyword">const</span> uint8_t songNum);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordtype">void</span> turnOn();</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordtype">void</span> turnOff();</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordtype">void</span> setDirection(<a class="code" href="namespace_roomba.html#a129c7fef99465f8e89987561b13649d1">direction</a> Direction);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="class_roomba_1_1_roomba.html#aef986a2eee3c2eb93b67f8f2d322e9fe">   96</a></span>&#160;        <a class="code" href="class_roomba_1_1_roomba.html#aef986a2eee3c2eb93b67f8f2d322e9fe">~Roomba</a>() {</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            mUartHandle-&gt;sendByte(<a class="code" href="namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada25526a868c9fde996821141e110f9b4b">command::Stop</a>);</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        }</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordtype">bool</span> mSetPassiveMode();</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordtype">bool</span> mSetSafeMode();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordtype">bool</span> sensorIsSingedInt8_t(<a class="code" href="namespace_roomba.html#a1ba20ae81e47ebf35362517c7dbfeff9">sensors</a> sensor);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordtype">bool</span> sensorIsUnsignedInt8_t(<a class="code" href="namespace_roomba.html#a1ba20ae81e47ebf35362517c7dbfeff9">sensors</a> sensor);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordtype">bool</span> sensorIsSingedInt16_t(<a class="code" href="namespace_roomba.html#a1ba20ae81e47ebf35362517c7dbfeff9">sensors</a> sensor);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordtype">bool</span> sensorIsUnsingedInt16_t(<a class="code" href="namespace_roomba.html#a1ba20ae81e47ebf35362517c7dbfeff9">sensors</a> sensor);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordtype">void</span> setSongNum(<span class="keyword">const</span> uint8_t songNum, <span class="keyword">const</span> std::vector&lt;uint8_t&gt; notesWithDuration);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordtype">void</span> playSongNum(<span class="keyword">const</span> uint8_t songNum);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordtype">void</span> turnOn();</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordtype">void</span> turnOff();</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordtype">void</span> setDirection(<a class="code" href="namespace_roomba.html#a129c7fef99465f8e89987561b13649d1">direction</a> Direction);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="class_roomba_1_1_roomba.html#aef986a2eee3c2eb93b67f8f2d322e9fe">  101</a></span>&#160;        <a class="code" href="class_roomba_1_1_roomba.html#aef986a2eee3c2eb93b67f8f2d322e9fe">~Roomba</a>() {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            mUartHandle-&gt;sendByte(<a class="code" href="namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada25526a868c9fde996821141e110f9b4b">command::Stop</a>);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        }</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordtype">bool</span> mSetFullMode();</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordtype">void</span> driveCommand(int16_t velocity, int16_t radius);</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        std::shared_ptr&lt;IO::IO&gt; mIOHandle;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        std::shared_ptr&lt;UART::UART&gt; mUartHandle;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <a class="code" href="namespace_roomba.html#a5209de87fc9bed4bd208eae71aab67c3">control</a> mCurrControlMode;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="keyword">const</span> int16_t velForward = 500, velBackward = -500, velStop = 0;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keyword">const</span> int16_t rotNone = 32767, rotLeft = -2000, rotRight = 2000;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        </div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    };</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordtype">bool</span> mSetPassiveMode();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordtype">bool</span> mSetSafeMode();</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keywordtype">bool</span> mSetFullMode();</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordtype">void</span> driveCommand(int16_t velocity, int16_t radius);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        std::shared_ptr&lt;IO::IO&gt; mIOHandle;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        std::shared_ptr&lt;UART::UART&gt; mUartHandle;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <a class="code" href="namespace_roomba.html#a5209de87fc9bed4bd208eae71aab67c3">control</a> mCurrControlMode;</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;}</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keyword">const</span> int16_t velForward = 500, velBackward = -500, velStop = 0;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="keyword">const</span> int16_t rotNone = 32767, rotLeft = -2000, rotRight = 2000;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    };</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;}</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="afunction_8hpp_html"><div class="ttname"><a href="function_8hpp.html">function.hpp</a></div></div>
@@ -273,7 +278,7 @@ $(document).ready(function(){initNavTree('_roomba_8hpp_source.html',''); initRes
 <div class="ttc" id="anamespace_roomba_html_a28115f0e32b012cd8bdb9f6c7d5dc0adaea362a99e78a753418c391e4e175ea0a"><div class="ttname"><a href="namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0adaea362a99e78a753418c391e4e175ea0a">Roomba::Query</a></div><div class="ttdeci">@ Query</div><div class="ttdef"><b>Definition:</b> Roomba.hpp:46</div></div>
 <div class="ttc" id="anamespace_roomba_html_a28115f0e32b012cd8bdb9f6c7d5dc0adaa692ea5675145bf31203bdef69c0cf51"><div class="ttname"><a href="namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0adaa692ea5675145bf31203bdef69c0cf51">Roomba::Drive</a></div><div class="ttdeci">@ Drive</div><div class="ttdef"><b>Definition:</b> Roomba.hpp:46</div></div>
 <div class="ttc" id="anamespace_u_a_r_t_html_a5f6ba0e04c3a031981c58788fb317736"><div class="ttname"><a href="namespace_u_a_r_t.html#a5f6ba0e04c3a031981c58788fb317736">UART::Baudrates</a></div><div class="ttdeci">Baudrates</div><div class="ttdef"><b>Definition:</b> UARTBase.hpp:13</div></div>
-<div class="ttc" id="aclass_roomba_1_1_roomba_html_aef986a2eee3c2eb93b67f8f2d322e9fe"><div class="ttname"><a href="class_roomba_1_1_roomba.html#aef986a2eee3c2eb93b67f8f2d322e9fe">Roomba::Roomba::~Roomba</a></div><div class="ttdeci">~Roomba()</div><div class="ttdef"><b>Definition:</b> Roomba.hpp:96</div></div>
+<div class="ttc" id="aclass_roomba_1_1_roomba_html_aef986a2eee3c2eb93b67f8f2d322e9fe"><div class="ttname"><a href="class_roomba_1_1_roomba.html#aef986a2eee3c2eb93b67f8f2d322e9fe">Roomba::Roomba::~Roomba</a></div><div class="ttdeci">~Roomba()</div><div class="ttdef"><b>Definition:</b> Roomba.hpp:101</div></div>
 <div class="ttc" id="anamespace_roomba_html_a1ba20ae81e47ebf35362517c7dbfeff9a104be4af82c6ff18b3dee289047c6a22"><div class="ttname"><a href="namespace_roomba.html#a1ba20ae81e47ebf35362517c7dbfeff9a104be4af82c6ff18b3dee289047c6a22">Roomba::RCM</a></div><div class="ttdeci">@ RCM</div><div class="ttdef"><b>Definition:</b> Roomba.hpp:27</div></div>
 <div class="ttc" id="anamespace_roomba_html_a1ba20ae81e47ebf35362517c7dbfeff9aa74e848a2cd273e303794e915f91a65f"><div class="ttname"><a href="namespace_roomba.html#a1ba20ae81e47ebf35362517c7dbfeff9aa74e848a2cd273e303794e915f91a65f">Roomba::Current</a></div><div class="ttdeci">@ Current</div><div class="ttdef"><b>Definition:</b> Roomba.hpp:29</div></div>
 <div class="ttc" id="anamespace_roomba_html_a28115f0e32b012cd8bdb9f6c7d5dc0adaa266c5f936ce11caff6ec389402c80f2"><div class="ttname"><a href="namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0adaa266c5f936ce11caff6ec389402c80f2">Roomba::Digit_Leds_Ascii</a></div><div class="ttdeci">@ Digit_Leds_Ascii</div><div class="ttdef"><b>Definition:</b> Roomba.hpp:48</div></div>

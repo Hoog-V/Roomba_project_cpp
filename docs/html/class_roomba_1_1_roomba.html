@@ -98,7 +98,7 @@ Collaboration diagram for Roomba::Roomba:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_roomba_1_1_roomba__coll__graph.png" border="0" usemap="#_roomba_1_1_roomba_coll__map" alt="Collaboration graph"/></div>
 <map name="_roomba_1_1_roomba_coll__map" id="_roomba_1_1_roomba_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,172,317"/>
+<area shape="rect" title=" " alt="" coords="5,5,212,376"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -127,6 +127,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:adcb394803cfa9b02f03fd4f6561b0491"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f2955f402c1980d73d156bda51d31d8"><td class="memItemLeft" align="right" valign="top">std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_roomba_1_1_roomba.html#a3f2955f402c1980d73d156bda51d31d8">getSensorDataList</a> (std::vector&lt; <a class="el" href="namespace_roomba.html#a1ba20ae81e47ebf35362517c7dbfeff9">sensors</a> &gt; sensor)</td></tr>
 <tr class="separator:a3f2955f402c1980d73d156bda51d31d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a5ca2909f87b1d1583746ca7eeadc4f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_roomba_1_1_roomba.html#a4a5ca2909f87b1d1583746ca7eeadc4f">sensorIsSingedInt8_t</a> (<a class="el" href="namespace_roomba.html#a1ba20ae81e47ebf35362517c7dbfeff9">sensors</a> sensor)</td></tr>
+<tr class="separator:a4a5ca2909f87b1d1583746ca7eeadc4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa434d5c34bcf0ec2da26957718da2c87"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_roomba_1_1_roomba.html#aa434d5c34bcf0ec2da26957718da2c87">sensorIsUnsignedInt8_t</a> (<a class="el" href="namespace_roomba.html#a1ba20ae81e47ebf35362517c7dbfeff9">sensors</a> sensor)</td></tr>
+<tr class="separator:aa434d5c34bcf0ec2da26957718da2c87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0286aed80e076992a6e13403ba0eb1f1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_roomba_1_1_roomba.html#a0286aed80e076992a6e13403ba0eb1f1">sensorIsSingedInt16_t</a> (<a class="el" href="namespace_roomba.html#a1ba20ae81e47ebf35362517c7dbfeff9">sensors</a> sensor)</td></tr>
+<tr class="separator:a0286aed80e076992a6e13403ba0eb1f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af101f0afe5f57096697501d0977bdcb1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_roomba_1_1_roomba.html#af101f0afe5f57096697501d0977bdcb1">sensorIsUnsingedInt16_t</a> (<a class="el" href="namespace_roomba.html#a1ba20ae81e47ebf35362517c7dbfeff9">sensors</a> sensor)</td></tr>
+<tr class="separator:af101f0afe5f57096697501d0977bdcb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe59a1bc4f6de939f1999912ed528744"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_roomba_1_1_roomba.html#abe59a1bc4f6de939f1999912ed528744">setSongNum</a> (const uint8_t songNum, const std::vector&lt; uint8_t &gt; notesWithDuration)</td></tr>
 <tr class="separator:abe59a1bc4f6de939f1999912ed528744"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2779a0e22f0f56f3cd513be4eacdd2de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_roomba_1_1_roomba.html#a2779a0e22f0f56f3cd513be4eacdd2de">playSongNum</a> (const uint8_t songNum)</td></tr>
@@ -258,6 +266,79 @@ Public Member Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">int16_t&#160;</td>
           <td class="paramname"><em>angle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0286aed80e076992a6e13403ba0eb1f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0286aed80e076992a6e13403ba0eb1f1">&#9670;&nbsp;</a></span>sensorIsSingedInt16_t()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Roomba::Roomba::sensorIsSingedInt16_t </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_roomba.html#a1ba20ae81e47ebf35362517c7dbfeff9">sensors</a>&#160;</td>
+          <td class="paramname"><em>sensor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4a5ca2909f87b1d1583746ca7eeadc4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a5ca2909f87b1d1583746ca7eeadc4f">&#9670;&nbsp;</a></span>sensorIsSingedInt8_t()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Roomba::Roomba::sensorIsSingedInt8_t </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_roomba.html#a1ba20ae81e47ebf35362517c7dbfeff9">sensors</a>&#160;</td>
+          <td class="paramname"><em>sensor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section note"><dt>Note</dt><dd>the numbers seen here are form the datasheet <a href="https://cdn-shop.adafruit.com/datasheets/create_2_Open_Interface_Spec.pdf">https://cdn-shop.adafruit.com/datasheets/create_2_Open_Interface_Spec.pdf</a> seen at page 22 to 31, all these numbers are the PacketID's </dd></dl>
+
+</div>
+</div>
+<a id="aa434d5c34bcf0ec2da26957718da2c87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa434d5c34bcf0ec2da26957718da2c87">&#9670;&nbsp;</a></span>sensorIsUnsignedInt8_t()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Roomba::Roomba::sensorIsUnsignedInt8_t </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_roomba.html#a1ba20ae81e47ebf35362517c7dbfeff9">sensors</a>&#160;</td>
+          <td class="paramname"><em>sensor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af101f0afe5f57096697501d0977bdcb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af101f0afe5f57096697501d0977bdcb1">&#9670;&nbsp;</a></span>sensorIsUnsingedInt16_t()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Roomba::Roomba::sensorIsUnsingedInt16_t </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_roomba.html#a1ba20ae81e47ebf35362517c7dbfeff9">sensors</a>&#160;</td>
+          <td class="paramname"><em>sensor</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
