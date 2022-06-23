@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"pages.html":[],
 "struct_i_o_1_1_i_o_settings.html":[7,0,0,2],
 "struct_i_o_1_1_i_o_settings.html#a04ced6d77ed707f151133d79c40d45b3":[7,0,0,2,0],
 "struct_i_o_1_1_i_o_settings.html#a3ec21a15d0b9b6af03cea732c01e77af":[7,0,0,2,1],
