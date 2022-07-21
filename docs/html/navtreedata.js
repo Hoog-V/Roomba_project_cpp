@@ -61,6 +61,20 @@ var NAVTREE =
       [ "Algemene regels", "6.html#a", null ],
       [ "Code standaarden", "6.html#c", null ]
     ] ],
+    [ "Contributor Covenant Code of Conduct", "md__m_d__c_o_d_e__o_f__c_o_n_d_u_c_t.html", [
+      [ "Our Pledge", "md__m_d__c_o_d_e__o_f__c_o_n_d_u_c_t.html#autotoc_md24", null ],
+      [ "Our Standards", "md__m_d__c_o_d_e__o_f__c_o_n_d_u_c_t.html#autotoc_md25", null ],
+      [ "Enforcement Responsibilities", "md__m_d__c_o_d_e__o_f__c_o_n_d_u_c_t.html#autotoc_md26", null ],
+      [ "Scope", "md__m_d__c_o_d_e__o_f__c_o_n_d_u_c_t.html#autotoc_md27", null ],
+      [ "Enforcement", "md__m_d__c_o_d_e__o_f__c_o_n_d_u_c_t.html#autotoc_md28", null ],
+      [ "Enforcement Guidelines", "md__m_d__c_o_d_e__o_f__c_o_n_d_u_c_t.html#autotoc_md29", [
+        [ "1. Correction", "md__m_d__c_o_d_e__o_f__c_o_n_d_u_c_t.html#autotoc_md30", null ],
+        [ "2. Warning", "md__m_d__c_o_d_e__o_f__c_o_n_d_u_c_t.html#autotoc_md31", null ],
+        [ "3. Temporary Ban", "md__m_d__c_o_d_e__o_f__c_o_n_d_u_c_t.html#autotoc_md32", null ],
+        [ "4. Permanent Ban", "md__m_d__c_o_d_e__o_f__c_o_n_d_u_c_t.html#autotoc_md33", null ]
+      ] ],
+      [ "Attribution", "md__m_d__c_o_d_e__o_f__c_o_n_d_u_c_t.html#autotoc_md34", null ]
+    ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -93,7 +107,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "2.html",
-"sleep_8hpp.html"
+"md__m_d__c_o_d_e__o_f__c_o_n_d_u_c_t.html#autotoc_md33"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
