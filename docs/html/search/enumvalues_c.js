@@ -1,15 +1,15 @@
 var searchData=
 [
-  ['safe_318',['Safe',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0adabae317a5112bb5bb9a0fa19021676f28',1,'Roomba::Safe()'],['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0adac6eea0560cd6f377e78dff2c85cc9122',1,'Roomba::Safe()']]],
-  ['sbuttons_319',['sButtons',['../namespace_roomba.html#a1ba20ae81e47ebf35362517c7dbfeff9a143d85ff138b961442a96ae44ea52d03',1,'Roomba']]],
-  ['schedule_320',['Schedule',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0adae13146ee672b941e124f32d429c43832',1,'Roomba']]],
-  ['schedule_5fleds_321',['Schedule_Leds',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada08cdfe713c0db7de775fe096a4d2e071',1,'Roomba']]],
-  ['sensor_322',['Sensor',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada96b12a5131d75aeaf310e8c95a6a6517',1,'Roomba']]],
-  ['sensorlist_323',['SensorList',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada7115babd8405aaf11a78cf41c67403c9',1,'Roomba']]],
-  ['set_5fdate_5ftime_324',['Set_Date_Time',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada4a3b2f9219e44db7de1eb691dc35c6b3',1,'Roomba']]],
-  ['song_325',['Song',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada5e74bd0d2ff2a13b41e5ef9949ba52e0',1,'Roomba']]],
-  ['spot_326',['Spot',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada58c314c67ebef171368e4dabc4a8aba0',1,'Roomba::Spot()'],['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada6c9d6b8aea6f3d16847bdebe05878a2d',1,'Roomba::Spot()']]],
-  ['start_327',['Start',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada9f9b0b38673157c3f125d58a8bb603da',1,'Roomba']]],
-  ['stop_328',['Stop',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada25526a868c9fde996821141e110f9b4b',1,'Roomba']]],
-  ['stream_329',['Stream',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada2ba4e7d82ce1cad88b192c5222c13d05',1,'Roomba']]]
+  ['safe_321',['Safe',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0adabae317a5112bb5bb9a0fa19021676f28',1,'Roomba::Safe()'],['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0adac6eea0560cd6f377e78dff2c85cc9122',1,'Roomba::Safe()']]],
+  ['sbuttons_322',['sButtons',['../namespace_roomba.html#a1ba20ae81e47ebf35362517c7dbfeff9a143d85ff138b961442a96ae44ea52d03',1,'Roomba']]],
+  ['schedule_323',['Schedule',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0adae13146ee672b941e124f32d429c43832',1,'Roomba']]],
+  ['schedule_5fleds_324',['Schedule_Leds',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada08cdfe713c0db7de775fe096a4d2e071',1,'Roomba']]],
+  ['sensor_325',['Sensor',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada96b12a5131d75aeaf310e8c95a6a6517',1,'Roomba']]],
+  ['sensorlist_326',['SensorList',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada7115babd8405aaf11a78cf41c67403c9',1,'Roomba']]],
+  ['set_5fdate_5ftime_327',['Set_Date_Time',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada4a3b2f9219e44db7de1eb691dc35c6b3',1,'Roomba']]],
+  ['song_328',['Song',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada5e74bd0d2ff2a13b41e5ef9949ba52e0',1,'Roomba']]],
+  ['spot_329',['Spot',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada58c314c67ebef171368e4dabc4a8aba0',1,'Roomba::Spot()'],['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada6c9d6b8aea6f3d16847bdebe05878a2d',1,'Roomba::Spot()']]],
+  ['start_330',['Start',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada9f9b0b38673157c3f125d58a8bb603da',1,'Roomba']]],
+  ['stop_331',['Stop',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada25526a868c9fde996821141e110f9b4b',1,'Roomba']]],
+  ['stream_332',['Stream',['../namespace_roomba.html#a28115f0e32b012cd8bdb9f6c7d5dc0ada2ba4e7d82ce1cad88b192c5222c13d05',1,'Roomba']]]
 ];

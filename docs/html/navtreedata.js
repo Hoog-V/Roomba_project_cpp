@@ -24,21 +24,35 @@ var NAVTREE =
 [
   [ "Roomba", "index.html", [
     [ "Roomba OTOTOI Documentation", "index.html", [
-      [ "General information", "index.html#autotoc_md10", null ]
+      [ "General information", "index.html#autotoc_md22", null ]
+    ] ],
+    [ "Contributor Covenant Code of Conduct", "md__home_runner_work__roomba_project_cpp__roomba_project_cpp_tmp__c_o_d_e__o_f__c_o_n_d_u_c_t.html", [
+      [ "Our Pledge", "md__home_runner_work__roomba_project_cpp__roomba_project_cpp_tmp__c_o_d_e__o_f__c_o_n_d_u_c_t.html#autotoc_md1", null ],
+      [ "Our Standards", "md__home_runner_work__roomba_project_cpp__roomba_project_cpp_tmp__c_o_d_e__o_f__c_o_n_d_u_c_t.html#autotoc_md2", null ],
+      [ "Enforcement Responsibilities", "md__home_runner_work__roomba_project_cpp__roomba_project_cpp_tmp__c_o_d_e__o_f__c_o_n_d_u_c_t.html#autotoc_md3", null ],
+      [ "Scope", "md__home_runner_work__roomba_project_cpp__roomba_project_cpp_tmp__c_o_d_e__o_f__c_o_n_d_u_c_t.html#autotoc_md4", null ],
+      [ "Enforcement", "md__home_runner_work__roomba_project_cpp__roomba_project_cpp_tmp__c_o_d_e__o_f__c_o_n_d_u_c_t.html#autotoc_md5", null ],
+      [ "Enforcement Guidelines", "md__home_runner_work__roomba_project_cpp__roomba_project_cpp_tmp__c_o_d_e__o_f__c_o_n_d_u_c_t.html#autotoc_md6", [
+        [ "1. Correction", "md__home_runner_work__roomba_project_cpp__roomba_project_cpp_tmp__c_o_d_e__o_f__c_o_n_d_u_c_t.html#autotoc_md7", null ],
+        [ "2. Warning", "md__home_runner_work__roomba_project_cpp__roomba_project_cpp_tmp__c_o_d_e__o_f__c_o_n_d_u_c_t.html#autotoc_md8", null ],
+        [ "3. Temporary Ban", "md__home_runner_work__roomba_project_cpp__roomba_project_cpp_tmp__c_o_d_e__o_f__c_o_n_d_u_c_t.html#autotoc_md9", null ],
+        [ "4. Permanent Ban", "md__home_runner_work__roomba_project_cpp__roomba_project_cpp_tmp__c_o_d_e__o_f__c_o_n_d_u_c_t.html#autotoc_md10", null ]
+      ] ],
+      [ "Attribution", "md__home_runner_work__roomba_project_cpp__roomba_project_cpp_tmp__c_o_d_e__o_f__c_o_n_d_u_c_t.html#autotoc_md11", null ]
     ] ],
     [ "MoScoW eisen", "2.html", [
-      [ "Eisen Roomba lib m.b.v. MOSCOW", "2.html#autotoc_md0", null ]
+      [ "Eisen Roomba lib m.b.v. MOSCOW", "2.html#autotoc_md12", null ]
     ] ],
     [ "Acceptatietesten", "3.html", [
-      [ "Acceptatietesten Roomba library", "3.html#autotoc_md1", [
-        [ "Acceptatietest 1: Robot van richting laten veranderen", "3.html#autotoc_md2", null ],
-        [ "Acceptatietest 2: Het starten van een schoonmaakronde en zoek dock modus", "3.html#autotoc_md3", null ],
-        [ "Acceptatietest 3:  Aan/uit zetten", "3.html#autotoc_md4", null ],
-        [ "Acceptatietest 4:  Motoren manipuleren.", "3.html#autotoc_md5", null ],
-        [ "Acceptatietest 5:  Leds manipuleren", "3.html#autotoc_md6", null ],
-        [ "Acceptatietest 6:  Baudrate aanpassen", "3.html#autotoc_md7", null ],
-        [ "Acceptatietest 7:  Noten afspelen", "3.html#autotoc_md8", null ],
-        [ "Acceptatietest 8: Controleer code conventies", "3.html#autotoc_md9", null ]
+      [ "Acceptatietesten Roomba library", "3.html#autotoc_md13", [
+        [ "Acceptatietest 1: Robot van richting laten veranderen", "3.html#autotoc_md14", null ],
+        [ "Acceptatietest 2: Het starten van een schoonmaakronde en zoek dock modus", "3.html#autotoc_md15", null ],
+        [ "Acceptatietest 3:  Aan/uit zetten", "3.html#autotoc_md16", null ],
+        [ "Acceptatietest 4:  Motoren manipuleren.", "3.html#autotoc_md17", null ],
+        [ "Acceptatietest 5:  Leds manipuleren", "3.html#autotoc_md18", null ],
+        [ "Acceptatietest 6:  Baudrate aanpassen", "3.html#autotoc_md19", null ],
+        [ "Acceptatietest 7:  Noten afspelen", "3.html#autotoc_md20", null ],
+        [ "Acceptatietest 8: Controleer code conventies", "3.html#autotoc_md21", null ]
       ] ]
     ] ],
     [ "Use Case Diagram", "4.html", null ],
@@ -79,7 +93,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "2.html",
-"union_roomba_1_1sensor_data.html#a979221df4a355e27c97b80b174c66594"
+"sleep_8hpp.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
